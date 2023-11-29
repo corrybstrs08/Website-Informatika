@@ -30,6 +30,7 @@
             display: flex;
             flex-wrap: wrap;
             padding-left: 0;
+            justify-content: center;
         }
 
         .serv ul li {
@@ -136,7 +137,6 @@
             display: none;
             position: absolute;
             background-color: rgba(90, 94, 123, 0.67);
-            padding-block-end: 20px;
             border-radius: 3%;
         }
 
@@ -197,8 +197,9 @@
                     <div class="dropdown">
                         <p class="mainmenubtn mt-1 mx-4">Akademik<i class="ri-arrow-down-s-fill"></i></p>
                         <div class="dropdown-child float">
-                            <a href='/organisasi'>HIMASTI</a>
+                            <a href='/organisasi'>Himpunan</a>
                             <a href="/staffDosen">Dosen </a>
+                            <a href="/mahasiswa">Mahasiswa </a>
                         </div>
                     </div>
 
