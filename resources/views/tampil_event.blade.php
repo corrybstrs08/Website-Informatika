@@ -3,7 +3,7 @@
 @section('section')
 
     <div >
-        <h1 class=" container text-light"><b>{{$event->nama}}</b></h1>
+        <h1 class=" container text-body"><b>{{$event->nama}}</b></h1>
         <br>
 
         <div class="container p-3 text-dark rounded-4   " style="background: rgba(255, 255, 255, 0.5);">
@@ -27,7 +27,7 @@
         </div>
 
         <br>
-        <div class="container text-light text-center">
+        <div class="container text-body text-center">
             <p">{{$event->penjelasan}}</p>
         </div>
     </div>
