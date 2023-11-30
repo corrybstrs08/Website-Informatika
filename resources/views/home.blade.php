@@ -196,7 +196,7 @@
 
         </div> --}}
 
-        <div>
+        {{-- <div>
             <div class="d-flex justify-content-center">
                 <div class="">
                     <a href="https://spmb.del.ac.id/
@@ -208,7 +208,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         {{-- <div>
             <span class="d-flex">
