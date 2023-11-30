@@ -2,7 +2,7 @@
 
 @section('section')
 
-<div class="text-light container">
+<div class="text-body container">
     <h1 >{{ $berita->judul }}</h1>
     
 </div>
@@ -15,7 +15,7 @@
 </div>
 
 <br><br>
-<div class="text-light container">
+<div class= "text-body container">
     
     <p>{{ $berita->isi  }}</p>
 </div>
