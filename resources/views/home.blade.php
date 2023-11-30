@@ -184,19 +184,19 @@
 
 <br><br>
 
-<div class="container text-body">
+{{-- <div class="container text-body">
     <h1 class="text-center"><b><u>Link Terkait</u></b></h1><br><br>
     <ul class="d-flex justify-content-center">
-        {{-- <div>
+        <div>
             <div style="width: 50%; /* or any other width */
                 margin: auto;">
                 <a href="https://www.del.ac.id/" target="none"><img src="{{ asset('asset/img/logo_del.png') }}" alt="logo del " width="100em" style="border-radius: 10%;"></a>
             </div>
             <br>
 
-        </div> --}}
+        </div>
 
-        {{-- <div>
+        <div>
             <div class="d-flex justify-content-center">
                 <div class="">
                     <a href="https://spmb.del.ac.id/
@@ -208,9 +208,9 @@
                     </a>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
-        {{-- <div>
+        <div>
             <span class="d-flex">
                 <a href="https://cis.del.ac.id/user/login" target="none">
                     <a href="https://cis.del.ac.id/user/login" target="none">
@@ -229,9 +229,9 @@
                             src=" {{ asset('asset/img/ecourse.png') }}" alt="logo del " width="100em" style="border-radius: 5%;width: 20em;"></a>
             </div>
 
-        </div> --}}
+        </div>
     </ul>
-</div>
+</div> --}}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
 </script>
