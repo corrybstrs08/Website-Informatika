@@ -187,6 +187,15 @@
 <div class="container text-body">
     <h1 class="text-center"><b><u>Link Terkait</u></b></h1><br><br>
     <ul class="d-flex justify-content-center">
+        {{-- <div>
+            <div style="width: 50%; /* or any other width */
+                margin: auto;">
+                <a href="https://www.del.ac.id/" target="none"><img src="{{ asset('asset/img/logo_del.png') }}" alt="logo del " width="100em" style="border-radius: 10%;"></a>
+            </div>
+            <br>
+
+        </div> --}}
+
         <div>
             <div class="d-flex justify-content-center">
                 <div class="">
@@ -200,6 +209,27 @@
                 </div>
             </div>
         </div>
+
+        {{-- <div>
+            <span class="d-flex">
+                <a href="https://cis.del.ac.id/user/login" target="none">
+                    <a href="https://cis.del.ac.id/user/login" target="none">
+                        <h1 class="me-1" style="font-size: 6em">CIS</h1>
+                    </a>
+                    <div class="cis-text"><br>
+                        <a href="https://cis.del.ac.id/user/login" target="none">INSTITUT <br>TEKNOLOGI DEL</a>
+                    </div>
+                </a>
+            </span>
+        </div>
+        <div>
+            <div>
+
+                <a href="https://ecourse.del.ac.id/my/" target="none"><img
+                            src=" {{ asset('asset/img/ecourse.png') }}" alt="logo del " width="100em" style="border-radius: 5%;width: 20em;"></a>
+            </div>
+
+        </div> --}}
     </ul>
 </div>
 
