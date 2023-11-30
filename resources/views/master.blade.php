@@ -57,7 +57,7 @@
 
         .martop {
             margin-top: 20px;
-            background-color: rgba(255, 0, 0, 0.109);
+            /* background-color: rgba(255, 0, 0, 0.109); */
             background-size: contain;
         }
 
@@ -321,7 +321,7 @@
         // Select all slides
         const slides = document.querySelectorAll(".slide");
 
-        // loop through slides and set each slides translateX property to index * 100% 
+        // loop through slides and set each slides translateX property to index * 100%
         slides.forEach((slide, indx) => {
             slide.style.transform = `translateX(${indx * 100}%)`;
         });

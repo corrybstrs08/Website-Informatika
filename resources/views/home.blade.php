@@ -119,67 +119,67 @@
         </div>
 
         <div class=" text-body p-5" id="berita">
-                            <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
-                            <hr>
-                            <div class=" d-flex text-dark">
-                                <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
+            <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
+            <hr>
+            <div class=" d-flex text-dark">
+                <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
 
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper ">
-                                        @foreach ($berita as $item)
-                                        <div class="swiper-slide">
-                                            <div class="bg-light" style="border-radius:10px">
-                                                <div class="image-wrapper"><img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="border-radius:9px 9px 0px 0;">
-                                                </div>
-                                                <div class="card-body">
-                                                    <a href="/berita/{{ $item->id }}">
-                                                        <h5 class="card-title">{{ $item->judul }}</h5>
-                                                    </a>
-                                                    <p class="card-text">{{ $item->deskripsi }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="swiper-pagination martop"></div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper ">
+                        @foreach ($berita as $item)
+                        <div class="swiper-slide">
+                            <div class="bg-light" style="border-radius:10px">
+                                <div class="image-wrapper"><img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="border-radius:9px 9px 0px 0;">
                                 </div>
-                                <p class=" d-flex align-items-center"><i class="beff ri-arrow-right-s-line"></i></p>
-                            </div>
-
-                        </div>
-
-                        <br>
-                        <div class="d-flex justify-content-around text-body text-center mb-2 ">
-                            <div class="lingkar">
-                                <a href="/mahasiswa">
-                                    <div class="ele">
-                                        <i class="ri-user-fill"></i>
-                                        <p><b>Mahasiswa Aktif</b></p>
-                                        <h2><b>{{ $jumlahAktif }}</b></h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="lingkar">
-                                <a href="/mahasiswaAlumni">
-                                    <div class="ele">
-                                        <i class="ri-group-fill"></i>
-                                        <h4><b>Alumni</b></h4>
-                                        <h2><b>{{ $jumlahAlumni }}</b></h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="lingkar">
-                                <a href="/staffDosen">
-                                    <div class="ele">
-                                        <b>
-                                            <i class="ri-pages-line"></i>
-                                            <p><b>Dosen</b></p>
-                                            <h2><b>{{ $dosen }}</b></h2>
-                                        </b>
-                                    </div>
-                                </a>
+                                <div class="card-body">
+                                    <a href="/berita/{{ $item->id }}">
+                                        <h5 class="card-title">{{ $item->judul }}</h5>
+                                    </a>
+                                    <p class="card-text">{{ $item->deskripsi }}</p>
+                                </div>
                             </div>
                         </div>
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination martop"></div>
+                </div>
+                <p class=" d-flex align-items-center"><i class="beff ri-arrow-right-s-line"></i></p>
+            </div>
+
+        </div>
+
+        <br>
+        <div class="d-flex justify-content-around text-body text-center mb-2 ">
+            <div class="lingkar">
+                <a href="/mahasiswa">
+                    <div class="ele">
+                        <i class="ri-user-fill"></i>
+                        <p><b>Mahasiswa Aktif</b></p>
+                        <h2><b>{{ $jumlahAktif }}</b></h2>
+                    </div>
+                </a>
+            </div>
+            <div class="lingkar">
+                <a href="/mahasiswaAlumni">
+                    <div class="ele">
+                        <i class="ri-group-fill"></i>
+                        <h4><b>Alumni</b></h4>
+                        <h2><b>{{ $jumlahAlumni }}</b></h2>
+                    </div>
+                </a>
+            </div>
+            <div class="lingkar">
+                <a href="/staffDosen">
+                    <div class="ele">
+                        <b>
+                            <i class="ri-pages-line"></i>
+                            <p><b>Dosen</b></p>
+                            <h2><b>{{ $dosen }}</b></h2>
+                        </b>
+                    </div>
+                </a>
+            </div>
+        </div>
 </section>
 
 <br><br>
