@@ -21,6 +21,16 @@
 
         /* endslidehost */
 
+        /* Modif Corry */
+        /* Ganti warna teks saat kursor diarahkan */
+        .dosen-name:hover {
+            color: blue; /* Ganti dengan warna yang diinginkan */
+        }
+        /* Tambahkan garis bawah saat kursor diarahkan */
+        .card-link:hover .dosen-name {
+            text-decoration: underline; /* Menambahkan garis bawah */
+        }
+
         .gbrDosen {
             border-radius: 50%;
             width: 25%;
