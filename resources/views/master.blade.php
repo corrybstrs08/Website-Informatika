@@ -71,7 +71,7 @@
       .swiper-slide img {
           display: block;
           width: 100%;
-          height: 100%;
+          height: 28rem;
           object-fit: cover;
       }
 
@@ -87,6 +87,11 @@
 
       .afft {
           margin: 20px;
+      }
+
+      .text-gray {
+        color: #4a4a4a;
+        font-size: 20px;
       }
 
       * {
@@ -191,6 +196,16 @@
       .text-body {
           color: #266bb1 !important;
       }
+
+      .horizontal {
+        width: 339px;
+        margin: 0 auto; /* Membuat elemen berada di tengah */
+        border: 3px solid; /* Mengatur border dengan ketebalan 2px */
+        color: rgba(0, 121, 194, 1); /* Mengatur warna border menjadi dark blue */
+      }
+
+
+
 
       /* pagination in eventAll */
 
