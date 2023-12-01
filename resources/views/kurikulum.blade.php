@@ -2,8 +2,35 @@
 
 @section('section')
     <section class="text-body">
-        <h1 class="text-body" style="font-size: 4em;margin-left: 2em; margin-bottom: 2em;"><b>
-                Struktur <br> Kurikulum Program Studi <br> Informatika</b></h1>
+        <h1 class="text-body text-center" style="font-size: 3em;"><b>
+                Struktur Kurikulum <br> Program Studi Informatika</b></h1>
+        <div class="container mt-5">
+            <form>
+            <div class="form-row">
+                <div class="form-group col-md-4 m-2">
+                    <label for="tahun">Tahun Kurikulum</label>
+                    <select id="tahun" class="form-control">
+                        <option selected>Pilih Tahun</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <!-- Tambahkan tahun lainnya sesuai kebutuhan -->
+                    </select>
+                </div>
+                <div class="form-group col-md-4 m-2">
+                    <label for="prodi">Program Studi</label>
+                    <select id="prodi" class="form-control">
+                        <option selected>Pilih Program Studi</option>
+                        <option>Informatika</option>
+                        <!-- Tambahkan program studi lainnya sesuai kebutuhan -->
+                    </select>
+                </div>
+                <div class="form-group col-md-4 mt-2 mb-4">
+                <label></label>
+                <button type="submit" class="btn btn-primary btn-block">Cari</button>
+                </div>
+            </div>
+            </form>
+        </div>
         @for ($i = 1; $i <= 8; $i++)
             <div class="mx-5 mt-3">
                 <div class="row">
