@@ -298,7 +298,6 @@
     </div>
 
   </header>
-  <br>
 
 
   <!-- SECTION -->
