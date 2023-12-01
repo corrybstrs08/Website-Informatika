@@ -16,14 +16,6 @@
                         <!-- Tambahkan tahun lainnya sesuai kebutuhan -->
                     </select>
                 </div>
-                <div class="form-group col-md-4 m-2">
-                    <label for="prodi">Program Studi</label>
-                    <select id="prodi" class="form-control">
-                        <option selected>Pilih Program Studi</option>
-                        <option>Informatika</option>
-                        <!-- Tambahkan program studi lainnya sesuai kebutuhan -->
-                    </select>
-                </div>
                 <div class="form-group col-md-4 mt-2 mb-4">
                 <label></label>
                 <button type="submit" class="btn btn-primary btn-block">Cari</button>

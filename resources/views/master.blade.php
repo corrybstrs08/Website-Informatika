@@ -195,33 +195,26 @@
       color: #266bb1 !important;
     }
 
-<<<<<<< HEAD
-      .horizontal {
-        width: 339px;
-        margin: 0 auto; /* Membuat elemen berada di tengah */
-        border: 2px solid; /* Mengatur border dengan ketebalan 2px */
-        color: rgba(0, 121, 194, 1); /* Mengatur warna border menjadi dark blue */
-      }
+    .horizontal {
+    width: 339px;
+    margin: 0 auto; /* Membuat elemen berada di tengah */
+    border: 2px solid; /* Mengatur border dengan ketebalan 2px */
+    color: rgba(0, 121, 194, 1); /* Mengatur warna border menjadi dark blue */
+    }
 
-      .hr-vertical {
-        width: 2px; /* Sesuaikan lebar vertikal sesuai kebutuhan */
-        height: 80%; /* Sesuaikan tinggi vertikal sesuai kebutuhan */
-        border: 2px solid rgba(0, 121, 194, 1); /* Mengatur border dengan ketebalan 2px dan warna dark blue */
-        margin: 0; /* Hapus margin agar lebih tepat di tengah */
-        transform: rotate(180deg);
-      }
+    .hr-vertical {
+    width: 2px; /* Sesuaikan lebar vertikal sesuai kebutuhan */
+    height: 80%; /* Sesuaikan tinggi vertikal sesuai kebutuhan */
+    border: 2px solid rgba(0, 121, 194, 1); /* Mengatur border dengan ketebalan 2px dan warna dark blue */
+    margin: 0; /* Hapus margin agar lebih tepat di tengah */
+    transform: rotate(180deg);
+    }
 
 
       /* pagination in eventAll */
 
       /* croptting */
     </style>
-=======
-    /* pagination in eventAll */
-
-    /* croptting */
-  </style>
->>>>>>> f58b5aa29a5d9b9c1bee251e1d15b74d5e4d32d1
 </head>
 
 <body>
