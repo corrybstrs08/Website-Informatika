@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <title>Document</title>
+    <title>Sarjana Informatika</title>
     <style>
       body{
         min-width: 920px;
@@ -292,7 +292,6 @@
         </div>
 
       </header>
-      <br>
 
 
       <!-- SECTION -->

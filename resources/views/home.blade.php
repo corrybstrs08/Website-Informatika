@@ -2,13 +2,6 @@
 
 @section('section')
 <section>
-    <h1 class=" ms-4 text-start">
-        <label class="text-primary"><b>Program Studi</b></label>
-        <label class="text-white"><b>Sarjana</b></label><br>
-        <label class="text-white "><b>Informatika</b></label>
-    </h1>
-
-
     <div style="z-index: 9;">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
