@@ -8,7 +8,7 @@
         </div>
         <div class="mx-5">
             <br>
-            <div class="bg-light p-3 rounded-4">
+            <div class="bg-light p-3 rounded-4" style="font-size: 1.5rem; text-align: justify;">
                 <b>{{ $sejarah->sejarah }}</b>
             </div>
         </div>

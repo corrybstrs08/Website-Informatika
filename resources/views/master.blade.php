@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-  <title>Informatika IT Del</title>
+  <title>Informatika</title>
   <style>
     body {
       min-width: 920px;
