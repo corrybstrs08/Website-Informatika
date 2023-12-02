@@ -42,7 +42,7 @@
 
     <div>
         <h3>Sejarah</h3>
-        <p class="border border-dark p-2 rounded-3">{{ $sejarah->sejarah }}</p>
-        <a href="/admin/editSejarah"><button type="button" class="btn btn-primary text-white">Ubah Sejarah</button></a>
+        <div class="border border-dark p-2 rounded-3">{!! $sejarah->sejarah !!}</div>
+        <a href="/admin/editSejarah"><button type="button" class="btn btn-primary text-white mt-3">Ubah Sejarah</button></a>
     </div>
 @endsection

@@ -8,7 +8,7 @@
     {{ csrf_field() }}
 
     <label class="form-label">Sejarah</label>
-    <textarea class="form-control" name="sejarah" rows="3" >{{$sejarah->sejarah}}</textarea>
+    <textarea class="form-control" name="sejarah" rows="3" id="text-area">{{$sejarah->sejarah}}</textarea>
     <br>
     <input type="submit" value="Ubah Sejarah" class="btn btn-primary">
 </form>
@@ -26,4 +26,14 @@
     </div>
 @endif
 
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#text-area' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
