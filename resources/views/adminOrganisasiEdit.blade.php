@@ -2,39 +2,50 @@
 
 @section('section')
 
-    <div class="container">
+<div class="container">
 
-        <h1>Edit Struktur Organisasi</h1>
-        <form action="/admin/editOrganisasi/proses" method="post" enctype="multipart/form-data">
-            {{ csrf_field() }}
-           
+    <h1>Edit Organisasi</h1>
+    <form action="/admin/editOrganisasi_proses" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
 
-            <div class="container m-3"><img src="{{ asset('asset/img/' . $organisasi->organisasi) }}"
-                    alt="{{ $organisasi->organisasi }}" style="width: 100%">
-            </div>
+        <input type="text" class="form-control" name="id" value="{{$organisasi->id}}" hidden>
 
-            <div class="form-group">
-                <b>File Gambar</b><br />
-                <input type="file" name="file">
-            </div>
+        <label class="form-label">Nama</label>
+        <input type="text" class="form-control" name="nama" value="{{$organisasi->nama}}">
 
-            <br>
+        <br><br>
 
-            <input type="submit" value="Edit Struktur Organisasi" class="btn btn-primary">
-        </form>
+        <div class="form-group">
+            <b>Gambar Anggota</b><br/>
+            <input type="file" name="gambar">
+            
+        </div><img class="gbrOrganisasi w-50" src="{{ asset('asset/img/Organisasi' . $organisasi->gambar) }}"
+                                            alt="{{ $organisasi->gambar }}">
 
         <br>
-        {{-- menampilkan error validasi --}}
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
-    </div>
+        <br>
+        <label class="form-label mb-3">Jabatan</label>
+        <input type="text" class="form-control mb-3" name="jabatan" value="{{$organisasi->jabatan}}">
+
+        
+
+        <br>
+        <input type="submit" value="Edit Data Anggota" class="btn btn-primary">
+    </form>
+
+    <br>
+    {{-- menampilkan error validasi --}}
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+</div>
 
 @endsection

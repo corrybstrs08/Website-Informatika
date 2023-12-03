@@ -507,7 +507,6 @@ class adminController extends Controller
             'kode' => 'required',
             'nama' => 'required',
             'semester' => 'required',
-            'semester' => 'required',
         ]);
 
         DB::table('kurikulum')->insert([
@@ -535,7 +534,6 @@ class adminController extends Controller
             'kode' => 'required',
             'nama' => 'required',
             'semester' => 'required',
-            'semester' => 'required',
         ]);
 
         DB::table('kurikulum')
@@ -559,17 +557,45 @@ class adminController extends Controller
         return redirect('/admin/kurikulum');
     }
 
-    //Kompetisi
-    public function showOrganisasi()
+    //Organisasi
+
+    public function organisasi()
     {
-        $organisasi = DB::table('organisasi')->first();
+        $organisasi = DB::table('organisasi')->get();
 
         return view('adminOrganisasi')->with('organisasi', $organisasi);
     }
 
-    public function editOrganisasi()
+    public function addOrganisasi()
     {
-        $organisasi = DB::table('organisasi')->first();
+        return view('adminOrganisasiAdd');
+    }
+
+    public function addOrganisasi_proses(Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'gambar' => 'required|mimes:png,jpg,jpeg|max:2048',
+            'jabatan' => 'required'
+        ]);
+
+        $imageOrganisasiName = $request->gambar->getClientOriginalName();
+        $request->gambar->move(public_path('asset/img/Organisasi'), $imageOrganisasiName);
+
+        DB::table('organisasi')->insert([
+            'nama' => $request->nama,
+            'gambar' => $request->gambar->getClientOriginalName(),
+            'jabatan' => $request->jabatan
+        ]);
+
+        return redirect('/admin/organisasi');
+    }
+
+    public function editOrganisasi($id)
+    {
+        $organisasi = DB::table('organisasi')
+            ->where('id', $id)
+            ->first();
 
         return view('adminOrganisasiEdit')->with('organisasi', $organisasi);
     }
@@ -577,25 +603,31 @@ class adminController extends Controller
     public function editOrganisasi_proses(Request $request)
     {
         $this->validate($request, [
-            'file' => 'required',
+            'nama' => 'required',
+            'gambar' => 'required|mimes:png,jpg,jpeg|max:2048',
+            'jabatan' => 'required'
+
         ]);
 
-        $imageExt = $request->file->getClientOriginalName();
+        $imageOrganisasiName = $request->gambar->getClientOriginalName();
+        $request->gambar->move(public_path('asset/img/Organisasi'), $imageOrganisasiName);
 
-        // Get file extension
-        $pathInfo = pathinfo($imageExt);
-        $extension = $pathInfo['extension'];
-
-        $imageName = $request->id;
-        $request->file->move(public_path('asset/img/'), 'organisasi' . '.' . $extension);
-
-
-        $organisasiLama = DB::table('organisasi')->first();
         DB::table('organisasi')
-            ->where('organisasi', $organisasiLama->organisasi)
+            ->where('id', $request->id)
             ->update([
-                'organisasi' => 'organisasi' . '.' . $extension,
+                'nama' => $request->nama,
+                'gambar' => $request->gambar->getClientOriginalName(),
             ]);
+
+        return redirect('/admin/organisasi');
+    }
+
+    public function hapusOrganisasi($id)
+    {
+        DB::table('organisasi')
+            ->where('id', $id)
+            ->delete();
+
         return redirect('/admin/organisasi');
     }
 }

@@ -69,7 +69,7 @@ class BlogController extends Controller
 
     public function organisasi()
     {
-        $organisasi = DB::table('organisasi')->first();
+        $organisasi = DB::table('organisasi')->get();
         return view('organisasi')->with('organisasi', $organisasi);
     }
 

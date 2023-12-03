@@ -38,8 +38,5 @@ class visiMisi extends Seeder
             
             Fakultas ini berdiri pada tahun 2013 seiring dengan perubahan Politeknik Informatika Del (PI Del) menjadi Institut Teknologi Del (IT Del).",
         ]);  
-        DB::table('organisasi')->insert([
-        	'organisasi'=>"organisasi.png",
-        ]);    
     }
 }

@@ -1,26 +1,22 @@
 @extends('master')
 
 @section('section')
-    <div class="row">
-        <div class="col">
+    <h1 class="serv text-body"><b>Struktur Keanggotaan</b></h1>
+    <section>
+        <div class="serv text-body">
+            <ul class="list-unstyled d-flex flex-wrap justify-content-around">
+                @foreach ($organisasi as $item)
+                    <div class="card-link">
+                        <div class="card m-2" style="width: 18rem; height: 10rem;">
+                            <div class="text-center">
+                                <img class="gbrDosen img-fluid mt-2 mb-2" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                                <p class="text-center"><strong>{{ $item->nama }}</strong></p>
+                                <p class="text-center">{{ $item->jabatan }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </ul>
         </div>
-        <div class="col">
-            <div class="">
-                
-            </div>
-        </div>
-    </div>
-    <div class="ms-4 mb-3">
-        <h1 class="text-body" style="font-size: 4em;">
-            <b>
-                Struktur Organisasi HIMASTI<br>
-                Program Studi Informatika
-            </b>
-        </h1>
-    </div>
-    
-
-    <div class="container d-flex justify-content-center mb-5">
-        <img src="{{ asset('asset/img/' . $organisasi->organisasi)}}" alt="logo Del" class="w-75">
-    </div>
+    </section>
 @endsection

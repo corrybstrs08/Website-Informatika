@@ -99,10 +99,12 @@ Route::get('/admin/hapusMisi/{id}', [adminController::class, 'hapusMisi'])->midd
 
 
 //Organisasi
-Route::get('/admin/organisasi', [adminController::class, 'showOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editOrganisasi/', [adminController::class, 'editOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editOrganisasi/proses', [adminController::class, 'editOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/admin/organisasi', [adminController::class, 'organisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addOrganisasi', [adminController::class, 'addOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/addOrganisasi_proses', [adminController::class, 'addOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editOrganisasi/{id}', [adminController::class, 'editOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editOrganisasi_proses', [adminController::class, 'editOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusOrganisasi/{id}', [adminController::class, 'hapusOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard', function () {
     return view('adminMenu');
 })->middleware(['auth', 'verified'])->name('dashboard');
