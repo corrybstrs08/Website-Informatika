@@ -251,15 +251,17 @@
                     <a class="nav-link text-light" href="/" style="font-size: 16px; font-family: Nunito;">Beranda</a>
                   </li>
 
-                  <!-- TENTANG KITA -->
+                  <!-- Profil -->
 
                   <li class="nav-item">
                     <div class="dropdown show">
-                      <a class="nav-link dropdown-toggle text-light" href="#" style="font-size: 16px; font-family: Nunito" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target="#dropdownMenu">Tentang Kita</a>
+                      <a class="nav-link dropdown-toggle text-light" href="#" style="font-size: 16px; font-family: Nunito" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target="#dropdownMenu">Profil</a>
                       <ul class="dropdown-menu dropdown-menu-center dropcolor" aria-labelledby="dropdownMenuLink" id="dropdownMenu" style="width: fit-content;">
                         <li><a class="dropdown-item text-light" href="/visiMisi" style="font-size: 16px; font-family: Nunito;">Visi Misi</a></li>
                         <hr>
                         <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Sejarah</a></li>
+                        <hr>
+                        <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Data Pendaftaran</a></li>
                       </ul>
                     </div>
                   </li>

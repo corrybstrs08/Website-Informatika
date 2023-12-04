@@ -14,11 +14,11 @@
             color: inherit;
             text-decoration: none;
         }
-        
+
         .trigger:hover+.keTrig {
             visibility: visible;
         }
-        
+
         .keTrig {
             padding: 3%;
             background-color: rgba(90, 94, 123, 0.95);
@@ -27,16 +27,16 @@
             position: absolute;
             visibility: hidden;
         }
-        
+
         .cards-wrapper {
             display: flex;
         }
-        
+
         .card {
             margin: 0.5em;
             width: calc(100%/3);
         }
-        
+
         .image-wrapper {
             height: 10vw;
             margin: 0 auto;
@@ -44,7 +44,7 @@
             justify-content: center;
             align-items: center; */
         }
-        
+
         .image-wrapper img {
             max-width: 100%;
             max-height: 100%;
@@ -66,7 +66,7 @@
 
                     <nav class="tentangKita mt-2">
                         <div class="d-flex justify-content-center align-items-center">
-                            <a href="" class=" trigger">Tentang Kita</a>
+                            <a href="" class=" trigger">Profil</a>
                         </div>
                         <ul class="keTrig">
                             <li><a href="">Visi Misi</a></li>
@@ -292,7 +292,7 @@
                         email.</p>
                     <p>Email Address</p>
                     <hr  style="size: 10; width: 80%; ">
-                    
+
                     <div class="containter d-flex justify-content-end ">
                         <button type="button " class="mt-3 btn btn-primary ">Submit</button>
                     </div>

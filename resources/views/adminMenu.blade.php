@@ -6,30 +6,30 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        
+
     </script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <title>Admin Menu</title>
 
     <style>
-        
+
 
         .menus:hover{
             background-color: rgb(110, 47, 47);
-            
+
         }
 
         .menusa:hover{
             background-color: rgb(110, 47, 47);
-            
+
         }
     </style>
 </head>
 
 <body>
-    
-    <div class="container-fluid"> 
+
+    <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
@@ -64,7 +64,7 @@
                         </li>
                         <li class="nav-item menus">
                             <a href="/admin/visiMisi" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Tentang Kita</span>
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Profil</span>
                             </a>
                         </li>
                         <li class="nav-item menus">
@@ -72,7 +72,7 @@
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Organisasi</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
@@ -89,7 +89,7 @@
                             </li>
                             <li><form method="POST" action="{{ route('logout') }}">
                                 @csrf
-    
+
                                 <x-dropdown-link class="dropdown-item" :href="route('logout')"
                                         onclick="event.preventDefault();
                                                     this.closest('form').submit();">
