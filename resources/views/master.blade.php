@@ -219,7 +219,7 @@
 </head>
 
 <body>
-  <header style="background-color: #0079C2;">
+  <header style="background-color: #09306B ;">
     <div class="container-fluid py-3 px-4">
       <div class="row align-items-center">
 
@@ -297,7 +297,7 @@
                   <!-- LOGIN ADMIN -->
 
                   <li class="nav-item" style="margin-left: 10px;">
-                    <a href="/admin" class="btn btn-primary" style="font-size: 16px; width: 150px; font-family: Nunito; background-color: #09306B">Login Admin</a>
+                    <a href="/admin" class="btn btn-primary" style="font-size: 16px; width: 150px; font-family: Nunito; background-color: #0079C2;">Login Admin</a>
                   </li>
                 </ul>
               </div>
@@ -326,7 +326,7 @@
 
   <br>
   <footer>
-    <div class="container-fluid" style="background-color: #0079C2;">
+    <div class="container-fluid" style="background-color: #09306B ;">
       <div class="row">
         <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
 
@@ -362,8 +362,8 @@
 
     <!-- TANDA COPYRIGHT -->
 
-    <div class="container-fluid d-flex justify-content-center" style="background-color: #fff; font-family: Nunito; margin-bottom: -10px;">
-      <p class="justify-items-center" style="color: #19246F; font-weight: 700"> &copy; 2023 Program Studi S1 INFORMATIKA - IT Del</p>
+    <div class="container-fluid d-flex justify-content-center" style="background-color: #000; font-family: Nunito; margin-bottom: -10px;">
+      <p class="justify-items-center" style="color: #f4f4f4 ; font-weight: 700"> &copy; 2023 Program Studi S1 INFORMATIKA - IT Del</p>
     </div>
   </footer>
 

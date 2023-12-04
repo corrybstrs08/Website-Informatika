@@ -1,50 +1,95 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{asset('asset/css/bootstrap-5.2.3-dist/css/bootstrap.min.css')}}">
+  <style>
+    body {
+      background: linear-gradient(45deg, #3498db, #09306B);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background-color: #fff;
+    }
+    .card-header {
+      background: linear-gradient(45deg, #2980b9, #09306B);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background-color: #3498db;
+      border-color: #3498db;
+      width: 100%;
+    }
+    .btn-primary:hover {
+      background-color: #2980b9;
+      border-color: #2980b9;
+    }
+  </style>
+  <title>Login</title>
+</head>
+<body>
 
-        <div class="text-gray-500 flex justify-center items-center h-screen">
-            <h1 style="font-size: 30px;">Admin Login</h1>
-        </div>
+<div class="card">
+  <div class="card-header">
+    <h1 class="h3">Admin Login</h1>
+  </div>
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+  <!-- Session Status -->
+  @if (session('status'))
+    <div class="alert alert-success" role="alert">
+      {{ session('status') }}
+    </div>
+  @endif
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
+  <div class="card-body">
+    <form method="POST" action="{{ route('login') }}">
+      @csrf
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus>
+        @error('email')
+          <div class="text-danger">{{ $message }}</div>
+        @enderror
+      </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" class="form-control" type="password" name="password" required autocomplete="current-password">
+        @error('password')
+          <div class="text-danger">{{ $message }}</div>
+        @enderror
+      </div>
 
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </div>
+    </form>
+    <div class="text-center text-secondary">
+      Do not have an account? <a href="{{ route('register') }}" class="text-secondary">Register here</a>
+    </div>
+  </div>
+</div>
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
-
-            <div class="flex items-center justify-center mt-4">
-                {{-- @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif --}}
-
-                <x-primary-button class="w-full d-flex justify-content-center">
-                    {{ __('Log in') }}
-                  </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</body>
+</html>
