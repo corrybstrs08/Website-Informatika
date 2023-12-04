@@ -204,7 +204,7 @@
 
     .hr-vertical {
     width: 2px; /* Sesuaikan lebar vertikal sesuai kebutuhan */
-    height: 80%; /* Sesuaikan tinggi vertikal sesuai kebutuhan */
+    height: 100%; /* Sesuaikan tinggi vertikal sesuai kebutuhan */
     border: 2px solid rgba(0, 121, 194, 1); /* Mengatur border dengan ketebalan 2px dan warna dark blue */
     margin: 0; /* Hapus margin agar lebih tepat di tengah */
     transform: rotate(180deg);

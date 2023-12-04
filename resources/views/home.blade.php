@@ -27,14 +27,14 @@
     </div>
     <br>
     <h1 class="text-body text-center"><strong>Program Studi <font style="color:rgba(0, 121, 194, 1);">Informatika</font></strong></h1>
-    <p class="container text-center mb-3 text-gray">Informatika merupakan salah satu core technology dalam
+    <p class="container text-center mb-5 text-gray">Informatika merupakan salah satu core technology dalam
         sistem teknologi yang dikenal sebagai Teknologi Informasi dan Komunikasi (Information and Communication
         Technology), karena melalui pemfungsian Informatika-lah diperoleh produk-produk perangkat
         lunak (software products) yang memungkinkan terwujudnya sifat intelligent dari Teknologi Informasi dan
         Komunikasi. Teknologi Informasi dan Komunikasi merupakan strategic enabling technology dalam menopang upaya
         pencerdasan kehidupan bangsa</p>
 
-        <hr class="horizontal mb-3" />
+        <hr class="horizontal mb-5" />
 
     <div>
         <div class="row text-body ">
@@ -116,7 +116,6 @@
         </div>
         <div class=" text-body p-5" id="berita">
             <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
-            <hr>
             <div class=" d-flex text-dark">
                 <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
 
