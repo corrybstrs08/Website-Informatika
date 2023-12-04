@@ -4,7 +4,7 @@
 
 <div class="text-body container">
     <h1 >{{ $berita->judul }}</h1>
-    
+
 </div>
 
 <br><br>
@@ -16,7 +16,7 @@
 
 <br><br>
 <div class= "text-body container">
-    
+
     <p>{{ $berita->isi  }}</p>
 </div>
 

@@ -11,6 +11,7 @@
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="{{ asset('asset/img/logo_del.png') }}" />
 
   <title>Informatika</title>
   <style>
