@@ -18,32 +18,32 @@ class OrganisasiSeed extends Seeder
         DB::table('organisasi')->insert([
             [
                 'nama'=>"Benhard Yudha",
-                'gambar'=> "t.png",
+                'gambar'=> "Benhard Yudha_Ketua.jpg",
                 'jabatan' => "Ketua"
             ],
             [
                 'nama'=>"Baha Ambrosius Sibarani",
-                'gambar'=> "t.png",
+                'gambar'=> "Baha Ambrosius Sibarani _Wakil Himasti .jpg",
                 'jabatan' => " Wakil Ketua"
             ],
             [
                 'nama'=>"Angelika Ruth",
-                'gambar'=> "t.png",
+                'gambar'=> "angelika.jpg",
                 'jabatan' => "Sekretaris"
             ],
             [
                 'nama'=>"Nadia Gracia Sirait",
-                'gambar'=> "t.png",
+                'gambar'=> "Nadia Gracia_Wakil Sekretaris.jpg",
                 'jabatan' => "Wakil Sekretaris"
             ],
             [
                 'nama'=>"Ella Tasya Silaban",
-                'gambar'=> "t.png",
+                'gambar'=> "Ella Silaban.jpg",
                 'jabatan' => "Bendahara"
             ],
             [
                 'nama'=>"Olga Prischilla",
-                'gambar'=> "t.png",
+                'gambar'=> "Olga Frischila G_Wakil Bendahara.jpg",
                 'jabatan' => "Wakil Bendahara"
             ],
         ]);
