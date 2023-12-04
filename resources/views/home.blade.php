@@ -4,15 +4,40 @@
 <section>
     <div style="z-index: 9;">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{ asset('asset/img/pemandangan_1.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;width:100%;object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Jalan Setapak Fakultas FITE</h5>
+                        <p>jalan setapak di lokasi fakultas FITE dihiasi dengan tanaman-tanaman hijau.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('asset/img/pemandangan_2.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;width:100%;object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Institut Teknologi Del</h5>
+                        <p>pemandangan dari atas kampus Institut Teknologi Del</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('asset/img/pemandangan_3.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;width:100%;object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Gedung Fakultas Informatika dan Teknik Elektro</h5>
+                        <p>Gedung ini digunakan untuk perkuliahan program studi S1-Informatika, S1-Sistem Informasi, dan S1-Teknik Elektro</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('asset/img/pemandangan_4.jpg') }}" class="d-block w-100" alt="..." style="height: 500px;width:100%;object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ruangan Kelas di gedung</h5>
+                        <p>Gedung ini memiliki fasilitas-fasilitas seperti saung, ruangan kelas, laboratorium elektro, laboratorium komputer</p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
