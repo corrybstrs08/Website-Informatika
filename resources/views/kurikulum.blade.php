@@ -11,8 +11,16 @@
                     <label for="tahun">Tahun Kurikulum</label>
                     <select id="tahun" class="form-control">
                         <option selected>Pilih Tahun</option>
+                        <option>2001</option>
+                        <option>2004</option>
+                        <option>2007</option>
+                        <option>2010</option>
+                        <option>2012</option>
+                        <option>2014</option>
+                        <option>2016</option>
+                        <option>2019</option>
                         <option>2023</option>
-                        <option>2024</option>
+
                         <!-- Tambahkan tahun lainnya sesuai kebutuhan -->
                     </select>
                 </div>
