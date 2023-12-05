@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             beritaSeed::class,
             visiMisi::class,
             kopmetisiSeed::class,
-            dosenSeed::class
+            dosenSeed::class,
+            mahasiswaSeed::class,
         ]);
     }
 }

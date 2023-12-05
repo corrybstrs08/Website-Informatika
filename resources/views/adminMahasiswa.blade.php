@@ -20,8 +20,11 @@
             @foreach ($mahasiswa as $index =>$item)
                 <tr>
                     <th scope="row">{{ $index + 1}}</th>
+                    <td>{{ $item->nim }}</td>
                     <td>{{ $item->nama }}</td>
-                    <td><img src="{{ asset('asset/img/Dosen/' . $item->gambar) }}" alt="{{ $item->gambar }}" height="50em"></td>
+                    <td>{{ $item->angkatan }}</td>
+                    <td>{{ $item->status }}</td>
+
                     <td class="d-flex">
                         <a href="/admin/editMahasiswa/{{ $item->id }}"><button type="button"
                                 class="btn btn-primary mx-1">Edit</button></a>

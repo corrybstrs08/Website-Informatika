@@ -634,7 +634,6 @@ class adminController extends Controller
     public function mahasiswa()
     {
         $mahasiswa = DB::table('mahasiswa')->get();
-
         return view('adminMahasiswa')->with('mahasiswa', $mahasiswa);
     }
 
@@ -668,7 +667,7 @@ class adminController extends Controller
             ->where('id', $id)
             ->first();
 
-        return view('adminMahasiswaEdit')->with('mahasiswa', $id);
+        return view('adminMahasiswaEdit')->with('mahasiswa', $mahasiswa);
     }
 
     public function editMahasiswa_proses(Request $request)
