@@ -34,6 +34,11 @@
                             </a>
                         </li>
                         <li class="nav-item menus">
+                            <a href="/admin/mahasiswa" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Mahasiswa</span>
+                            </a>
+                        </li>
+                        <li class="nav-item menus">
                             <a href="/admin/dosen" class="nav-link align-middle px-0">
                                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dosen</span>
                             </a>

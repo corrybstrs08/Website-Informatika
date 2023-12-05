@@ -630,4 +630,74 @@ class adminController extends Controller
 
         return redirect('/admin/organisasi');
     }
+
+    public function mahasiswa()
+    {
+        $mahasiswa = DB::table('mahasiswa')->get();
+
+        return view('adminMahasiswa')->with('mahasiswa', $mahasiswa);
+    }
+
+    public function addMahasiswa()
+    {
+        return view('adminMahasiswaAdd');
+    }
+
+    public function addMahasiswa_proses(Request $request)
+    {
+        $this->validate($request, [
+            'nim' => 'required',
+            'nama' => 'required',
+            'angkatan' => 'required',
+            'status' => 'required'
+        ]);
+
+        DB::table('mahasiswa')->insert([
+            'nim' => $request->nim,
+            'nama' => $request->nama,
+            'angkatan' => $request->angkatan,
+            'status' => $request->status,
+        ]);
+
+        return redirect('/admin/mahasiswa');
+    }
+
+    public function editMahasiswa($id)
+    {
+        $mahasiswa = DB::table('mahasiswa')
+            ->where('id', $id)
+            ->first();
+
+        return view('adminMahasiswaEdit')->with('mahasiswa', $id);
+    }
+
+    public function editMahasiswa_proses(Request $request)
+    {
+        $this->validate($request, [
+            'nim' => 'required',
+            'nama' => 'required',
+            'angkatan' => 'required',
+            'status' => 'required'
+        ]);
+
+        DB::table('mahasiswa')
+            ->where('id', $request->id)
+            ->update([
+                'nim' => $request->nim,
+                'nama' => $request->nama,
+                'angkatan' => $request->angkatan,
+                'status' => $request->status,
+            ]);
+
+        return redirect('/admin/mahasiswa');
+    }
+
+    public function hapusMahasiswa($id)
+    {
+        DB::table('mahasiswa')
+            ->where('id', $id)
+            ->delete();
+
+        return redirect('/admin/mahasiswa');
+    }
 }

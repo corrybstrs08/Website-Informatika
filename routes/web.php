@@ -60,7 +60,7 @@ Route::get('/admin/editEvents/{id}', [adminController::class, 'editEvent'])->mid
 Route::post('/admin/editEvents/proses', [adminController::class, 'editEvent_proses'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/admin/hapusEvent/{id}', [adminController::class, 'hapusEvent'])->middleware(['auth', 'verified'])->name('dashboard');
 
-//DOSEN 
+//DOSEN
 Route::get('/admin/dosen', [adminController::class, 'dosen'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/admin/addDosen', [adminController::class, 'addDosen'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('/addDosen_proses', [adminController::class, 'addDosen_proses'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -108,6 +108,14 @@ Route::get('/admin/hapusOrganisasi/{id}', [adminController::class, 'hapusOrganis
 Route::get('/dashboard', function () {
     return view('adminMenu');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Mahasiswa
+Route::get('/admin/mahasiswa', [adminController::class, 'mahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addMahasiswa', [adminController::class, 'addMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/addMahasiswa_proses', [adminController::class, 'addMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editMahasiswa/{id}', [adminController::class, 'editMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editMahasiswa_proses', [adminController::class, 'editMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusMahasiswa/{id}', [adminController::class, 'hapusMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
