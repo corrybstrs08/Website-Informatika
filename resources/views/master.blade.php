@@ -230,7 +230,7 @@
             <span>
               <span class="ms-1 text-light" style="font-size: 36px; font-family: Nunito">Institut Teknologi Del</span>
               <br>
-              <span class="ms-1 text-light" style="font-size: 20px; font-family: Nunito">MarTuhan, MarRoha, Marbisuk</span>
+              <span class="ms-1 text-light" style="font-size: 20px; font-family: Nunito">Sarjana Informatika</span>
             </span>
           </a>
         </div>
