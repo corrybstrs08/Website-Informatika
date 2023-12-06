@@ -4,7 +4,7 @@
 
 <div class="container">
 
-    <h1>Tambah Dosen</h1>
+    <h1>Tambah Mahasiswa</h1>
     <form action="/addMahasiswa_proses" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
 
