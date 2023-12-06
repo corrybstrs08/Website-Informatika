@@ -9,10 +9,12 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th scope="col">No</th>
                 <th scope="col">NIM</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Angkatan</th>
                 <th scope="col">Status</th>
+                <th scope="col">Operasi</th>
             </tr>
         </thead>
         <tbody>
