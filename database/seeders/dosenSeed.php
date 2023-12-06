@@ -18,7 +18,7 @@ class dosenSeed extends Seeder
         DB::table('dosen')->insert([
             [
                 'nama' => "Arie Satia Dharma, S.T, M.Kom.",
-                'gambar' => "Arie.png",
+                'gambar' => "Arie.jpg",
             ],
             [
                 'nama' => "Dr. Arlinta Christy Barus, ST., M.InfoTech.",
@@ -30,7 +30,7 @@ class dosenSeed extends Seeder
             ],
             [
                 'nama' => "Dr. Johannes Harungguan Sianipar, S.T., M.T.",
-                'gambar' => "Johannes.png",
+                'gambar' => "Johannes.jpg",
             ],
             [
                 'nama' => "Herimanto, S.Kom., M.Kom",
@@ -58,15 +58,15 @@ class dosenSeed extends Seeder
             ],
             [
                 'nama' => "Anthon Roberto Tampubolon, S.Kom, M.T.",
-                'gambar' => "Anton.png",
+                'gambar' => "Anton.jpg",
             ],
             [
                 'nama' => "Lit Malem Ginting, S.Si, MT",
-                'gambar' => "LitMalem.png",
+                'gambar' => "LitMalem.jpg",
             ],
             [
                 'nama' => "Yaya Setiadi, S.Si., MT",
-                'gambar' => "Yaya.png",
+                'gambar' => "Yaya.jpg",
             ],
         ]);
     }
