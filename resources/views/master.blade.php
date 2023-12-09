@@ -187,6 +187,16 @@
       z-index: 100000000000;
     }
 
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #a0c4ff; /* Ganti dengan warna biru pudar yang Anda inginkan */
+        color: #fff; /* Ganti dengan warna teks yang sesuai */
+    }
+
+    .text-full{
+        text-align: justify;
+        color: #4a4a4a
+    }
+
 
     .dropdown:hover .dropdown-child {
       display: block;
@@ -290,9 +300,9 @@
 
                   <!-- KONTAK -->
 
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                     <a class="nav-link text-light" href="/kontak" style="font-size: 16px; font-family: Nunito">Kontak</a>
-                  </li>
+                  </li> --}}
 
                   <!-- LOGIN ADMIN -->
 
