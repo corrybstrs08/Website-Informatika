@@ -23,6 +23,7 @@ Route::get('/sejarah', [BlogController::class, 'sejarah']);
 Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
 Route::get('/staffDosen', [BlogController::class, 'staffDosen']);
 Route::get('/mahasiswa', [BlogController::class, 'mahasiswa']);
+Route::post('/mahasiswa', [BlogController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
 Route::get('/mahasiswaAlumni', [BlogController::class, 'mahasiswaAlumni']);
 Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
 Route::get('/event/{id}', [BlogController::class, 'tampil_event']);

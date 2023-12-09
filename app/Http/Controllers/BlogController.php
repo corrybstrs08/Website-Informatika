@@ -182,15 +182,47 @@ class BlogController extends Controller
         $jsonDataDosen = json_decode($responseDataDosen, true);
         $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
 
-        $aktifMahasiswa = array_filter($mahasiswa, function ($item) {
-            return $item['status'] == 'Aktif';
-        });
+        // $aktifMahasiswa = array_filter($mahasiswa, function ($item) {
+        //     return $item['status'] == 'Aktif';
+        // });
 
-        $aktifMahasiswaCount = count($aktifMahasiswa);
+        // $aktifMahasiswaCount = count($aktifMahasiswa);
 
         return view('mahasiswa')
-            ->with('data', $aktifMahasiswa)
-            ->with('jumlah', $aktifMahasiswaCount);
+            ->with('data', $mahasiswa);
+            // ->with('jumlah', $aktifMahasiswaCount);
+    }
+
+    public function filterMahasiswa(Request $request){
+        $responseDataDosen = Http::withToken($this->getToken())
+        ->asForm()
+        ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
+        ->body();
+
+        //mengubah data tersebut menjadi array
+        $jsonDataDosen = json_decode($responseDataDosen, true);
+        $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
+
+        if ($request->searchby == 'angkatan'){
+            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request){
+                return $item['angkatan'] == $request->searchvalue;
+            });
+        }
+        // dd($mahasiswa);
+
+        if ($request->searchby == 'status'){
+            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request) {
+                return $item['status'] == $request->searchvalue;
+            });
+        }
+
+        if ($request->searchby == ''){
+            return view('mahasiswa')
+                ->with('data', $filterMahasiswa);
+        }
+
+        return view('mahasiswa')
+            ->with('data', $filterMahasiswa);
     }
 
     public function mahasiswaAlumni()
@@ -207,7 +239,7 @@ class BlogController extends Controller
         $alumniMahasiswa = array_filter($mahasiswa, function ($item) {
             return $item['status'] == 'Lulus';
         });
-        
+
         $alumniMahasiswaCount = count($alumniMahasiswa);
 
         return view('mahasiswaAlumni')
