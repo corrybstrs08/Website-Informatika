@@ -73,14 +73,9 @@
                     <div class="m-2">
                         <div class="d-flex">
                             <div id="tanggal" class="d-flex justify-content-center ">
-<<<<<<< HEAD
-                                <p class="text-center w-100 p-2 m-2 d-flex justify-content-center align-items-center" style="background-color: rgb(0, 121, 194); color: #f4f4f4!important;">
-                                    {{ substr($event->waktu_mulai, 8, 2) }}
-=======
                                 <p class="text-center" style="width: 90px; background-color: rgba(156, 173, 206, 0.47); padding: 5px; border-radius: 5px;" >
                                     <span style="display: block;">{{ substr($event->waktu_mulai, 8, 2) }}</span>
                                     <span style="display: block;">
->>>>>>> 2a83489250ae70168bca42ac3bf60f0a1e69f1de
                                     @if (intval(substr($event->waktu_mulai, 5, 2)) == 1)
                                     Januari
                                     @elseif (intval(substr($event->waktu_mulai, 5, 2)) == 2)
