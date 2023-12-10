@@ -21,17 +21,25 @@ USE `informatika`;
 DROP TABLE IF EXISTS `dosen`;
 
 CREATE TABLE `dosen` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nama` varchar(255) NOT NULL,
-  `gambar` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(255) NOT NULL,
+  `gambar` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE dosen
+ADD COLUMN deskripsi TEXT NOT NULL AFTER gambar;
+
+UPDATE `dosen`
+SET deskripsi = 'Arie Satia Dharma, S.T, M.Kom adalah Kaprodi dari Prodi S1 Informatika'
+WHERE id = 1;
+
 
 /*Data for the table `dosen` */
 
-insert  into `dosen`(`id`,`nama`,`gambar`,`created_at`,`updated_at`) values 
+INSERT  INTO `dosen`(`id`,`nama`,`gambar`,`created_at`,`updated_at`) VALUES 
 (1,'Arie Satia Dharma, S.T, M.Kom.','t.png',NULL,NULL),
 (2,'Dr. Arlinta Christy Barus, ST., M.InfoTech.','t.png',NULL,NULL),
 (3,'Dr. Inggriani Liem','t.png',NULL,NULL),
@@ -51,25 +59,25 @@ insert  into `dosen`(`id`,`nama`,`gambar`,`created_at`,`updated_at`) values
 DROP TABLE IF EXISTS `events`;
 
 CREATE TABLE `events` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nama` varchar(255) NOT NULL,
-  `waktu_mulai` datetime NOT NULL,
-  `waktu_selesai` datetime NOT NULL,
-  `deskripsi_singkat` varchar(255) NOT NULL,
-  `jenis` varchar(255) NOT NULL,
-  `lokasi` varchar(255) NOT NULL,
-  `penyelenggara` varchar(255) NOT NULL,
-  `kontak` varchar(255) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `penjelasan` text NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(255) NOT NULL,
+  `waktu_mulai` DATETIME NOT NULL,
+  `waktu_selesai` DATETIME NOT NULL,
+  `deskripsi_singkat` VARCHAR(255) NOT NULL,
+  `jenis` VARCHAR(255) NOT NULL,
+  `lokasi` VARCHAR(255) NOT NULL,
+  `penyelenggara` VARCHAR(255) NOT NULL,
+  `kontak` VARCHAR(255) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
+  `penjelasan` TEXT NOT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `events` */
 
-insert  into `events`(`id`,`nama`,`waktu_mulai`,`waktu_selesai`,`deskripsi_singkat`,`jenis`,`lokasi`,`penyelenggara`,`kontak`,`deskripsi`,`penjelasan`,`created_at`,`updated_at`) values 
+INSERT  INTO `events`(`id`,`nama`,`waktu_mulai`,`waktu_selesai`,`deskripsi_singkat`,`jenis`,`lokasi`,`penyelenggara`,`kontak`,`deskripsi`,`penjelasan`,`created_at`,`updated_at`) VALUES 
 (1,'Pengukuhan anggota baru HIMASTI','2022-10-12 00:00:00','2022-10-12 00:00:00','Pengukuhan mahasiswa angkatan 2022 sebagai anggota HIMASTI.','Program Kerja Tahunan HIMASTI','Pantai Lumban Bul-Bul','Kepengurusan HIMASTI','Reindhard (+6282367xxxxxx)','Kegiatan ini diwajibkan untuk seluruh mahasiswa S1 Informatika angakatan 2019, 2020, 2021, dan 2022. Dengan dresscode training pack Del. ','Pengukuhan mahasiswa angkatan 2022 sebagai anggota HIMASTI. Pengukuhan ini dilakukan sebagai bentuk dan simbol bahwa angakatan 2022 telah dikukuhkan dan disahkan menjadi bagian dari keluarga HIMASTI. Dengan adanya kegiatan ini, diharapkan mahasiswa dan mahasiswi baru dapat merasakan kehangatan dan solidaritas dari keluarga HIMASTI. Setelah menjadi bagian dari keluarga Himpunan Mahasiswa Sarjana Informatika, maka mahasiswa dan mahasiswi Himpunan Mahasiswa Sarjana Informatika secara sadar harus siap menerima dan bertanggung jawab terhadap aturan dan peraturan serta menjaga nama baik Himpunan.',NULL,NULL),
 (2,'Natal Himpunan Mahasiswa Informatika','2022-10-12 00:00:00','2022-10-12 00:00:00','Perayaan hari natal untuk semua anggota HIMASTI','Kegiatan Tahunan Program Studi','Gereja HKBP Sitoluama','Mahasiswa-mahasiswi S1 Informatika','Guntur (+6282367xxxxxx)','Seluruh mahasiwa dan mahasiswi S1 Informatika diharapkan berpartisipasi dan turut hadir dalam acara natal ini. Dengan dresscode berwarna hijau. ','Perayaan hari natal untuk seluruh anggota HIMASTI. Natal adalah sebuah perayaan yang di lakukan oleh semua umat Kristiani di seluruh dunia untuk menyambut sang Juru Selamat, yaitu Tuhan Yesus Kristus. Tidak perlu dengan perayaan yang besar dan mewah tetapi bagaimana kita benar-benar meresapi dan mengenang bagaimana kedatangan Tuhan Yesus Kristus datang ke dunia ini untuk menyelamatkan kita. Melalui perayaan Natal ini, yang diharapakan mahasiswa/i menjadi generasi muda intelektual yang selalu takut akan Tuhan.',NULL,NULL),
 (3,'Malam Keakraban Program Studi S1 Informatika','2023-02-04 00:00:00','2022-02-05 00:00:00','Acara ini bertujuan untuk mempererat tali persaudaraan antar mahasiswa/i informatika dari angkatan terkecil hingga yang terbesar.','Kegiatan Refreshing','Lapangan Napitupulu','Informatika angkatan 2019',' 08218766xxxx (Judah)','Kegiatan ini diwajibkan untuk seluruh mahasiswa S1 Informatika angakatan 2019, 2020, 2021, dan 2022.','Pada acara ini seluruh mahasiswa/i akan bermalam dengan menggunakan tenda. Setiap mahasiswa/i wajib membawa peralatan pribadi yang mungkin dibutuhkan selama acara. Untuk rangkaian kegiatan yang akan dilakukan, akan dibagikan melalui grup antar angkatan prodi S1 Informatika. Diharapkan seluruh mahasiswa/i Informatika angkatan 2019 hingga 2022 mengikuti kegiatan ini dengan baik dan tertib. Tiada kesan tanpa kehadiran rekan-rekan sekalian.',NULL,NULL),

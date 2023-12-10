@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -183,6 +184,7 @@ class adminController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
+            'deskripsi' => 'required',
             'file' => 'required',
         ]);
 
@@ -191,6 +193,7 @@ class adminController extends Controller
 
         DB::table('dosen')->insert([
             'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi,
             'gambar' => $request->file->getClientOriginalName(),
         ]);
 
