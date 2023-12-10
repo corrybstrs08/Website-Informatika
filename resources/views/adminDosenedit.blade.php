@@ -15,15 +15,19 @@
 
         <br><br>
 
+        <label class="form-label">Deskripsi</label>
+        <textarea class="form-control" name="deskripsi">{{$dosen->deskripsi}}</textarea>
+
+        <br><br>
+
         <div class="form-group">
-            <b>Gambar Dosen</b><br/>
+            <b>Gambar Dosen</b><br />
             <input type="file" name="file">
         </div>
 
         <br>
 
-        <img class="gbrDosen w-50" src="{{ asset('asset/img/Dosen/' . $dosen->gambar) }}"
-                                            alt="{{ $dosen->gambar }}">
+        <img class="gbrDosen w-50" src="{{ asset('asset/img/Dosen/' . $dosen->gambar) }}" alt="{{ $dosen->gambar }}">
 
         <br>
 
@@ -34,13 +38,13 @@
     <br>
     {{-- menampilkan error validasi --}}
     @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     @endif
 
 </div>
