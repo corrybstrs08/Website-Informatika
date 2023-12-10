@@ -187,6 +187,16 @@
       z-index: 100000000000;
     }
 
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #a0c4ff; /* Ganti dengan warna biru pudar yang Anda inginkan */
+        color: #fff; /* Ganti dengan warna teks yang sesuai */
+    }
+
+    .text-full{
+        text-align: justify;
+        color: #4a4a4a
+    }
+
 
     .dropdown:hover .dropdown-child {
       display: block;
@@ -290,9 +300,9 @@
 
                   <!-- KONTAK -->
 
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                     <a class="nav-link text-light" href="/kontak" style="font-size: 16px; font-family: Nunito">Kontak</a>
-                  </li>
+                  </li> --}}
 
                   <!-- LOGIN ADMIN -->
 
@@ -332,7 +342,7 @@
 
           <!-- KONTAK KAMI -->
 
-          <h1 class="text-light px-3" style="font-weight: 700; text-decoration: underline">Kontak Kami</h1>
+          <h1 class="text-light fs-3 fw-bold text-decoration-underline px-3">Kontak Kami</h1>
           <br>
           <div class="container-fluid">
             <span>Institut Teknologi Del</span>
@@ -353,7 +363,7 @@
         <!-- TAUTAN -->
 
         <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
-          <h1 class="text-light" style="font-weight: 700; text-decoration: underline">Tautan</h1>
+          <h1 class="text-light fs-3 fw-bold text-decoration-underline" >Tautan</h1>
           <a href="https://www.del.ac.id/"><img src="{{ asset('asset/img/logo_del.png') }}" alt="del" target="_blank" width="100em" height="100em" class="rounded mx-2"></a>
           <a href="https://spmb.del.ac.id/"><img src="{{ asset('asset/img/spmb.png') }}" alt="spmb" target="_blank" width="130em" height="100em" class="rounded mx-2"></a>
         </div>

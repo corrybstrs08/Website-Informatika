@@ -62,7 +62,7 @@
         <hr class="horizontal mb-5" />
 
     <div>
-        <div class="row text-body ">
+        <div class="row text-body mb-5 ">
             <div class="col-sm-7">
                 <div class="p-2 container" style="background-color: rgba(156, 173, 206, 0.47) ;">
                     <a href="/eventsAll">
@@ -73,12 +73,18 @@
                     <div class="m-2">
                         <div class="d-flex">
                             <div id="tanggal" class="d-flex justify-content-center ">
+<<<<<<< HEAD
                                 <p class="text-center w-100 p-2 m-2 d-flex justify-content-center align-items-center" style="background-color: rgb(0, 121, 194); color: #f4f4f4!important;">
                                     {{ substr($event->waktu_mulai, 8, 2) }}
+=======
+                                <p class="text-center" style="width: 90px; background-color: rgba(156, 173, 206, 0.47); padding: 5px; border-radius: 5px;" >
+                                    <span style="display: block;">{{ substr($event->waktu_mulai, 8, 2) }}</span>
+                                    <span style="display: block;">
+>>>>>>> 2a83489250ae70168bca42ac3bf60f0a1e69f1de
                                     @if (intval(substr($event->waktu_mulai, 5, 2)) == 1)
                                     Januari
                                     @elseif (intval(substr($event->waktu_mulai, 5, 2)) == 2)
-                                    Februari
+                                    Febuari
                                     @elseif (intval(substr($event->waktu_mulai, 5, 2)) == 3)
                                     Maret
                                     @elseif (intval(substr($event->waktu_mulai, 5, 2)) == 4)
@@ -101,16 +107,16 @@
                                     Desember
                                     @endif
                                     {{-- tahun --}}
-                                    <br>
-                                    {{ substr($event->waktu_mulai, 0, 4) }}
+                                    </span>
+                                    <span style="display: block;">{{ substr($event->waktu_mulai, 0, 4) }}</span>
                                 </p>
                             </div>
-                            <div>
+                            <div class="m-2">
 
                                 <a href="/event/{{ $event->id }}">
                                     <h2>{{ $event->nama }}</h2>
                                 </a>
-                                <p>{{ $event->deskripsi_singkat }}</p>
+                                <p>{{ substr($event->deskripsi_singkat, 0, 50) }}...</p>
                             </div>
                         </div>
                         <hr class="w-75">
@@ -130,7 +136,59 @@
                     <li>
                         <div class=" pt-1 px-2 rounded-4">
                             <h3><a href="/kompetisi/{{ $item->id }}">{{ $item->nama }}</a></h3>
-                            <p>Batas Pendaftaran : {{ $item->tanggal }}</p>
+                            <p>Batas Pendaftaran:
+                                @php
+                                    $tanggal = $item->tanggal;
+                                    $timestamp = strtotime($tanggal);
+                                    $namaBulan = date('F', $timestamp);
+                                    $bulan = date('n', $timestamp);
+
+                                    switch ($bulan) {
+                                        case 1:
+                                            $namaBulan = "Januari";
+                                            break;
+                                        case 2:
+                                            $namaBulan = "Februari";
+                                            break;
+                                        case 3:
+                                            $namaBulan = "Maret";
+                                            break;
+                                        case 4:
+                                            $namaBulan = "April";
+                                            break;
+                                        case 5:
+                                            $namaBulan = "Mei";
+                                            break;
+                                        case 6:
+                                            $namaBulan = "Juni";
+                                            break;
+                                        case 7:
+                                            $namaBulan = "Juli";
+                                            break;
+                                        case 8:
+                                            $namaBulan = "Agustus";
+                                            break;
+                                        case 9:
+                                            $namaBulan = "September";
+                                            break;
+                                        case 10:
+                                            $namaBulan = "Oktober";
+                                            break;
+                                        case 11:
+                                            $namaBulan = "November";
+                                            break;
+                                        case 12:
+                                            $namaBulan = "Desember";
+                                            break;
+                                    }
+
+                                    $tanggalFormat = date('d', $timestamp);
+                                    $tahun = date('Y', $timestamp);
+
+                                    echo $tanggalFormat . ' ' . $namaBulan . ' ' . $tahun;
+                                @endphp
+                            </p>
+
                         </div>
                     </li>
                     <br>
@@ -139,7 +197,8 @@
                 </div>
             </div>
         </div>
-        <div class=" text-body p-5" id="berita">
+        <hr class="horizontal mb-3 mt-3" />
+        <div class=" text-body p-4" id="berita">
             <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
             <div class=" d-flex text-dark">
                 <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
