@@ -73,7 +73,7 @@
                     <div class="m-2">
                         <div class="d-flex">
                             <div id="tanggal" class="d-flex justify-content-center ">
-                                <p class="text-center w-100 p-2 m-2 d-flex justify-content-center align-items-center" style="background-color: rgb(0, 121, 194);">
+                                <p class="text-center w-100 p-2 m-2 d-flex justify-content-center align-items-center" style="background-color: rgb(0, 121, 194); color: #f4f4f4!important;">
                                     {{ substr($event->waktu_mulai, 8, 2) }}
                                     @if (intval(substr($event->waktu_mulai, 5, 2)) == 1)
                                     Januari
