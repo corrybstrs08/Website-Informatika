@@ -213,6 +213,7 @@ class adminController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
+            'deskripsi' => 'required',
             'file' => 'required|mimes:png,jpg,jpeg|max:2048',
         ]);
 
@@ -223,6 +224,7 @@ class adminController extends Controller
             ->where('id', $request->id)
             ->update([
                 'nama' => $request->nama,
+                'deskripsi' => $request->deskripsi,
                 'gambar' => $request->file->getClientOriginalName(),
             ]);
 
