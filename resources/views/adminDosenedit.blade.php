@@ -16,7 +16,7 @@
         <br><br>
 
         <label class="form-label">Deskripsi</label>
-        <textarea class="form-control" name="deskripsi">{{$dosen->deskripsi}}</textarea>
+        <textarea class="form-control" name="deskripsi"></textarea>
 
         <br><br>
 
