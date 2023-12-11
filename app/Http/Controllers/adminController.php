@@ -590,7 +590,9 @@ class adminController extends Controller
         DB::table('organisasi')->insert([
             'nama' => $request->nama,
             'gambar' => $request->gambar->getClientOriginalName(),
+            'divisi' => $request->divisi,
             'jabatan' => $request->jabatan
+
         ]);
 
         return redirect('/admin/organisasi');
@@ -610,6 +612,7 @@ class adminController extends Controller
         $this->validate($request, [
             'nama' => 'required',
             'gambar' => 'required|mimes:png,jpg,jpeg|max:2048',
+            'divisi' => 'required',
             'jabatan' => 'required'
 
         ]);
