@@ -14,12 +14,12 @@
         <br><br>
 
         <label class="form-label">Deskripsi</label>
-        <textarea class="form-control" name="deskripsi"></textarea>
+        <textarea class="form-control" name="deskripsi" rows="3" id="text-area"></textarea>
 
         <br><br>
 
         <div class="form-group">
-            <b>Gambar Dosen</b><br/>
+            <b>Gambar Dosen</b><br />
             <input type="file" name="file">
         </div>
 
@@ -31,15 +31,25 @@
     <br>
     {{-- menampilkan error validasi --}}
     @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     @endif
 
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create(document.querySelector('#text-area'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 @endsection

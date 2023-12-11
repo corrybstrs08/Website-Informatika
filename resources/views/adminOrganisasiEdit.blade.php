@@ -10,32 +10,45 @@
 
         <input type="text" class="form-control" name="id" value="{{$organisasi->id}}" hidden>
 
-        <label class="form-label">Nama</label>
-        <input type="text" class="form-control" name="nama" value="{{$organisasi->nama}}">
+        <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama" value="{{$organisasi->nama}}">
+        </div>
 
-        <br><br>
+        <div class="mb-3">
+            <label for="gambar" class="form-label">Gambar Anggota</label><br/>
+            <input type="file" class="form-control" id="gambar" name="gambar">
+            @if($organisasi->gambar)
+                <img class="gbrOrganisasi w-50 mt-2" src="{{ asset('asset/img/Organisasi/' . $organisasi->gambar) }}"
+                    alt="{{ $organisasi->gambar }}">
+            @endif
+        </div>
 
-        <div class="form-group">
-            <b>Gambar Anggota</b><br/>
-            <input type="file" name="gambar">
-            
-        </div><img class="gbrOrganisasi w-50" src="{{ asset('asset/img/Organisasi' . $organisasi->gambar) }}"
-                                            alt="{{ $organisasi->gambar }}">
+        <div class="mb-3">
+            <label for="jabatan" class="form-label">Jabatan</label>
+            <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{$organisasi->jabatan}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="divisi" class="form-label">Divisi</label>
+            <select class="form-control" id="divisi" name="divisi">
+                <option value="BPH" @if($organisasi->divisi == 'BPH') selected @endif>BPH</option>
+                <option value="Ristek" @if($organisasi->divisi == 'Ristek') selected @endif>Ristek</option>
+                <option value="Pengetahuan" @if($organisasi->divisi == 'Pengetahuan') selected @endif>Pengetahuan</option>
+                <option value="Danus" @if($organisasi->divisi == 'Danus') selected @endif>Danus</option>
+                <option value="Minat" @if($organisasi->divisi == 'Minat') selected @endif>Minat</option>
+                <option value="Kominfo" @if($organisasi->divisi == 'Kominfo') selected @endif>Kominfo</option>
+                <option value="Humas" @if($organisasi->divisi == 'Humas') selected @endif>Humas</option>
+            </select>
+        </div>
 
         <br>
-
-        <br>
-        <label class="form-label mb-3">Jabatan</label>
-        <input type="text" class="form-control mb-3" name="jabatan" value="{{$organisasi->jabatan}}">
-
-        
-
-        <br>
-        <input type="submit" value="Edit Data Anggota" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary">Edit Data Anggota</button>
     </form>
 
     <br>
-    {{-- menampilkan error validasi --}}
+
+    {{-- Menampilkan error validasi --}}
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -48,4 +61,24 @@
 
 </div>
 
+<script>
+    function previewImage() {
+        var preview = document.getElementById('preview');
+        var fileInput = document.getElementById('gambar');
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = '';
+            preview.style.display = 'none';
+        }
+    }
+</script>
 @endsection
