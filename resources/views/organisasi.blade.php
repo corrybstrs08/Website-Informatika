@@ -1,20 +1,19 @@
 @extends('master')
 
 @section('section')
-    <h1 class="serv text-body"><b>Struktur Keanggotaan</b></h1>
+    <h1 class="serv text-body text-center"><b>Struktur Keanggotaan</b></h1>
     <section>
+        <h2 class="serv text-body text-center"><b>BPH</b></h2>
         <div class="serv text-body">
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi as $item)
-                    <div class="card-link">
-                        <div class="card m-2" style="width: 18rem; height: 10rem;">
-                            <div class="text-center">
-                                <img class="gbrDosen img-fluid mt-2 mb-2" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
-                                <p class="text-center"><strong>{{ $item->nama }}</strong></p>
-                                <p class="text-center">{{ $item->jabatan }}</p>
-                            </div>
-                        </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <div class="card-body">
+                        <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
+                        <p class="text-center card-text">{{ $item->nama }}</p>
                     </div>
+                </div>
                 @endforeach
             </ul>
         </div>
