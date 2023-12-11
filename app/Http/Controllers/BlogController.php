@@ -103,6 +103,15 @@ class BlogController extends Controller
         return view('staffDosen')->with('dosen', $dosen);
     }
 
+    //Tambahan utk detailDosen
+    public function detailDosen($id)
+    {
+        $dosen = DB::table('dosen')
+            ->where('id', $id)
+            ->first();
+        return view('detailDosen', ['dosen' => $dosen]);
+    }
+
     public function visiMisi()
     {
         $visi = DB::table('visi')->get();
@@ -190,33 +199,34 @@ class BlogController extends Controller
 
         return view('mahasiswa')
             ->with('data', $mahasiswa);
-            // ->with('jumlah', $aktifMahasiswaCount);
+        // ->with('jumlah', $aktifMahasiswaCount);
     }
 
-    public function filterMahasiswa(Request $request){
+    public function filterMahasiswa(Request $request)
+    {
         $responseDataDosen = Http::withToken($this->getToken())
-        ->asForm()
-        ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-        ->body();
+            ->asForm()
+            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
+            ->body();
 
         //mengubah data tersebut menjadi array
         $jsonDataDosen = json_decode($responseDataDosen, true);
         $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
 
-        if ($request->searchby == 'angkatan'){
-            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request){
+        if ($request->searchby == 'angkatan') {
+            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request) {
                 return $item['angkatan'] == $request->searchvalue;
             });
         }
         // dd($mahasiswa);
 
-        if ($request->searchby == 'status'){
+        if ($request->searchby == 'status') {
             $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request) {
                 return $item['status'] == $request->searchvalue;
             });
         }
 
-        if ($request->searchby == ''){
+        if ($request->searchby == '') {
             return view('mahasiswa')
                 ->with('data', $filterMahasiswa);
         }
@@ -337,7 +347,5 @@ class BlogController extends Controller
 
         //menampung variabel dosen tersebut
         $nama = $jsonDataDosen['data']['dosen'][0]['nama'];
-
     }
-
 }
