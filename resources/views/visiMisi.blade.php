@@ -2,14 +2,6 @@
 
 @section('section')
     <div class="bg-light py-3">
-        <div class="col">
-            <div class="row">
-
-            </div>
-            <div class="row">
-
-            </div>
-         </div>
         <div class="d-flex justify-content-center ">
             <h1 class="p-5  rounded-5"
                 style="background: rgb(133,128,218);
