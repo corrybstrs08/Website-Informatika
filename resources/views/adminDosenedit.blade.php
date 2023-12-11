@@ -16,7 +16,9 @@
         <br><br>
 
         <label class="form-label">Deskripsi</label>
-        <textarea class="form-control" name="deskripsi"></textarea>
+        <textarea class="form-control" name="deskripsi" rows="3" id="text-area">
+        {{ $dosen->deskripsi }}
+        </textarea>
 
         <br><br>
 
@@ -49,4 +51,14 @@
 
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create(document.querySelector('#text-area'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 @endsection
