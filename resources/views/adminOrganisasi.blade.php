@@ -14,6 +14,7 @@
                 <th scope="col">Nama</th>
                 <th scope="col">Gambar</th>
                 <th scope="col">Jabatan</th>
+                <th scope="col">Divisi</th>
                 <th scope="col">Operasi</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                     <td>{{ $item->nama }}</td>
                     <td><img src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" height="50em"></td>
                     <td>{{ $item->jabatan }}</td>
+                    <td>{{ $item->divisi }}</td>
                     <td class="d-flex">
                         <a href="/admin/editOrganisasi/{{ $item->id }}"><button type="button"
                                 class="btn btn-primary mx-1">Edit</button></a>
