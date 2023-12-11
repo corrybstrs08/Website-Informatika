@@ -2,7 +2,7 @@
 
 @section('section')
 
-<h3>Visi</h3>
+<h3>Sejarah</h3>
 
 <form action="/admin/editSejarah/proses" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
