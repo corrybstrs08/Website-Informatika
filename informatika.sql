@@ -32,10 +32,43 @@ CREATE TABLE `dosen` (
 ALTER TABLE dosen
 ADD COLUMN deskripsi TEXT NOT NULL AFTER gambar;
 
+DELETE FROM dosen WHERE id = 3;
+
 UPDATE `dosen`
-SET deskripsi = 'Arie Satia Dharma, S.T, M.Kom adalah Kaprodi dari Prodi S1 Informatika'
+SET deskripsi = '<p>Jabatan&nbsp; &nbsp; &nbsp;: Ketua Program Studi Sarjana Informatika dan Ketua Senat Fakultas Informatika dan Teknik Elektro</p><p>Email&nbsp; &nbsp; &nbsp; &nbsp; : <a href="mailto:ariesatia@del.ac.id">ariesatia@del.ac.id</a></p><p>Latar Belakang Pendidikan&nbsp; &nbsp;:</p><ul><li>S1 Teknik Elektro Universitas Kristen Maranatha</li><li>S2 Teknik Informatika USU</li></ul><p><strong>Publikasi :</strong></p><ol><li>Analisis Algoritma Approximate String Matching pada Fitur Autocorrect dalam Pencarian Data, Seminar Nasional Teknologi Informasi dan Komunikasi di Daerah Rural (SNaTIKRa) 2017, 22 November 2017</li></ol>'
 WHERE id = 1;
 
+UPDATE `dosen`
+SET deskripsi = '<p>Jabatan&nbsp; &nbsp; : Dosen</p><h4>Personal</h4><figure class="table"><table><tbody><tr><td>Name</td><td>:</td><td>Johannes Harungguan&nbsp;Sianipar</td></tr><tr><td>Birth</td><td>:</td><td>16 April 1973</td></tr><tr><td>Marital Status</td><td>:</td><td>Married</td></tr><tr><td>Citizenship</td><td>:</td><td>Indonesia</td></tr><tr><td>Address</td><td>:</td><td>Komp. IT Del, Jl. SM Raja Sitoluama – Kec. Laguboti, Kab. Toba, Sumatera Utara – 22381</td></tr><tr><td>Email Address</td><td>:</td><td><a href="mailto:runggu@yahoo.com">runggu@yahoo.com</a>&nbsp;,&nbsp;<a href="mailto:johannes@del.ac.id">johannes@del.ac.id</a></td></tr></tbody></table></figure><h4>Education</h4><figure class="table"><table><tbody><tr><td>2000</td><td>:</td><td><p>Bachelor Degree from STTTelkom (Telkom University)</p><p>Faculty of Telecommunication Engineering</p><p>Thesis: TDMA based MAC Protocol for ATM-PON</p></td></tr><tr><td>2010</td><td>:</td><td><p>Master Degree from Institut Teknologi Bandung (ITB)</p><p>Faculty of Informatics</p><p>Thesis: Log Analysis Application Development for User Access Control on Internet Proxy Server</p></td></tr><tr><td>2020</td><td>:</td><td><p>Ph.D from Hasso Plattner Institut, University of Potsdam Germany</p><p>Thesis: Towards Scalable &amp; Secure Virtual Laboratory for Cybersecurity e-Learning</p></td></tr></tbody></table></figure><h4>Academic Rank</h4><figure class="table"><table><tbody><tr><td>2004</td><td>:</td><td>Asisten Ahli</td></tr><tr><td>2012</td><td>:</td><td>Lektor</td></tr></tbody></table></figure><h4>Work Experiences</h4><figure class="table"><table><tbody><tr><td>2000 – 2002</td><td>:</td><td>Instructor of Cisco Networking Academy at ITB</td></tr><tr><td>2002 – 2013</td><td>:</td><td>Lecturer at Del Institut of Technology (IT Del) Indonesia</td></tr><tr><td>2002 – 2007</td><td>:</td><td>Network Administrator in IT Del</td></tr><tr><td>2004 – 2007</td><td>:</td><td>Head of Computer Engineering Department</td></tr><tr><td>2011 – 2012</td><td>:</td><td>Vice Director of General Administration and Resources at IT Del</td></tr><tr><td>2013 – 2019</td><td>:</td><td>Ph.D. Student at Hasso Plattner Institute</td></tr></tbody></table></figure><h4>Profesional Training</h4><figure class="table"><table><tbody><tr><td>2001</td><td>:</td><td>Cisco Networking Academy Program</td></tr><tr><td>2002</td><td>:</td><td>CCNA, CCDA Certified</td></tr></tbody></table></figure><h4>Profesional Training</h4><figure class="table"><table><tbody><tr><td>Programming Languages</td><td>:</td><td>Java, Python, C, Groovy, HTML, Javascripts</td></tr><tr><td>Operating Systems</td><td>:</td><td>CWindows Server, Linux Centos &amp; Ubuntu</td></tr><tr><td>Networking</td><td>:</td><td>Protocol (TCP/IP, etc), Wireless LAN, LAN, ATM, Frame Relay, ISDN, RIP etc.</td></tr><tr><td>Networking Services</td><td>:</td><td>DNS, DHCP, Active Directory, NGINX, NFS, SNMP, NAS, etc.</td></tr><tr><td>Hardware</td><td>:</td><td>Cisco Catalyst, Cisco Router, Firewall (Cisco PIX, Mikrotik, Fortigate), Mikrotik Router, Fiber Optic, etc.</td></tr></tbody></table></figure><h4><strong>Research Interest</strong></h4><figure class="table"><table><tbody><tr><td>1.</td><td>Virtual Laboratory for Cyber Security e-Learning</td></tr><tr><td>2.</td><td>Distributed System &amp; Cloud Computing</td></tr><tr><td>3.</td><td>Security in Cloud Computing</td></tr><tr><td>4.</td><td>Machine Learning in Cyber Security</td></tr></tbody></table></figure><h4><strong>Publications</strong></h4><figure class="table"><table><tbody><tr><td>1.</td><td>Sianipar, J.: Web Usage Mining Log Akses Proxy Server Untuk Pengelolaan Akses Internet., Proceeding SNEEMO 2011, Politeknik Manufaktur Astra Jakarta, ISBN 9786021904305, 2011</td></tr><tr><td>2.</td><td>Sianipar, J.: Sistem Informasi Pelaporan Penggunaan Sumber Daya Jaringan di Politeknik Informatika Del, Proceeding SNEEMO 2011, Politeknik Manufaktur Astra Jakarta, ISBN 9786021904305, 2011</td></tr><tr><td>3.</td><td>Sianipar, J., Saleh, E., Meinel, C.: Construction of Agent-Based Trust in Cloud Infrastructure. In Proceedings of the 2014 IEEE/ACM 7th International Conference on Utility and Cloud Computing, pages 941-946. IEEE Computer Society. (2014)</td></tr><tr><td>4.</td><td>Saleh, E., Sianipar, J., Meinel, C.: SecPlace: A Security-Aware Placement Model for Multi-tenant SaaS Environments. In Proceedings of IEEE 11th Intl Conf on Autonomic and Trusted Computing. IEEE ACT. (2014)</td></tr><tr><td>5.</td><td>Sianipar, J., Meinel, C.: A verification mechanism for cloud brokerage system. In Proceedings of 2015 Second International Conference on Computer Science, Computer Engineering, and Social Media (CSCESM), pages 143- 148. IEEE. (2015)</td></tr><tr><td>6.</td><td>Sianipar, J., Willems, C., Meinel, C.: A container-based virtual laboratory for internet security e-learning. In International Journal of Learning and Teaching. IJLT, vol. 2, no. 2, pp. 121{128. (2016)</td></tr><tr><td>7.</td><td>Sianipar, J., Willems, C., Meinel, C.: Crowdresourcing Virtual Laboratory Architecture On Hybrid Cloud. In INTED2016 Proceedings, 10th International Technology, Education and Development Conference, pages 2940-2949. IATED. (2016)</td></tr><tr><td>8.</td><td>Sianipar, J., Willems, C., Meinel, C.: Signed URL for an Isolated Web Server in a Virtual Laboratory. In Proceedings of the 2017 9th International Conference on Education Technology and Computers, pages 218-222. ACM. (2017)</td></tr><tr><td>9.</td><td>Sianipar, J., Willems, C., Meinel, C.: Team Placement in Crowd-Resourcing Virtual Laboratory for IT Security e-Learning. In Proceedings of the 2017 International Conference on Cloud and Big Data Computing, pages 60-66. ACM. (2017)</td></tr><tr><td>10.</td><td>Sianipar, J., Willems, C., Meinel, C.: Virtual Machine Integrity Verification in Crowd-Resourcing Virtual Laboratory. In 2018 IEEE 11th Conference on Service-Oriented Computing and Applications (SOCA), pages 169-176. ACM. (2018)</td></tr><tr><td>11.</td><td>Sianipar, J., Sukmana, M., Meinel, C.:Moving Sensitive Data Against Live Memory Dumping, Spectre and Meltdown Attacks. 2018 26th International Conference on Systems Engineering (ICSEng). IEEE. (2018)</td></tr></tbody></table></figure><h4><strong>Advising</strong></h4><figure class="table"><table><tbody><tr><td>1.</td><td><p>Roosen Gabriel Manurung</p><ul><li>Research Area: Distributed System &amp; Cloud Computing</li><li>Competencies: Analytical ability, Problem-solving</li><li>Skills: Computer Networking, Programming</li></ul></td></tr><tr><td>2.</td><td><p>Yoel Napitupulu</p><ul><li>Research Area: Distributed System &amp; Cloud Computing</li><li>Competencies: Analytical ability, Problem-solving</li><li>Skills: Computer Networking, Programming</li></ul></td></tr></tbody></table></figure><p>&nbsp;</p>'
+WHERE id = 4;
+
+UPDATE `dosen`
+SET deskripsi = '<p>Vice Rector of Academic and Student Affairs (2013-2015)<br>Dean of Faculty of Informatics and Electrical Engineering (2013-2015)<br>Of Del Institute of Technology<br>Vice Rector of Planning, Resources, and Finance Affairs (2017-now)<br>She received her Bachelor Degree from Bandung Institute of Technology, Indonesia, in Informatics Engineering (1998-2002). Then she got her master degree of ICT from Wollongong University, Australia in 2005. She pursued her PhD in Software Testing from Swinburne University of Technology, Australia (2010).</p><p>After receiving her Bachelor Degree, she took a position as a junior lecturer in Del Polytechnic of Informatics (an earlier form of Del Institute of Technology). In 2010, she was appointed as Vice Director of Academic and Student affairs and in 2012 as the Director of Del Polytechnic of Informatics. After Del Polytechnic of Informatics was transformed into Del Institute of Technology in 2013, she was appointed as Vice Rector of Academic and Student Affairs, as well as the Dean of Faculty of Informatics and Electrical Engineering.</p><p>She is contactable by email :&nbsp;<a href="mailto:arlinta@del.ac.id">arlinta@del.ac.id</a>, and&nbsp;<a href="mailto:arlintacbarus@gmail.com">arlintacbarus@gmail.com</a>&nbsp;and also by phone: +62 632 331234 (office) and +62 81375660081 (mobile)</p><p>&nbsp;</p><h4>Publications</h4><figure class="table"><table><tbody><tr><td rowspan="3">1</td><td>Nama</td><td>Arlinta Christy Barus, Tsong Yueh Chen, Fei-Ching Kuo, Huai Liu, Robert G. Merkel, Gregg Rothermel</td></tr><tr><td>Judul</td><td>A Cost-Effective Random Testing Method for Programs with Non-Numeric Inputs</td></tr><tr><td>Jurnal</td><td>Journal IEEE Transactions on Computers<br>Volume 65 Issue 12, December 2016<br><a href="http://ieeexplore.ieee.org/document/7442567/">http://ieeexplore.ieee.org/document/7442567/</a><br>doi:&nbsp;<a href="https://doi.org/10.1109/TC.2016.2547380">10.1109/TC.2016.2547380</a>, ISSN: 0018-9340<br>(<a href="http://www.del.ac.id/people/arlinta/files/01_IEEE%20Journal%20Version.pdf">file1</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/01_Peer%20Reviewer.pdf">peer_review</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/turnitin/01_A%20Cost-Effective%20Random%20Testing%20Method%20for%20Programs%20with%20Non-Numeric%20Inputs%20versi%202.pdf">cek_turnitin</a>)</td></tr><tr><td rowspan="3">2</td><td>Nama</td><td>Arlinta C Barus, Muhammad Lukman, Ovryenni Pandiangan, Surya Simangunsong, Fitri Juliana Manurung</td></tr><tr><td>Judul</td><td>Generating Ulos Pattern by Using L-System</td></tr><tr><td>&nbsp;</td><td>Journal of Engineering and Applied Sciences 12(9): 2316-2321, 2017 (<a href="http://www.del.ac.id/people/arlinta/files/02_JurnalEngApplied%20Science.pdf">file1</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/02_Peer%20Reviewer.pdf">peer_review</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/turnitin/02_LSystem_Ulos_Raeic_New_Cek%20Turnitin.pdf">cek_turnitin</a>)</td></tr><tr><td rowspan="3">3</td><td>Nama</td><td>Arlinta Christy Barus, Leo Siburian</td></tr><tr><td>Judul</td><td>STUDI PERBANDINGAN ALAT PENGUJIAN OTOMATIS UNTUK APLIKASI ANDROID</td></tr><tr><td>Jurnal</td><td>Jurnal Teknologi Informasi dan Ilmu Komputer (JTIIK) (<a href="http://www.del.ac.id/people/arlinta/files/03a_JTIIK_ACB.pdf">file1</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/03b_JTIIK_ACB_Acceptance%20proof.pdf">file2</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/03_Peer%20Reviewer.pdf">peer_review</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/turnitin/03a_JTIIK_ACB.pdf">cek_turnitin</a>)</td></tr><tr><td rowspan="3">4</td><td>Nama</td><td>Arlinta Christy Barus</td></tr><tr><td>Judul</td><td>Matrix Multiplication Program: a Case Study of Metamorphic Testing</td></tr><tr><td>&nbsp;</td><td>ARPN Journal of Engineering and Applied Science, VOL. 10, NO. 3, FEBRUARY 2015 ,<br><a href="http://www.arpnjournals.com/jeas/research_papers/rp_2015/jeas_0215_1580.pdf">http://www.arpnjournals.com/jeas/research_papers/rp_2015/jeas_0215_1580.pdf</a>, ISSN 1819-6608 (Online), (<a href="http://www.del.ac.id/people/arlinta/files/04_ARPN%20Journal.pdf">file1</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/04_Peer%20Reviewer.pdf">peer_review</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/turnitin/04_ARPN%20Journal_cek%20II.pdf">cek_turnitin</a>)</td></tr><tr><td rowspan="3">5</td><td>Nama</td><td>Arlinta Christy Barus, Dian Ira Putri Hutasoit, Joel Hunter Siringoringo, Yusfi Apriyanti Siahaan</td></tr><tr><td>Judul</td><td>White box testing tool prototype development</td></tr><tr><td>&nbsp;</td><td>2015 International Conference on Electrical Engineering and Informatics (ICEEI),<br><a href="http://ieeexplore.ieee.org/document/7352537/">http://ieeexplore.ieee.org/document/7352537/</a>&nbsp;,&nbsp;<a href="https://doi.org/10.1109/ICEEI.2015.7352537">DOI: 10.1109/ICEEI.2015.7352537</a>,<br>Electronic ISSN: 2155-6830, (<a href="http://www.del.ac.id/people/arlinta/files/05_internasional%20conference%20ICEEI.pdf">file1</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/05_Peer%20Reviewer.pdf">peer_review</a>,&nbsp;<a href="http://www.del.ac.id/people/arlinta/files/turnitin/05_internasional%20conference%20ICEEI-Cek%20II.pdf">cek_turnitin</a>)</td></tr><tr><td rowspan="2">6</td><td>Nama</td><td>Arlinta Christy Barus, Tsong Yueh Chen, Fei-Ching Kuo, Huai Liu, Heinz W. Schmid</td></tr><tr><td>Judul</td><td>The impact of source test case selection on the effectiveness of metamorphic testing.</td></tr></tbody></table></figure>'
+WHERE id = 2;
+
+UPDATE `dosen`
+SET deskripsi = '<p>&nbsp;</p><figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>iustisia.simbolon@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p>'
+WHERE id = 6;
+
+UPDATE `dosen`
+SET deskripsi = '<figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>nenni.aruan@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td>&nbsp;</td></tr></tbody></table></figure>'
+WHERE id = 7;
+
+UPDATE `dosen`
+SET deskripsi = '<figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>yaya@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td><ul><li>S1 Matematika ITB 2000</li><li>S2 Informatika ITB 2011</li></ul></td></tr></tbody></table></figure>'
+WHERE id = 13;
+
+UPDATE `dosen`
+SET deskripsi = '<figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td><a href="mailto:litmalem.ginting@del.ac.id">litmalem.ginting@del.ac.id</a></td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td><ul><li>S1 Fisika ITB 2005</li><li>S2 Informatika ITB 2012</li></ul></td></tr></tbody></table></figure><h4>Publikasi</h4><figure class="table"><table><tbody><tr><td><ol><li>&nbsp;</li></ol></td><td>Kajian Algoritma Craig Raynold pada Kerumunan (Flocking), Seminar Nasional Teknologi Informasi dan Komunikasi di Daerah Rural (SNaTIKRa) 2017, 22 November 2017</td></tr></tbody></table></figure>'
+WHERE id = 12;
+
+UPDATE `dosen`
+SET deskripsi = '<figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>anthon.roberto@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td><ul><li>S1 Teknik Informatika STIKOM UYELINDO Kupang</li><li>S2 Informatika Institut Teknologi Bandung</li></ul></td></tr></tbody></table></figure><h4>Publikasi</h4><figure class="table"><table><tbody><tr><td>1</td><td>Document Clustering using Combination of Kmeans and Single Linkage Clustering Algorithm</td></tr><tr><td>2</td><td>Implementation of Sentiment Analysis on Twitter Using Naive Bayes Algorithm to Know the People Responses to the Debate of DKI Jakarta Governor Election, The 2017 3rd Recent Advancement in Informatics, Electrical and Electronics Engineering International Conference (RAIEIC), 20-22 November 2017</td></tr></tbody></table></figure>'
+WHERE id = 11;
+
+UPDATE `dosen`
+SET deskripsi = ''
+WHERE id = ;
 
 /*Data for the table `dosen` */
 
@@ -92,16 +125,16 @@ INSERT  INTO `events`(`id`,`nama`,`waktu_mulai`,`waktu_selesai`,`deskripsi_singk
 DROP TABLE IF EXISTS `failed_jobs`;
 
 CREATE TABLE `failed_jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `uuid` VARCHAR(255) NOT NULL,
+  `connection` TEXT NOT NULL,
+  `queue` TEXT NOT NULL,
+  `payload` LONGTEXT NOT NULL,
+  `exception` LONGTEXT NOT NULL,
+  `failed_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `failed_jobs` */
 
@@ -110,14 +143,14 @@ CREATE TABLE `failed_jobs` (
 DROP TABLE IF EXISTS `jumlah`;
 
 CREATE TABLE `jumlah` (
-  `Mahasiswa` int(11) NOT NULL,
-  `StaffDosen` int(11) NOT NULL,
-  `Publikasi` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `Mahasiswa` INT(11) NOT NULL,
+  `StaffDosen` INT(11) NOT NULL,
+  `Publikasi` INT(11) NOT NULL
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `jumlah` */
 
-insert  into `jumlah`(`Mahasiswa`,`StaffDosen`,`Publikasi`) values 
+INSERT  INTO `jumlah`(`Mahasiswa`,`StaffDosen`,`Publikasi`) VALUES 
 (223,261,13);
 
 /*Table structure for table `kompetisi` */
@@ -125,19 +158,19 @@ insert  into `jumlah`(`Mahasiswa`,`StaffDosen`,`Publikasi`) values
 DROP TABLE IF EXISTS `kompetisi`;
 
 CREATE TABLE `kompetisi` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nama` varchar(100) NOT NULL,
-  `tanggal` date NOT NULL,
-  `penyelenggara` varchar(100) NOT NULL,
-  `keterangan` text NOT NULL,
-  `gambar` varchar(255) NOT NULL,
-  `link` varchar(100) NOT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(100) NOT NULL,
+  `tanggal` DATE NOT NULL,
+  `penyelenggara` VARCHAR(100) NOT NULL,
+  `keterangan` TEXT NOT NULL,
+  `gambar` VARCHAR(255) NOT NULL,
+  `link` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `kompetisi` */
 
-insert  into `kompetisi`(`id`,`nama`,`tanggal`,`penyelenggara`,`keterangan`,`gambar`,`link`) values 
+INSERT  INTO `kompetisi`(`id`,`nama`,`tanggal`,`penyelenggara`,`keterangan`,`gambar`,`link`) VALUES 
 (1,'International Design Challenge 2022','2022-08-31','Binus University','Lomba Design internasional yang diadakan oleh binus','k1.jpg','https://sis.binus.ac.id/idc'),
 (2,'INTERNATIONAL ENTREPRENEUR VIEW 2022','2022-08-21','Universitas indonesia','Kompetisi Business Plan','2.jpg','https://drive.google.com/file/d/1wHq78V4b_7axgbV3fpKi1ZTO9oPKCn-I/view?usp=sharing'),
 (3,'Management Startup Challenge (MSC)','2022-09-18','Universitas Airlangga','Kompetisi Business Plan','3.jpg','https://mexpounair.com/wp-content/uploads/2022/07/booklet-penyisihan-msc-2022.pdf'),
@@ -149,17 +182,17 @@ insert  into `kompetisi`(`id`,`nama`,`tanggal`,`penyelenggara`,`keterangan`,`gam
 DROP TABLE IF EXISTS `kurikulum`;
 
 CREATE TABLE `kurikulum` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `kode` varchar(100) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `semester` int(11) NOT NULL,
-  `sks` int(11) NOT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `kode` VARCHAR(100) NOT NULL,
+  `nama` VARCHAR(100) NOT NULL,
+  `semester` INT(11) NOT NULL,
+  `sks` INT(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `kurikulum` */
 
-insert  into `kurikulum`(`id`,`kode`,`nama`,`semester`,`sks`) values 
+INSERT  INTO `kurikulum`(`id`,`kode`,`nama`,`semester`,`sks`) VALUES 
 (1,'KUS1102','Pembentukan Karakter Del',1,2),
 (2,'MAS1101','Matematika Dasar I',1,4),
 (3,'TIS1101','Inovasi Digital',1,2),
@@ -222,15 +255,15 @@ insert  into `kurikulum`(`id`,`kode`,`nama`,`semester`,`sks`) values
 DROP TABLE IF EXISTS `migrations`;
 
 CREATE TABLE `migrations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) NOT NULL,
-  `batch` int(11) NOT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `migration` VARCHAR(255) NOT NULL,
+  `batch` INT(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `migrations` */
 
-insert  into `migrations`(`id`,`migration`,`batch`) values 
+INSERT  INTO `migrations`(`id`,`migration`,`batch`) VALUES 
 (15,'2014_10_12_000000_create_users_table',1),
 (16,'2014_10_12_100000_create_password_resets_table',1),
 (17,'2019_08_19_000000_create_failed_jobs_table',1),
@@ -241,14 +274,14 @@ insert  into `migrations`(`id`,`migration`,`batch`) values
 DROP TABLE IF EXISTS `misi`;
 
 CREATE TABLE `misi` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `misi` text NOT NULL,
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `misi` TEXT NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `misi` */
 
-insert  into `misi`(`id`,`misi`) values 
+INSERT  INTO `misi`(`id`,`misi`) VALUES 
 (1,'Menyelenggarakan pendidikan teknik informatika yang bermutu, profesional dan diperhitungkan secara nasional.'),
 (2,'Menyelenggarakan penelitian yang menghasilkan dan memanfaatkan teknologi untuk mengembangkan potensi lokal.'),
 (3,'Melakukan pengabdian kepada masyarakat dalam bidang teknik informatika.');
@@ -258,19 +291,19 @@ insert  into `misi`(`id`,`misi`) values
 DROP TABLE IF EXISTS `news_article`;
 
 CREATE TABLE `news_article` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `judul` varchar(255) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
-  `isi` text NOT NULL,
-  `gambar` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `judul` VARCHAR(255) NOT NULL,
+  `deskripsi` VARCHAR(255) NOT NULL,
+  `isi` TEXT NOT NULL,
+  `gambar` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `news_article` */
 
-insert  into `news_article`(`id`,`judul`,`deskripsi`,`isi`,`gambar`,`created_at`,`updated_at`) values 
+INSERT  INTO `news_article`(`id`,`judul`,`deskripsi`,`isi`,`gambar`,`created_at`,`updated_at`) VALUES 
 (1,'3 Mahasiswa Informatika IT DEL lolos Garuda ACE 2022','Garuda Research And Academic Of Excellence (Garuda ACE) merupakan salah satu program MBKM berjenis Penelitian yang diberikan kepada mahasiswa berprestasi  yang ingin berkolaborasi dengan profesor di AS.','Program Garuda ACE ini adalah program capacity building selama dua tahun, untuk murid-murid Indonesia (dosen/peneliti/profesional muda) yang akan mendapatkan bimbingan langsung dari para Profesor dan peneliti di UChicago Amerika, sehingga diharapkan mereka dapat mendapatkan ‘Letter of Acceptance (LoA)’ dalam PhD program di UChicago atau di universitas terkemuka lainnya, karena pembimbingan intensif sebelumnya.\n\n            Dan dari Institut Teknologi Del ada 5 mahasiswa terpilih yang akan dikirimkan untuk mengikuti program ini, yaitu:\n            1. Natanael Jansudin Siregar\n            2. Marcellino Kelly N Lumban Gaol\n            3. Wordyka Yehezkiel Nainggolan\n            4. Yoel Napitupulu\n            5. Roosen Gabriel Manurung\n            \n            Tiga di antara lima mahasiswa tersebut yaitu Natanael Jansudin Siregar, Yoel Napitupulu, dan Roosen Gabriel Manurung adalah mahasiswa yang berasal dari HMASTI (Himpunan Mahasiswa S1 Informatika).','1.jpg',NULL,NULL),
 (2,'Mahasiswa prodi Informatika lolos Penerima  P2MW 2022','Mahasiswa IT Del Prodi Informatika yang lolos sebagai Penerima Bantuan Program Pembinaan Mahasiswa Wirausaha (P2MW) 2022: Samuel Sibuea, Guntur Sinaga, Lamboy Sirait, Michael Napitupulu','Dengan Judul Usaha \'Manajemen Sumber Daya Tambak Toba\' 3 mahasiswa IT del pada Prodi Informatika lolos sebagai Penerima Bantuan Program Pembinaan Mahasiswa Wirausaha (P2MW) 2022:  Samuel Sibuea, Guntur Sinaga, Lamboy Sirait, Michael Napitupulu\n\n                Program Pembinaan Mahasiswa Wirausaha (P2MW) merupakan program pengembangan usaha mahasiswa yang telah memiliki usaha melalui bantuan dana pengembangan dan pembinaan dengan melakukan pendampingan serta pelatihan (coaching) usaha kepada mahasiswa yang bertujuan untuk mendorong dan mencetak mahasiswa dalam menjalankan dan mengembangkan wirausaha serta meningkatkan program kewirausahaan di perguruan tinggi.\n                \n                Kategori usaha yang tersedia juga berbagai jenis, yakni: \n                Makanan dan Minuman\n                Menghasilkan produk makanan dan minuman baik dari bahan mentah menjadi setengah jadi, bahan setengah jadi diolah menjadi produk akhir (bukan reseller).\n                Produksi atau Budidaya\n                Proses produksi dari hulu ke hilir bidang-bidang agrokomplek (pertanian tanaman pangan, hortikultura, kehutanan, peternakan, dan perikanan).\n                Industri Kreatif, Seni, Budaya, dan Pariwisata\n                Proses penciptaan produk dan jasa yang memiliki nilai kreativitas dan ide yang dijadikan produk ekonomi dalam bidang seni, budaya, dan pariwisata.\n                Jasa dan Perdagangan\n                Melakukan aktivitas jual beli barang dan/atau jasa yang dilakukan antara pedagang dan pembeli.\n                Teknologi Terapan\n                Penerapan teknologi tepat guna di berbagai sektor kehidupan.\n                ','2.png',NULL,NULL),
 (3,'Tim CICAKCICAK DIDINDING Ist Runner UP Hackathon Code','Selamat kepada tim Cicak cicak didinding yang memperoleh 1st Runner Up Hackathon Code For The Nation pada tanggal 28 Oktober 2022, juga sebagai Best Speaker pada Hackathon Code For The Nation ','Hackathon : Code for the Nation merupakan kompetisi  yang diadakan oleh tiga pihak (riset.ai, Biznet Gio, IT Del) untuk menguji pemahaman terkait bidang keprofesian dalam teknologi informasi serta menguji kemampuan problem solving untuk mahasiswa S1/D3 di daerah Medan dan sekitarnya. Hackathon Competition ini akan diadakan dalam 2 (dua) jenis babak:\n                    1. Preliminary Round\n                    Tahap Preliminary Round, peserta akan diberikan sebuah studi kasus yang harus diselesaikan dengan membuat proposal dan video penjelasan atas masalah yang ada.\n                    2. Final Round\n                    Final Round, peserta akan merealisasikan proposal yang ditawarkan dalam bentuk demo produk dan diuji dengan melakukan presentasi proposal beserta dengan demo produk. Solusi yang diberikan harus diselesaikan dengan memanfaatkan keberadaan dan perkembangan teknologi informasi khususnya Artificial Intelligence (AI) .\n                    Kompetisi ini sudah selesai dilaksanakan. Dan 1 tim yaitu tim CICAKCICAK DIDINDING yang terdiri dari  Natanael Jansudin Siregar, Yoel Napitupulu, dan Roosen Gabriel Manurung memenangkan kompetisi tersebut di kedudukan no 1.\n                    ','3.jpg',NULL,NULL),
@@ -283,12 +316,12 @@ insert  into `news_article`(`id`,`judul`,`deskripsi`,`isi`,`gambar`,`created_at`
 DROP TABLE IF EXISTS `organisasi`;
 
 CREATE TABLE `organisasi` (
-  `organisasi` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `organisasi` VARCHAR(100) NOT NULL
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `organisasi` */
 
-insert  into `organisasi`(`organisasi`) values 
+INSERT  INTO `organisasi`(`organisasi`) VALUES 
 ('organisasi.png');
 
 /*Table structure for table `password_resets` */
@@ -296,11 +329,11 @@ insert  into `organisasi`(`organisasi`) values
 DROP TABLE IF EXISTS `password_resets`;
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `token` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
   KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `password_resets` */
 
@@ -309,20 +342,20 @@ CREATE TABLE `password_resets` (
 DROP TABLE IF EXISTS `personal_access_tokens`;
 
 CREATE TABLE `personal_access_tokens` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `tokenable_type` varchar(255) NOT NULL,
-  `tokenable_id` bigint(20) unsigned NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
-  `last_used_at` timestamp NULL DEFAULT NULL,
-  `expires_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tokenable_type` VARCHAR(255) NOT NULL,
+  `tokenable_id` BIGINT(20) UNSIGNED NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `token` VARCHAR(64) NOT NULL,
+  `abilities` TEXT DEFAULT NULL,
+  `last_used_at` TIMESTAMP NULL DEFAULT NULL,
+  `expires_at` TIMESTAMP NULL DEFAULT NULL,
+  `created_at` TIMESTAMP NULL DEFAULT NULL,
+  `updated_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `personal_access_tokens` */
 
@@ -331,12 +364,12 @@ CREATE TABLE `personal_access_tokens` (
 DROP TABLE IF EXISTS `sejarah`;
 
 CREATE TABLE `sejarah` (
-  `sejarah` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `sejarah` TEXT NOT NULL
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `sejarah` */
 
-insert  into `sejarah`(`sejarah`) values 
+INSERT  INTO `sejarah`(`sejarah`) VALUES 
 ('Program Studi S1 Teknik Informatika merupakan salah satu dari 4 (empat) program studi di bawah Fakultas Teknik Informatika dan Elektro di Institut Teknologi Del. Program studi ini dibentuk “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate quam vitae purus efficitur pulvinar id a lectus. Phasellus at magna.\n\n            Prodi S1 Informatika ini di rancang sejak tahun 2013 dan beroperasi pada tahun 2014 bersama dengan 2 prodi lainnya yaitu prodi S1 Teknik Elektro dan S1 Sistem Informasi. Ketiga prodi ini tergabung dalam 1 fakultas yaitu FITE (Fakultas Teknik Elektro dan Informatika).\n            \n            Fakultas ini berdiri pada tahun 2013 seiring dengan perubahan Politeknik Informatika Del (PI Del) menjadi Institut Teknologi Del (IT Del).');
 
 /*Table structure for table `users` */
@@ -344,12 +377,12 @@ insert  into `sejarah`(`sejarah`) values
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `email_verified_at` TIMESTAMP NULL DEFAULT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `remember_token` VARCHAR(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
