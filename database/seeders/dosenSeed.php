@@ -173,6 +173,12 @@ class dosenSeed extends Seeder
                 <li>S2 Informatika ITB 2011</li></ul></td></tr></tbody></table></figure>',
                 'gambar' => "Yaya.jpg",
             ],
+
+            [
+                'nama' => "Ranty Deviana Siahaan, S.Kom, M.Eng.",
+                'deskripsi' => "",
+                'gambar' => "t.png",
+            ],
         ]);
     }
 }
