@@ -34,12 +34,12 @@
             <label for="divisi" class="form-label">Divisi</label>
             <select class="form-control" id="divisi" name="divisi">
                 <option value="BPH" @if($organisasi->divisi == 'BPH') selected @endif>BPH</option>
-                <option value="Ristek" @if($organisasi->divisi == 'Ristek') selected @endif>Ristek</option>
-                <option value="Pendidikan" @if($organisasi->divisi == 'Pendidikan') selected @endif>Pendidikan</option>
                 <option value="Danus" @if($organisasi->divisi == 'Danus') selected @endif>Danus</option>
-                <option value="Minat" @if($organisasi->divisi == 'Minat') selected @endif>Minat</option>
-                <option value="Kominfo" @if($organisasi->divisi == 'Kominfo') selected @endif>Kominfo</option>
                 <option value="Humas" @if($organisasi->divisi == 'Humas') selected @endif>Humas</option>
+                <option value="Kominfo" @if($organisasi->divisi == 'Kominfo') selected @endif>Kominfo</option>
+                <option value="Minat" @if($organisasi->divisi == 'Minat') selected @endif>Minat</option>
+                <option value="Pendidikan" @if($organisasi->divisi == 'Pendidikan') selected @endif>Pendidikan</option>
+                <option value="Ristek" @if($organisasi->divisi == 'Ristek') selected @endif>Ristek</option>
             </select>
         </div>
 

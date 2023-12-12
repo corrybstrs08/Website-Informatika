@@ -24,12 +24,12 @@
             <label for="divisi">Divisi:</label>
             <select class="form-control" id="divisi" name="divisi">
                 <option value="BPH">BPH</option>
-                <option value="Ristek">Ristek</option>
-                <option value="Pendidikan">Pendidikan</option>
                 <option value="Danus">Danus</option>
-                <option value="Minat">Minat</option>
-                <option value="Kominfo">Kominfo</option>
                 <option value="Humas">Humas</option>
+                <option value="Kominfo">Kominfo</option>
+                <option value="Minat">Minat</option>
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Ristek">Ristek</option>
             </select>
         </div>
         
