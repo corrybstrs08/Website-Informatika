@@ -197,7 +197,6 @@
             <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
             <div class=" d-flex text-dark">
                 <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
-
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper ">
                         @foreach ($berita as $item)
@@ -217,7 +216,7 @@
                     </div>
                     <div class="swiper-pagination martop"></div>
                 </div>
-                <p class=" d-flex align-items-center"><i class="beff ri-arrow-right-s-line"></i></p>
+                <p class="d-flex align-items-center"><i class="afft ri-arrow-right-s-line"></i></p>
             </div>
         </div>
         <hr class="horizontal mb-3 mt-3" />

@@ -248,7 +248,7 @@
 
         <div class="d-flex pb-5 justify-content-center text-light">
             <div id="CTA" class="w-50 p-4" style="text-align: center;background-color: rgba(156, 173, 206, 0.47);">
-                <h2 ">Bergabung Bersama Kami</h2>
+                <h2>Bergabung Bersama Kami</h2>
                 <p>Informasi Pendaftaran</p>
                 <div class=" justify-content-center d-flex ">
                     <button type="button " class="btn btn-primary ">Klik Lebih Lanjut</button>
