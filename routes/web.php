@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,7 @@ Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
 Route::get('/staffDosen', [BlogController::class, 'staffDosen']);
 Route::get('/staffDosen/{id}', [BlogController::class, 'detailDosen']); //EditCorry
 Route::get('/mahasiswa', [BlogController::class, 'mahasiswa']);
-Route::post('/mahasiswa', [BlogController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
+Route::get('/filter-mahasiswa', [BlogController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
 Route::get('/mahasiswaAlumni', [BlogController::class, 'mahasiswaAlumni']);
 Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
 Route::get('/event/{id}', [BlogController::class, 'tampil_event']);

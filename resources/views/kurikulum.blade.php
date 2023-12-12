@@ -40,21 +40,15 @@
 <section class="text-body">
     <h1 class="text-body text-center" style="font-size: 3em;"><b>Struktur Kurikulum <br> Program Studi Informatika</b></h1>
     <div class="container mt-5">
-        <form>
+        <form id="formFilterByYear">
             <div class="form-row">
                 <div class="form-group col-md-4 m-2">
                     <label for="tahun">Tahun Kurikulum</label>
-                    <select id="tahun" class="form-control">
-                        <option selected>Pilih Tahun</option>
-                        <option>2001</option>
-                        <option>2004</option>
-                        <option>2007</option>
-                        <option>2010</option>
-                        <option>2012</option>
-                        <option>2014</option>
-                        <option>2016</option>
-                        <option>2019</option>
-                        <option>2023</option>
+                    <select name="tahun" id="tahun" class="form-control" onchange="document.getElementById('formFilterByYear').submit();">
+                        <option disabled selected>Pilih Tahun</option>
+                        @foreach($tahun_kurikulum as $tahun)
+                            <option {{request()->get('tahun') == $tahun->tahun ? 'selected' : ''}} value="{{$tahun->tahun}}">{{$tahun->tahun}}</option>
+                        @endforeach
                         <!-- Tambahkan tahun lainnya sesuai kebutuhan -->
                     </select>
                 </div>

@@ -87,6 +87,9 @@ INSERT  INTO `dosen`(`id`,`nama`,`gambar`,`created_at`,`updated_at`) VALUES
 (12,'Lit Malem Ginting, S.Si, MT','t.png',NULL,NULL),
 (13,'Yaya Setiadi, S.Si., MT','t.png',NULL,NULL);
 
+INSERT  INTO `dosen`(`id`,`nama`,`gambar`, `deskripsi`, `created_at`,`updated_at`) VALUES
+(14, 'Ranty Deviana Siahaan, S.Kom, M.Eng.', 't.png', 'Ranty Deviana Siahaan, S.Kom, M.Eng.',  NULL, NULL);
+
 /*Table structure for table `events` */
 
 DROP TABLE IF EXISTS `events`;

@@ -29,7 +29,7 @@
                         
                         <a href="/admin/hapusEvent/{{$item->id}}"><button type="button" class="btn btn-danger mx-1">Hapus</button></a>
                         
-                        <a href="/event/{{$item->id}}"><button type="button" class="btn btn-success mx-1">Lihat Artikel Asli</button></a>
+                        <a href="/event/{{$item->id}}"><button type="button" class="btn btn-success mx-1" target="_blank">Lihat Artikel Pratinjau</button></a>
                     </td>
                 </tr>
             @endforeach

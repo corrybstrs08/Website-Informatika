@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 
 class BlogController extends Controller
 {
+    private $filtercategory = '';
+    private $filtervalue = '';
     public function home()
     {
         $responseData = Http::withToken($this->getToken())
@@ -73,10 +75,24 @@ class BlogController extends Controller
         return view('organisasi')->with('organisasi', $organisasi);
     }
 
-    public function kurikulum()
+    public function kurikulum(Request $request)
     {
-        $kurikulum = DB::table('kurikulum')->get();
-        return view('kurikulum')->with('kurikulum', $kurikulum);
+        $targetYear = $request->query("tahun");
+
+        $kurikulum = null;
+        if(!$targetYear){
+            $kurikulum = DB::table('kurikulum')->get();
+        }else{
+            $kurikulum = DB::table('kurikulum')->where('tahun', $targetYear)->get();
+        }
+
+        $tahun_kurikulum = DB::table('kurikulum')->distinct()->whereNot("tahun", null)->orderByDesc("tahun")->get(["tahun"]);
+
+        $data = [
+            "kurikulum" => $kurikulum,
+            "tahun_kurikulum" => $tahun_kurikulum
+        ];
+        return view('kurikulum', $data);
     }
 
     public function sejarah()
@@ -103,7 +119,6 @@ class BlogController extends Controller
         return view('staffDosen')->with('dosen', $dosen);
     }
 
-    //Tambahan utk detailDosen
     public function detailDosen($id)
     {
         $dosen = DB::table('dosen')
@@ -182,57 +197,74 @@ class BlogController extends Controller
 
     public function mahasiswa()
     {
-        $responseDataDosen = Http::withToken($this->getToken())
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-            ->body();
+        $angkatan = DB::table('mahasiswa')
+            ->select('angkatan')
+            ->distinct()
+            ->get();
 
-        //mengubah data tersebut menjadi array
-        $jsonDataDosen = json_decode($responseDataDosen, true);
-        $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
+        $status = DB::table('mahasiswa')
+            ->select('status')
+            ->distinct()
+            ->get();
 
-        // $aktifMahasiswa = array_filter($mahasiswa, function ($item) {
-        //     return $item['status'] == 'Aktif';
-        // });
+        if ($this->filtercategory == 'angkatan') {
+            $mahasiswa = DB::table('mahasiswa')
+                ->where('angkatan', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'angkatan' => $this->filtervalue
+                ]);
+        }
 
-        // $aktifMahasiswaCount = count($aktifMahasiswa);
+        if ($this->filtercategory == 'status') {
+            $mahasiswa = DB::table('mahasiswa')
+                ->where('status', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'status' => $this->filtervalue
+                ]);
+        }
+
+        if ($this->filtercategory == '') {
+            $mahasiswa = DB::table('mahasiswa')
+                ->orderBy('nim', 'ASC')
+                ->paginate(20);
+        }
+
+        $mahasiswa->appends([
+            'searchby' => $this->filtercategory,
+            'searchvalue' => $this->filtervalue,
+        ]);
 
         return view('mahasiswa')
-            ->with('data', $mahasiswa);
-        // ->with('jumlah', $aktifMahasiswaCount);
+            ->with('data', $mahasiswa)
+            ->with('angkatan', $angkatan)
+            ->with('status', $status);
     }
 
     public function filterMahasiswa(Request $request)
     {
-        $responseDataDosen = Http::withToken($this->getToken())
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-            ->body();
-
-        //mengubah data tersebut menjadi array
-        $jsonDataDosen = json_decode($responseDataDosen, true);
-        $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
 
         if ($request->searchby == 'angkatan') {
-            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request) {
-                return $item['angkatan'] == $request->searchvalue;
-            });
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
         }
-        // dd($mahasiswa);
 
         if ($request->searchby == 'status') {
-            $filterMahasiswa = array_filter($mahasiswa, function ($item) use ($request) {
-                return $item['status'] == $request->searchvalue;
-            });
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
         }
 
         if ($request->searchby == '') {
-            return view('mahasiswa')
-                ->with('data', $filterMahasiswa);
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
         }
 
-        return view('mahasiswa')
-            ->with('data', $filterMahasiswa);
+        // dd($this->filtervalue);
+        $mahasiswaView = $this->mahasiswa();
+        return $mahasiswaView;
     }
 
     public function mahasiswaAlumni()

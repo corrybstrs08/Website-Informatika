@@ -17,10 +17,11 @@
 
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar Anggota</label><br/>
-            <input type="file" class="form-control" id="gambar" name="gambar">
+            <input type="file" class="form-control" id="gambar" name="gambar" onchange="previewImage()">
             @if($organisasi->gambar)
-                <img class="gbrOrganisasi w-50 mt-2" src="{{ asset('asset/img/Organisasi/' . $organisasi->gambar) }}"
-                    alt="{{ $organisasi->gambar }}">
+                <img id="preview" class="gbrOrganisasi w-50 mt-2" src="{{ asset('asset/img/Organisasi/' . $organisasi->gambar) }}" alt="{{ $organisasi->gambar }}" style="display: block;">
+            @else
+                <img id="preview" class="gbrOrganisasi w-50 mt-2" src="" alt="Preview" style="display: none;">
             @endif
         </div>
 
@@ -32,13 +33,14 @@
         <div class="mb-3">
             <label for="divisi" class="form-label">Divisi</label>
             <select class="form-control" id="divisi" name="divisi">
+                <option value="Pembina" @if($organisasi->divisi == 'Pembina') selected @endif>BPH</option>
                 <option value="BPH" @if($organisasi->divisi == 'BPH') selected @endif>BPH</option>
-                <option value="Ristek" @if($organisasi->divisi == 'Ristek') selected @endif>Ristek</option>
-                <option value="Pengetahuan" @if($organisasi->divisi == 'Pengetahuan') selected @endif>Pengetahuan</option>
                 <option value="Danus" @if($organisasi->divisi == 'Danus') selected @endif>Danus</option>
-                <option value="Minat" @if($organisasi->divisi == 'Minat') selected @endif>Minat</option>
-                <option value="Kominfo" @if($organisasi->divisi == 'Kominfo') selected @endif>Kominfo</option>
                 <option value="Humas" @if($organisasi->divisi == 'Humas') selected @endif>Humas</option>
+                <option value="Kominfo" @if($organisasi->divisi == 'Kominfo') selected @endif>Kominfo</option>
+                <option value="Minat" @if($organisasi->divisi == 'Minat') selected @endif>Minat</option>
+                <option value="Pendidikan" @if($organisasi->divisi == 'Pendidikan') selected @endif>Pendidikan</option>
+                <option value="Ristek" @if($organisasi->divisi == 'Ristek') selected @endif>Ristek</option>
             </select>
         </div>
 
