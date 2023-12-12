@@ -23,6 +23,7 @@
         <div class="form-group">
             <label for="divisi">Divisi:</label>
             <select class="form-control" id="divisi" name="divisi">
+                <option value="Pembina">Pembina</option>
                 <option value="BPH">BPH</option>
                 <option value="Danus">Danus</option>
                 <option value="Humas">Humas</option>

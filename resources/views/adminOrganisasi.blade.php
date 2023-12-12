@@ -40,6 +40,6 @@
     </table>
 
     <a href="/organisasi"><button type="button" class="btn btn-success mx-1">Lihat
-        Artikel Asli</button></a>
+        Pratinjau Tampilan</button></a>
 
 @endsection

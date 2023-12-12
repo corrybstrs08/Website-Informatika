@@ -42,7 +42,7 @@ class OrganisasiSeed extends Seeder
             ],
             [
                 'nama'=>"Ella Tasya Silaban",
-                'gambar'=> "ella_bendahara.jpg",
+                'gambar'=> "ella_bendahara.jpeg",
                 'divisi' => "BPH",
                 'jabatan' => "Bendahara"
             ],

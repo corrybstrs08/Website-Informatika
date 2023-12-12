@@ -33,6 +33,7 @@
         <div class="mb-3">
             <label for="divisi" class="form-label">Divisi</label>
             <select class="form-control" id="divisi" name="divisi">
+                <option value="Pembina" @if($organisasi->divisi == 'Pembina') selected @endif>BPH</option>
                 <option value="BPH" @if($organisasi->divisi == 'BPH') selected @endif>BPH</option>
                 <option value="Danus" @if($organisasi->divisi == 'Danus') selected @endif>Danus</option>
                 <option value="Humas" @if($organisasi->divisi == 'Humas') selected @endif>Humas</option>

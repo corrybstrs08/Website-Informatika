@@ -39,5 +39,5 @@
         </tbody>
     </table>
 
-    <a href="/Mahasiswa"><button type="button" class="btn btn-success mx-1">Lihat Artikel Asli</button></a>
+    <a href="/Mahasiswa" target="_blank"><button type="button" class="btn btn-success mx-1">Lihat Pratinjau</button></a>
 @endsection

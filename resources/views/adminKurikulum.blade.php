@@ -31,6 +31,6 @@
             @endforeach
         </tbody>
     </table>
-    <a href="/staffDosen"><button type="button" class="btn btn-success mx-1">Lihat
-            Artikel Asli</button></a>
+    <a href="/staffDosen" target="_blank"><button type="button" class="btn btn-success mx-1">Lihat
+            Pratinjau</button></a>
 @endsection
