@@ -625,6 +625,7 @@ class adminController extends Controller
             ->update([
                 'nama' => $request->nama,
                 'gambar' => $request->gambar->getClientOriginalName(),
+                'divisi' => $request->divisi,
             ]);
 
         return redirect('/admin/organisasi');
