@@ -105,6 +105,14 @@ class BlogController extends Controller
         return view('staffDosen')->with('dosen', $dosen);
     }
 
+    public function detailDosen($id)
+    {
+        $dosen = DB::table('dosen')
+            ->where('id', $id)
+            ->first();
+        return view('detailDosen', ['dosen' => $dosen]);
+    }
+
     public function visiMisi()
     {
         $visi = DB::table('visi')->get();
@@ -176,39 +184,39 @@ class BlogController extends Controller
     public function mahasiswa()
     {
         $angkatan = DB::table('mahasiswa')
-                        ->select('angkatan')
-                        ->distinct()
-                        ->get();
+            ->select('angkatan')
+            ->distinct()
+            ->get();
 
         $status = DB::table('mahasiswa')
-                        ->select('status')
-                        ->distinct()
-                        ->get();
+            ->select('status')
+            ->distinct()
+            ->get();
 
-        if ($this->filtercategory == 'angkatan'){
+        if ($this->filtercategory == 'angkatan') {
             $mahasiswa = DB::table('mahasiswa')
-                        ->where('angkatan', '=', $this->filtervalue)
-                        ->orderBy('nim', 'ASC')
-                        ->paginate(20)
-                        ->appends([
-                            'angkatan' => $this->filtervalue
-                        ]);
+                ->where('angkatan', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'angkatan' => $this->filtervalue
+                ]);
         }
 
-        if ($this->filtercategory == 'status'){
+        if ($this->filtercategory == 'status') {
             $mahasiswa = DB::table('mahasiswa')
-                        ->where('status', '=', $this->filtervalue)
-                        ->orderBy('nim', 'ASC')
-                        ->paginate(20)
-                        ->appends([
-                            'status' => $this->filtervalue
-                        ]);
+                ->where('status', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'status' => $this->filtervalue
+                ]);
         }
 
-        if ($this->filtercategory == ''){
+        if ($this->filtercategory == '') {
             $mahasiswa = DB::table('mahasiswa')
-                        ->orderBy('nim', 'ASC')
-                        ->paginate(20);
+                ->orderBy('nim', 'ASC')
+                ->paginate(20);
         }
 
         $mahasiswa->appends([
@@ -222,19 +230,20 @@ class BlogController extends Controller
             ->with('status', $status);
     }
 
-    public function filterMahasiswa(Request $request){
+    public function filterMahasiswa(Request $request)
+    {
 
-        if ($request->searchby == 'angkatan'){
+        if ($request->searchby == 'angkatan') {
             $this->filtercategory = $request->searchby;
             $this->filtervalue = $request->searchvalue;
         }
 
-        if ($request->searchby == 'status'){
+        if ($request->searchby == 'status') {
             $this->filtercategory = $request->searchby;
             $this->filtervalue = $request->searchvalue;
         }
 
-        if ($request->searchby == ''){
+        if ($request->searchby == '') {
             $this->filtercategory = $request->searchby;
             $this->filtervalue = $request->searchvalue;
         }
@@ -356,7 +365,5 @@ class BlogController extends Controller
 
         //menampung variabel dosen tersebut
         $nama = $jsonDataDosen['data']['dosen'][0]['nama'];
-
     }
-
 }
