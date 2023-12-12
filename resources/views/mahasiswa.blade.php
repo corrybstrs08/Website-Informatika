@@ -7,7 +7,7 @@
 
     <div class="row">
        <div class="col-4 py-5 px-5">
-        <form action="{{ route('filter.mahasiswa') }}" method="POST">
+        <form action="{{ route('filter.mahasiswa') }}" method="GET">
             @csrf
             <div class="row">
                 <label for="searchby" class="py-2">Pilih Kategori</label>
@@ -46,17 +46,17 @@
             <tbody>
                 @foreach ($data as $item)
                     <tr>
-                        @if ($item['prodi_name'] == 'S1 Informatika')
-                            <td>{{ $item['nim'] }}</td>
-                            <td>{{ $item['nama'] }}</td>
-                            <td>{{ $item['angkatan'] }}</td>
-                            <td>{{ $item['status'] }}</td>
-                        @endif
+                        {{-- @if ($item['prodi_name'] == 'S1 Informatika') --}}
+                            <td>{{ $item->nim }}</td>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ $item->angkatan }}</td>
+                            <td>{{ $item->status }}</td>
+                        {{-- @endif --}}
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
+        {{ $data->links() }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script>
