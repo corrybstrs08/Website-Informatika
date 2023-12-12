@@ -75,10 +75,24 @@ class BlogController extends Controller
         return view('organisasi')->with('organisasi', $organisasi);
     }
 
-    public function kurikulum()
+    public function kurikulum(Request $request)
     {
-        $kurikulum = DB::table('kurikulum')->get();
-        return view('kurikulum')->with('kurikulum', $kurikulum);
+        $targetYear = $request->query("tahun");
+
+        $kurikulum = null;
+        if(!$targetYear){
+            $kurikulum = DB::table('kurikulum')->get();
+        }else{
+            $kurikulum = DB::table('kurikulum')->where('tahun', $targetYear)->get();
+        }
+
+        $tahun_kurikulum = DB::table('kurikulum')->distinct()->whereNot("tahun", null)->orderByDesc("tahun")->get(["tahun"]);
+
+        $data = [
+            "kurikulum" => $kurikulum,
+            "tahun_kurikulum" => $tahun_kurikulum
+        ];
+        return view('kurikulum', $data);
     }
 
     public function sejarah()

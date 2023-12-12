@@ -11,6 +11,8 @@
                 <th scope="col">Nama Mata Kuliah</th>
                 <th scope="col">Semester</th>
                 <th scope="col">SKS</th>
+                <th scope="col">Tahun Kurikulum</th>
+
             </tr>
         </thead>
         <tbody>
@@ -20,6 +22,8 @@
                     <td>{{ $k->nama }}</td>
                     <td>{{ $k->semester }}</td>
                     <td>{{ $k->sks }}</td>
+                    <td>{{ $k->tahun }}</td>
+
                     <td>
                         <a href="/admin/editkurikulum/{{ $k->id }}"><button type="button"
                                 class="btn btn-primary mx-1">Edit</button></a>
