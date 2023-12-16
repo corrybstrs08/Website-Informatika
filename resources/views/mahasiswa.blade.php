@@ -68,10 +68,24 @@
             s2.innerHTML = "";
 
             if(s1.value == 'angkatan'){
-                var optionarr = ['2014|2014', '2015|2015', '2016|2016', '2017|2017', '2018|2018', '2019|2019', '2020|2020', '2021|2021'];
+                // var optionarr = ['2014|2014', '2015|2015', '2016|2016', '2017|2017', '2018|2018', '2019|2019', '2020|2020', '2021|2021'];
+                var optionarr = [
+                    @if (@isset($angkatan) & sizeof($angkatan) > 0)
+                        @foreach ($angkatan as $akt)
+                            '{{ $akt->angkatan }}|{{ $akt->angkatan }}',
+                        @endforeach
+                    @endif
+                ];
             }
             else if (s1.value == 'status'){
-                var optionarr = ['Aktif|Aktif', 'Mengundurkan Diri|Mengundurkan Diri', 'Lulus|Lulus'];
+                // var optionarr = ['Aktif|Aktif', 'Mengundurkan Diri|Mengundurkan Diri', 'Lulus|Lulus',];
+                var optionarr = [
+                    @if (@isset($status) & sizeof($status) > 0)
+                        @foreach ($status as $sts)
+                            '{{ $sts->status }}|{{ $sts->status }}',
+                        @endforeach
+                    @endif
+                ];
             }
 
             for(var option in optionarr){

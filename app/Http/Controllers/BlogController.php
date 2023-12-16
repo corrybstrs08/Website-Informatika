@@ -238,6 +238,7 @@ class BlogController extends Controller
             'searchvalue' => $this->filtervalue,
         ]);
 
+        // dd($angkatan);
         return view('mahasiswa')
             ->with('data', $mahasiswa)
             ->with('angkatan', $angkatan)
