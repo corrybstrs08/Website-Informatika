@@ -31,6 +31,9 @@
             <option value="2021">2021</option>
             <option value="2022">2022</option>
             <option value="2023">2023</option>
+            <option value="2023">2024</option>
+            <option value="2023">2025</option>
+            <option value="2023">2026</option>
         </select>
 
         <br><br>
@@ -39,9 +42,8 @@
         <select name="status" id="status">
             <option value="">--- Pilih Status ---</option>
             <option value="Aktif">Aktif</option>
-            <option value="NonAktif">NonAktif</option>
-            <option value="Alumni">Alumni</option>
-            <option value="Unri">Unri</option>
+            <option value="Lulus">Lulus</option>
+            <option value="Mengundurkan Diri">Mengundurkan Diri</option>
         </select>
 
 
