@@ -17,6 +17,12 @@ class OrganisasiSeed extends Seeder
     {
         DB::table('organisasi')->insert([
             [
+                'nama'=>"Arie Satia Dharma",
+                'gambar'=> "Arie.jpg",
+                'divisi' => "Pembina",
+                'jabatan' => "Pembina"
+            ],
+            [
                 'nama'=>"Benhard Yudha",
                 'gambar'=> "benhard_ketua.jpg",
                 'divisi' => "BPH",

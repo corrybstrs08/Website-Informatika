@@ -33,6 +33,9 @@
             <option value="2021"{{$mahasiswa->angkatan == '2021' ? 'selected' : ''}}>2021</option>
             <option value="2022"{{$mahasiswa->angkatan == '2022' ? 'selected' : ''}}>2022</option>
             <option value="2023"{{$mahasiswa->angkatan == '2023' ? 'selected' : ''}}>2023</option>
+            <option value="2024"{{$mahasiswa->angkatan == '2024' ? 'selected' : ''}}>2024</option>
+            <option value="2025"{{$mahasiswa->angkatan == '2025' ? 'selected' : ''}}>2025</option>
+            <option value="2026"{{$mahasiswa->angkatan == '2026' ? 'selected' : ''}}>2026</option>
         </select>
 
         <br><br>
@@ -41,9 +44,8 @@
         <select name="status" id="status">
             <option value="">--- Pilih Status ---</option>
             <option value="Aktif" {{$mahasiswa->status == 'Aktif' ? 'selected' : ''}}>Aktif</option>
-            <option value="NonAktif" {{$mahasiswa->status == 'NonAktif' ? 'selected' : ''}}>NonAktif</option>
-            <option value="Alumni" {{$mahasiswa->status == 'Alumni' ? 'selected' : ''}}>Alumni</option>
-            <option value="Unri" {{$mahasiswa->status == 'Unri' ? 'selected' : ''}}>Unri</option>
+            <option value="Lulus" {{$mahasiswa->status == 'Lulus' ? 'selected' : ''}}>Lulus</option>
+            <option value="Mengundurkan Diri" {{$mahasiswa->status == 'Mengundurkan Diri' ? 'selected' : ''}}>Mengundurkan Diri</option>
         </select>
 
         <br>
