@@ -188,13 +188,15 @@
     }
 
     .dropdown-menu .dropdown-item:hover {
-        background-color: #a0c4ff; /* Ganti dengan warna biru pudar yang Anda inginkan */
-        color: #fff; /* Ganti dengan warna teks yang sesuai */
+      background-color: #a0c4ff;
+      /* Ganti dengan warna biru pudar yang Anda inginkan */
+      color: #fff;
+      /* Ganti dengan warna teks yang sesuai */
     }
 
-    .text-full{
-        text-align: justify;
-        color: #4a4a4a
+    .text-full {
+      text-align: justify;
+      color: #4a4a4a
     }
 
 
@@ -207,25 +209,32 @@
     }
 
     .horizontal {
-    width: 339px;
-    margin: 0 auto; /* Membuat elemen berada di tengah */
-    border: 2px solid; /* Mengatur border dengan ketebalan 2px */
-    color: rgba(0, 121, 194, 1); /* Mengatur warna border menjadi dark blue */
+      width: 339px;
+      margin: 0 auto;
+      /* Membuat elemen berada di tengah */
+      border: 2px solid;
+      /* Mengatur border dengan ketebalan 2px */
+      color: rgba(0, 121, 194, 1);
+      /* Mengatur warna border menjadi dark blue */
     }
 
     .hr-vertical {
-    width: 2px; /* Sesuaikan lebar vertikal sesuai kebutuhan */
-    height: 100%; /* Sesuaikan tinggi vertikal sesuai kebutuhan */
-    border: 2px solid rgba(0, 121, 194, 1); /* Mengatur border dengan ketebalan 2px dan warna dark blue */
-    margin: 0; /* Hapus margin agar lebih tepat di tengah */
-    transform: rotate(180deg);
+      width: 2px;
+      /* Sesuaikan lebar vertikal sesuai kebutuhan */
+      height: 100%;
+      /* Sesuaikan tinggi vertikal sesuai kebutuhan */
+      border: 2px solid rgba(0, 121, 194, 1);
+      /* Mengatur border dengan ketebalan 2px dan warna dark blue */
+      margin: 0;
+      /* Hapus margin agar lebih tepat di tengah */
+      transform: rotate(180deg);
     }
 
 
-      /* pagination in eventAll */
+    /* pagination in eventAll */
 
-      /* croptting */
-    </style>
+    /* croptting */
+  </style>
 </head>
 
 <body>
@@ -272,7 +281,7 @@
                         <hr>
                         <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Sejarah</a></li>
                         <hr>
-                        <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Data Pendaftaran</a></li>
+                        <!-- <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Data Pendaftaran</a></li> -->
                       </ul>
                     </div>
                   </li>
@@ -318,6 +327,7 @@
 
           <div class="row  d-flex justify-content-end">
             <div class="col col-6 " style="width: 300px;">
+            <form action="/cariProses" method="post" enctype="multipart/form-data">
               {{ csrf_field() }}
               <input type="text" class="form-control" placeholder="Pencarian.." style="background-color: aliceblue;" name="cari" onclick="clearInput(this)">
             </div>
@@ -363,7 +373,7 @@
         <!-- TAUTAN -->
 
         <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
-          <h1 class="text-light fs-3 fw-bold text-decoration-underline" >Tautan</h1>
+          <h1 class="text-light fs-3 fw-bold text-decoration-underline">Tautan</h1>
           <a href="https://www.del.ac.id/"><img src="{{ asset('asset/img/logo_del.png') }}" alt="del" target="_blank" width="100em" height="100em" class="rounded mx-2"></a>
           <a href="https://spmb.del.ac.id/"><img src="{{ asset('asset/img/spmb.png') }}" alt="spmb" target="_blank" width="130em" height="100em" class="rounded mx-2"></a>
         </div>
