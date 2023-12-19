@@ -307,7 +307,7 @@
                   <!-- LOGIN ADMIN -->
 
                   <li class="nav-item" style="margin-left: 10px;">
-                    <a href="/admin" target="_blank" class="btn btn-primary" style="font-size: 16px; width: 150px; font-family: Nunito; background-color: #0079C2;">Login Admin</a>
+                    <a href="/admin" class="btn btn-primary" style="font-size: 16px; width: 150px; font-family: Nunito; background-color: #0079C2;">Login Admin</a>
                   </li>
                 </ul>
               </div>
