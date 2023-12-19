@@ -327,9 +327,10 @@
 
           <div class="row  d-flex justify-content-end">
             <div class="col col-6 " style="width: 300px;">
-            <form action="/cariProses" method="post" enctype="multipart/form-data">
-              {{ csrf_field() }}
-              <input type="text" class="form-control" placeholder="Pencarian.." style="background-color: aliceblue;" name="cari" onclick="clearInput(this)">
+              <form action="/cariProses" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <input type="text" class="form-control" placeholder="Pencarian.." style="background-color: aliceblue;" name="cari" onclick="clearInput(this)">
+              </form>
             </div>
           </div>
         </div>

@@ -190,10 +190,10 @@ class BlogController extends Controller
         return $token;
     }
 
-    public function subscribe()
-    {
-        return view('subscribe');
-    }
+    // public function subscribe()
+    // {
+    //     return view('subscribe');
+    // }
 
     public function mahasiswa()
     {

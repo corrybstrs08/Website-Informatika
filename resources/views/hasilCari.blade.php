@@ -4,7 +4,7 @@
 
 <div class="text-white">
 
-    <div class="mx-2 p-2" style="background-color: rgba(150, 164, 200) ;border-radius: 10px;">
+    <div class="mx-2 p-2" style="background-color: rgb(150, 164, 200) ;border-radius: 10px;">
         <h1>Hasil Pencaharian yang sesuai dengan : {{ $cari }}</h1>
     </div>
     <br>
@@ -71,7 +71,7 @@
     </div>
 
     @foreach ($berita as $item)
-    <div class="mx-5" style="border-radius: 20px; background-color:rgba(173, 216, 230, 0.5)">
+    <div class="mx-5" style="border-radius: 20px; background-color:rgb(156, 173, 206)">
         <div class="berita d-flex p-3">
             <img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="height:225px;width:400px">
             <div class="ms-3 pt-4 text-light">
