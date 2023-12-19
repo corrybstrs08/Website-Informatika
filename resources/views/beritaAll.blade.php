@@ -6,7 +6,7 @@
     </div>
 
     @foreach ($berita as $item)
-    <div class="mx-5" style="border-radius: 20px; background-color:rgba(173, 216, 230, 0.5)">
+    <div class="mx-5" style="border-radius: 20px; background-color:rgb(156, 173, 206)">
         <div class="berita d-flex p-3">
             <img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}"
                 style="height:225px;width:400px">

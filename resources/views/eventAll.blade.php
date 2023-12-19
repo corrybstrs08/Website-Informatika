@@ -5,10 +5,10 @@
         <div class="p-2 ">
             <h1 class=""><strong>EVENTS</strong></h1>
             @foreach ($events as $event)
-                <div class="m-2 p-2 " style="background-color: rgba(156, 173, 206, 0.47) ;border-radius: 25px;">
+                <div class="m-2 p-2 " style="background-color: rgb(156, 173, 206) ;border-radius: 25px;">
                     <div class="d-flex mt-2">
                         <div id="tanggal" class="d-flex justify-content-center">
-                            <p class="text-center w-100 p-2 m-2" style="background-color: rgb(0, 121, 194);">
+                            <p class="text-center w-100 p-2 m-2" style="background-color: rgb(130, 164, 200);">
                                 {{ substr($event->waktu_mulai, 8, 2) }}
                                 @if (intval(substr($event->waktu_mulai, 5, 2)) == 1)
                                     Januari
