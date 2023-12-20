@@ -16,12 +16,12 @@
         <br><br>
 
         <label class="form-label">Waktu Mulai</label>
-        <input type="datetime-local" class="form-control" name="waktu_mulai" value="{{$events->waktu_mulai}}">
+        <input type="date" class="form-control" name="waktu_mulai" value="{{$events->waktu_mulai}}">
 
         <br><br>
 
         <label class="form-label">Waktu Selesai</label>
-        <input type="datetime-local" class="form-control" name="waktu_selesai" value="{{$events->waktu_selesai}}">
+        <input type="date" class="form-control" name="waktu_selesai" value="{{$events->waktu_selesai}}">
 
         <br><br>
 
@@ -41,7 +41,7 @@
         <br><br>
 
         <label class="form-label">Penyelenggara</label>
-        <input type="text" class="form-control" name="penyelenggara"value="{{$events->penyelenggara}}"> 
+        <input type="text" class="form-control" name="penyelenggara" value="{{$events->penyelenggara}}">
 
         <br><br>
 

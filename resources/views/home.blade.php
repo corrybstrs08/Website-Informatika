@@ -232,7 +232,7 @@
             </a>
         </div>
         <div class="lingkar">
-            <a href="/mahasiswaAlumni">
+            <a href="/mahasiswa">
                 <div class="ele">
                     <i class="ri-group-fill"></i>
                     <h4><b>Alumni</b></h4>

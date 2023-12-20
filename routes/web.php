@@ -26,7 +26,7 @@ Route::get('/staffDosen', [BlogController::class, 'staffDosen']);
 Route::get('/staffDosen/{id}', [BlogController::class, 'detailDosen']); //EditCorry
 Route::get('/mahasiswa', [BlogController::class, 'mahasiswa']);
 Route::get('/filter-mahasiswa', [BlogController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
-Route::get('/mahasiswaAlumni', [BlogController::class, 'mahasiswaAlumni']);
+// Route::get('/mahasiswaAlumni', [BlogController::class, 'mahasiswaAlumni']);
 Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
 Route::get('/event/{id}', [BlogController::class, 'tampil_event']);
 Route::get('/eventsAll', [BlogController::class, 'eventAll']);

@@ -11,42 +11,42 @@
         <input type="text" class="form-control" name="id" hidden>
 
         <label class="form-label">Judul Event</label>
-        <input type="text" class="form-control" name="nama" >
+        <input type="text" class="form-control" name="nama">
 
         <br><br>
 
         <label class="form-label">Waktu Mulai</label>
-        <input type="date" class="form-control" name="waktu_mulai" >
+        <input type="date" class="form-control" name="waktu_mulai">
 
         <br><br>
 
         <label class="form-label">Waktu Selesai</label>
-        <input type="datetime-local" class="form-control" name="waktu_selesai" >
+        <input type="date" class="form-control" name="waktu_selesai">
 
         <br><br>
 
         <label class="form-label">Deskripsi Singkat</label>
-        <input type="text" class="form-control" name="deskripsi_singkat" >
+        <input type="text" class="form-control" name="deskripsi_singkat">
 
         <br><br>
 
         <label class="form-label">Jenis</label>
-        <input type="text" class="form-control" name="jenis" >
+        <input type="text" class="form-control" name="jenis">
 
         <br><br>
 
         <label class="form-label">Lokasi</label>
-        <input type="text" class="form-control" name="lokasi" >
+        <input type="text" class="form-control" name="lokasi">
 
         <br><br>
 
         <label class="form-label">Penyelenggara</label>
-        <input type="text" class="form-control" name="penyelenggara"> 
+        <input type="text" class="form-control" name="penyelenggara">
 
         <br><br>
 
         <label class="form-label">Kontak</label>
-        <input type="text" class="form-control" name="kontak" >
+        <input type="text" class="form-control" name="kontak">
 
         <br><br>
 
@@ -56,7 +56,7 @@
         <br><br>
 
         <label class="form-label">Penjelasan</label>
-        <input type="text" class="form-control" name="penjelasan" >
+        <input type="text" class="form-control" name="penjelasan">
 
         <br><br>
 

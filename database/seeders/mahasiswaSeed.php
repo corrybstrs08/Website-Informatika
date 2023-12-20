@@ -18,20 +18,20 @@ class mahasiswaSeed extends Seeder
         //
         DB::table('mahasiswa')->insert([
             [
-                'nim'=>"11S21042",
-                'nama'=> "Pany Irene Matondang",
+                'nim' => "11S21042",
+                'nama' => "Pany Irene Matondang",
                 'angkatan' => "2021",
                 'status' => "Aktif",
             ],
             [
-                'nim'=>"11S21050",
-                'nama'=> "Ella Silaban",
+                'nim' => "11S21050",
+                'nama' => "Ella Silaban",
                 'angkatan' => "2021",
                 'status' => "Aktif",
             ],
             [
-                'nim'=>"11S21002",
-                'nama'=> "Benhard Yudha",
+                'nim' => "11S21003",
+                'nama' => "Benhard Yudha",
                 'angkatan' => "2021",
                 'status' => "Aktif",
             ],
