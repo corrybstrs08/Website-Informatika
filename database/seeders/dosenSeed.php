@@ -134,23 +134,23 @@ class dosenSeed extends Seeder
             [
                 'nama' => "Herimanto, S.Kom., M.Kom",
                 'deskripsi' => "",
-                'gambar' => "t.png",
+                'gambar' => "Herimanto.jpeg",
             ],
             [
                 'nama' => "Iustisia Natalia Simbolon, S.Kom., M.T.",
                 'deskripsi' => '<p>&nbsp;</p><figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>iustisia.simbolon@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p>',
-                'gambar' => "t.png",
+                'gambar' => "Iustisia.png",
             ],
             [
                 'nama' => "Nenni Mona Aruan, S.Pd., M.Si",
                 'deskripsi' => '<figure class="table"><table><tbody><tr><td>Jabatan</td><td>:</td><td>Dosen</td></tr><tr><td>Email</td><td>:</td><td>nenni.aruan@del.ac.id</td></tr><tr><td>Latar Belakang Pendidikan</td><td>:</td><td>&nbsp;</td></tr></tbody></table></figure>',
-                'gambar' => "t.png",
+                'gambar' => "Nenni.jpeg",
             ],
 
             [
                 'nama' => "Tahan HJ Sihombing, S.Pd., M. App Ling",
                 'deskripsi' => "",
-                'gambar' => "t.png",
+                'gambar' => "Tahan.jpeg",
             ],
             [
                 'nama' => "Anthon Roberto Tampubolon, S.Kom, M.T.",
@@ -177,7 +177,7 @@ class dosenSeed extends Seeder
             [
                 'nama' => "Ranty Deviana Siahaan, S.Kom, M.Eng.",
                 'deskripsi' => "",
-                'gambar' => "t.png",
+                'gambar' => "Ranti.jpeg",
             ],
         ]);
     }

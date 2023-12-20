@@ -353,7 +353,7 @@
 
           <!-- KONTAK KAMI -->
 
-          <h1 class="text-light fs-3 fw-bold text-decoration-underline px-3">Kontak Kami</h1>
+          <h1 class="text-light fs-3 fw-bold px-3">Kontak Kami</h1>
           <br>
           <div class="container-fluid">
             <span>Institut Teknologi Del</span>
@@ -374,7 +374,7 @@
         <!-- TAUTAN -->
 
         <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
-          <h1 class="text-light fs-3 fw-bold text-decoration-underline">Tautan</h1>
+          <h1 class="text-light fs-3 fw-bold">Tautan</h1>
           <a href="https://www.del.ac.id/"><img src="{{ asset('asset/img/logo_del.png') }}" alt="del" target="_blank" width="100em" height="100em" class="rounded mx-2"></a>
           <a href="https://spmb.del.ac.id/"><img src="{{ asset('asset/img/spmb.png') }}" alt="spmb" target="_blank" width="130em" height="100em" class="rounded mx-2"></a>
         </div>
