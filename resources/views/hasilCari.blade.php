@@ -5,7 +5,7 @@
 <div class="text-white">
 
     <div class="mx-2 p-2" style="background-color: rgb(150, 164, 200) ;border-radius: 10px;">
-        <h1>Hasil Pencaharian yang sesuai dengan : {{ $cari }}</h1>
+        <h1>Hasil Pencarian yang sesuai dengan : {{ $cari }}</h1>
     </div>
     <br>
 
