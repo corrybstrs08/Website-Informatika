@@ -204,13 +204,13 @@ class OrganisasiSeed extends Seeder
             ],
             [
                 'nama'=>"Gerry Bukit",
-                'gambar'=> "dummy.jpg",
+                'gambar'=> "dummy.png",
                 'divisi' => "Humas",
                 'jabatan' => "Kepala Divisi"
             ],
             [
                 'nama'=>"Wilona Simbolon",
-                'gambar'=> "dummy.jpg",
+                'gambar'=> "dummy.png",
                 'divisi' => "Humas",
                 'jabatan' => "Wakil Kepala Divisi"
             ],
