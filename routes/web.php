@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +25,8 @@ Route::get('/sejarah', [BlogController::class, 'sejarah']);
 Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
 Route::get('/staffDosen', [BlogController::class, 'staffDosen']);
 Route::get('/staffDosen/{id}', [BlogController::class, 'detailDosen']); //EditCorry
-Route::get('/mahasiswa', [BlogController::class, 'mahasiswa']);
-Route::get('/filter-mahasiswa', [BlogController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
-// Route::get('/mahasiswaAlumni', [BlogController::class, 'mahasiswaAlumni']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa']);
+Route::get('/filter-mahasiswa', [MahasiswaController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
 Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
 Route::get('/event/{id}', [BlogController::class, 'tampil_event']);
 Route::get('/eventsAll', [BlogController::class, 'eventAll']);
@@ -113,12 +113,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //Mahasiswa
-Route::get('/admin/mahasiswa', [adminController::class, 'mahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/addMahasiswa', [adminController::class, 'addMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/addMahasiswa_proses', [adminController::class, 'addMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editMahasiswa/{id}', [adminController::class, 'editMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editMahasiswa_proses', [adminController::class, 'editMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/hapusMahasiswa/{id}', [adminController::class, 'hapusMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/mahasiswa', [MahasiswaController::class, 'adminMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addMahasiswa', [MahasiswaController::class, 'addMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/addMahasiswa_proses', [MahasiswaController::class, 'addMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editMahasiswa/{id}', [MahasiswaController::class, 'editMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editMahasiswa_proses', [MahasiswaController::class, 'editMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusMahasiswa/{id}', [MahasiswaController::class, 'hapusMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
