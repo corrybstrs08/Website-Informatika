@@ -9,7 +9,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Pembina') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -27,7 +27,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'BPH') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" >
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>

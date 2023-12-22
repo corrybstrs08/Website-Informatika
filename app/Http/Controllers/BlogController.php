@@ -69,12 +69,6 @@ class BlogController extends Controller
         return view('profil_lulusan');
     }
 
-    public function organisasi()
-    {
-        $organisasi = DB::table('organisasi')->get();
-        return view('organisasi')->with('organisasi', $organisasi);
-    }
-
     public function kurikulum(Request $request)
     {
         $targetYear = $request->query("tahun");

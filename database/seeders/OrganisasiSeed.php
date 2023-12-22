@@ -59,6 +59,12 @@ class OrganisasiSeed extends Seeder
                 'jabatan' => "Wakil Bendahara"
             ],
             [
+                'nama'=>"Solang Simangunsong",
+                'gambar'=> "marianne wensesla.jpg",
+                'divisi' => "BPH",
+                'jabatan' => "Istri Ketua"
+            ],
+            [
                 'nama'=>"Cindy Simangunsong",
                 'gambar'=> "cindy_pendidikan_kepala.jpg",
                 'divisi' => "Pendidikan",
