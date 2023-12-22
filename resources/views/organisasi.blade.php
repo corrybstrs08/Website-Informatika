@@ -27,7 +27,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'BPH') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" >
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -45,7 +45,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Ristek') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -63,7 +63,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Pendidikan') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -79,7 +79,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Kominfo') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -95,7 +95,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Minat') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -113,7 +113,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Danus') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>
@@ -131,7 +131,7 @@
             <ul class="list-unstyled d-flex flex-wrap justify-content-around">
                 @foreach ($organisasi->where('divisi', 'Humas') as $item)
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}">
+                    <img class="card-img-top" src="{{ asset('asset/img/Organisasi/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="width: 18rem; height: 18rem;">
                     <div class="card-body">
                         <p class="text-center"><strong>{{ $item->jabatan }}</strong></p>
                         <p class="text-center card-text">{{ $item->nama }}</p>

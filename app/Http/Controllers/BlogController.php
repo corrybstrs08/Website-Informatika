@@ -69,26 +69,6 @@ class BlogController extends Controller
         return view('profil_lulusan');
     }
 
-    public function kurikulum(Request $request)
-    {
-        $targetYear = $request->query("tahun");
-
-        $kurikulum = null;
-        if(!$targetYear){
-            $kurikulum = DB::table('kurikulum')->get();
-        }else{
-            $kurikulum = DB::table('kurikulum')->where('tahun', $targetYear)->get();
-        }
-
-        $tahun_kurikulum = DB::table('kurikulum')->distinct()->whereNot("tahun", null)->orderByDesc("tahun")->get(["tahun"]);
-
-        $data = [
-            "kurikulum" => $kurikulum,
-            "tahun_kurikulum" => $tahun_kurikulum
-        ];
-        return view('kurikulum', $data);
-    }
-
     public function sejarah()
     {
         $sejarah = DB::table('sejarah')->first();
@@ -104,21 +84,6 @@ class BlogController extends Controller
     public function register()
     {
         return view('auth.register');
-    }
-
-    public function staffDosen()
-    {
-        $dosen = DB::table('dosen')->get();
-
-        return view('staffDosen')->with('dosen', $dosen);
-    }
-
-    public function detailDosen($id)
-    {
-        $dosen = DB::table('dosen')
-            ->where('id', $id)
-            ->first();
-        return view('detailDosen', ['dosen' => $dosen]);
     }
 
     public function visiMisi()

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\ProfileController;
@@ -21,11 +23,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BlogController::class, 'home']);
 //Route::get('/', [BlogController::class, 'register']);
 Route::get('/organisasi', [OrganisasiController::class, 'organisasi']);
-Route::get('/kurikulum', [BlogController::class, 'kurikulum']);
+Route::get('/kurikulum', [KurikulumController::class, 'kurikulum']);
 Route::get('/sejarah', [BlogController::class, 'sejarah']);
 Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
-Route::get('/staffDosen', [BlogController::class, 'staffDosen']);
-Route::get('/staffDosen/{id}', [BlogController::class, 'detailDosen']); //EditCorry
+Route::get('/staffDosen', [DosenController::class, 'staffDosen']);
+Route::get('/staffDosen/{id}', [DosenController::class, 'detailDosen']); //EditCorry
 Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa']);
 Route::get('/filter-mahasiswa', [MahasiswaController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
 Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
@@ -65,12 +67,12 @@ Route::post('/admin/editEvents/proses', [adminController::class, 'editEvent_pros
 Route::get('/admin/hapusEvent/{id}', [adminController::class, 'hapusEvent'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //DOSEN
-Route::get('/admin/dosen', [adminController::class, 'dosen'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/addDosen', [adminController::class, 'addDosen'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/addDosen_proses', [adminController::class, 'addDosen_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editDosen/{id}', [adminController::class, 'editDosen'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editDosen_proses', [adminController::class, 'editDosen_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/hapusDosen/{id}', [adminController::class, 'hapusDosen'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/dosen', [DosenController::class, 'dosen'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addDosen', [DosenController::class, 'addDosen'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/addDosen_proses', [DosenController::class, 'addDosen_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editDosen/{id}', [DosenController::class, 'editDosen'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editDosen_proses', [DosenController::class, 'editDosen_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusDosen/{id}', [DosenController::class, 'hapusDosen'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //Kompetisi
 Route::get('/admin/kompetisi', [adminController::class, 'showKompetisi'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -81,12 +83,12 @@ Route::post('/admin/editKompetisi/proses', [adminController::class, 'editKompeti
 Route::get('/admin/hapusKompetisi/{id}', [adminController::class, 'hapusKompetisi'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //Kurikulum
-Route::get('/admin/kurikulum', [adminController::class, 'showKurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/addKurikulum', [adminController::class, 'addkurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/addKurikulum_proses', [adminController::class, 'addkurikulum_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editkurikulum/{id}', [adminController::class, 'editkurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editkurikulum/proses', [adminController::class, 'editkurikulum_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/hapuskurikulum/{id}', [adminController::class, 'hapuskurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/kurikulum', [KurikulumController::class, 'adminKurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addKurikulum', [KurikulumController::class, 'addkurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/addKurikulum_proses', [KurikulumController::class, 'addkurikulum_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editkurikulum/{id}', [KurikulumController::class, 'editkurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editkurikulum/proses', [KurikulumController::class, 'editkurikulum_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapuskurikulum/{id}', [KurikulumController::class, 'hapuskurikulum'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 //Visi Misi
