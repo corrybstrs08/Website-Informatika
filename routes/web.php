@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BlogController::class, 'home']);
 //Route::get('/', [BlogController::class, 'register']);
-Route::get('/organisasi', [BlogController::class, 'organisasi']);
+Route::get('/organisasi', [OrganisasiController::class, 'organisasi']);
 Route::get('/kurikulum', [BlogController::class, 'kurikulum']);
 Route::get('/sejarah', [BlogController::class, 'sejarah']);
 Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
@@ -102,12 +103,12 @@ Route::get('/admin/hapusMisi/{id}', [adminController::class, 'hapusMisi'])->midd
 
 
 //Organisasi
-Route::get('/admin/organisasi', [adminController::class, 'organisasi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/addOrganisasi', [adminController::class, 'addOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/addOrganisasi_proses', [adminController::class, 'addOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editOrganisasi/{id}', [adminController::class, 'editOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editOrganisasi_proses', [adminController::class, 'editOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/hapusOrganisasi/{id}', [adminController::class, 'hapusOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/organisasi', [OrganisasiController::class, 'adminOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addOrganisasi', [OrganisasiController::class, 'addOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/addOrganisasi_proses', [OrganisasiController::class, 'addOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editOrganisasi/{id}', [OrganisasiController::class, 'editOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editOrganisasi_proses', [OrganisasiController::class, 'editOrganisasi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusOrganisasi/{id}', [OrganisasiController::class, 'hapusOrganisasi'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard', function () {
     return view('adminMenu');
 })->middleware(['auth', 'verified'])->name('dashboard');
