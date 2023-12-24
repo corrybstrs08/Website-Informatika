@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 " style="position: fixed">
                     <a href="/admin" class="d-flex align-items-center pb-3  text-white text-decoration-none">
                         <span class="fs-5  d-sm-inline">Menu</span>
                     </a>
