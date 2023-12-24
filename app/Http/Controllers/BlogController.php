@@ -95,38 +95,6 @@ class BlogController extends Controller
             ->with('visi', $visi);
     }
 
-    public function tampil_event($id)
-    {
-        $event = DB::table('events')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_event', ['event' => $event]);
-    }
-
-    public function eventAll()
-    {
-        $event = DB::table('events')
-            ->orderBy('waktu_mulai', 'desc')
-            ->paginate(5);
-
-        return view('eventAll', ['events' => $event]);
-    }
-
-    public function tampil_berita($id)
-    {
-        $news = DB::table('news_article')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_berita', ['berita' => $news]);
-    }
-
-    public function tampil_kompetisi($id)
-    {
-        $kompetisi = DB::table('kompetisi')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_kompetisi', ['kompetisi' => $kompetisi]);
-    }
 
     public function capaian()
     {
@@ -177,22 +145,6 @@ class BlogController extends Controller
         return view('contactUS');
     }
 
-    public function beritaAll()
-    {
-        $berita = DB::table('news_article')
-            ->orderBy('id', 'desc')
-            ->paginate(3);
-        return view('beritaAll')->with('berita', $berita);
-    }
-
-    public function kompetisiAll()
-    {
-        $kompetisi = DB::table('kompetisi')
-            ->orderBy('id', 'desc')
-            ->paginate(3);
-
-        return view('kompetisiAll', ['kompetisi' => $kompetisi]);
-    }
 
     public function cariProses(Request $request)
     {
@@ -262,5 +214,6 @@ class BlogController extends Controller
 
         //menampung variabel dosen tersebut
         $nama = $jsonDataDosen['data']['dosen'][0]['nama'];
+
     }
 }
