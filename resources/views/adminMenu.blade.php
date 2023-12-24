@@ -72,22 +72,26 @@
                             <span class="d-none d-sm-inline mx-1">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><x-dropdown-link class="dropdown-item" :href="route('profile.edit')">
+                            {{-- <li>
+                                <x-dropdown-link class="dropdown-item" :href="route('profile.edit')">
                                 {{ __('Profile') }}
-                            </x-dropdown-link>
+                                </x-dropdown-link>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><form method="POST" action="{{ route('logout') }}">
-                                @csrf
+                            </li> --}}
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
 
-                                <x-dropdown-link class="dropdown-item" :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                                {{-- <a class="dropdown-item" method="POST" href="route('logout')">Sign out</a> --}}
-                            </form></li>
+                                    <x-dropdown-link class="dropdown-item" :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                    {{-- <a class="dropdown-item" method="POST" href="route('logout')">Sign out</a> --}}
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
