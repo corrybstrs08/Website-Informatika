@@ -66,6 +66,11 @@
 
                     </ul>
                     <hr>
+                    <div>
+                        <button class="btn btn-primary" onclick="location.href='{{ route('home') }}'">
+                            Beranda
+                        </button>
+                    </div>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="ri-account-circle-fill"></i>
