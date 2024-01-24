@@ -131,127 +131,78 @@
                     <li>
                         <div class=" pt-1 px-2 rounded-4">
                             <h3><a href="/kompetisi/{{ $item->id }}">{{ $item->nama }}</a></h3>
-                            <p>Batas Pendaftaran:
-                                @php
-                                $tanggal = $item->tanggal;
-                                $timestamp = strtotime($tanggal);
-                                $namaBulan = date('F', $timestamp);
-                                $bulan = date('n', $timestamp);
-
-                                switch ($bulan) {
-                                case 1:
-                                $namaBulan = "Januari";
-                                break;
-                                case 2:
-                                $namaBulan = "Februari";
-                                break;
-                                case 3:
-                                $namaBulan = "Maret";
-                                break;
-                                case 4:
-                                $namaBulan = "April";
-                                break;
-                                case 5:
-                                $namaBulan = "Mei";
-                                break;
-                                case 6:
-                                $namaBulan = "Juni";
-                                break;
-                                case 7:
-                                $namaBulan = "Juli";
-                                break;
-                                case 8:
-                                $namaBulan = "Agustus";
-                                break;
-                                case 9:
-                                $namaBulan = "September";
-                                break;
-                                case 10:
-                                $namaBulan = "Oktober";
-                                break;
-                                case 11:
-                                $namaBulan = "November";
-                                break;
-                                case 12:
-                                $namaBulan = "Desember";
-                                break;
-                                }
-
-                                $tanggalFormat = date('d', $timestamp);
-                                $tahun = date('Y', $timestamp);
-
-                                echo $tanggalFormat . ' ' . $namaBulan . ' ' . $tahun;
-                                @endphp
-                            </p>
-
-                        </div>
-                    </li>
-                    <br>
-                    @endforeach
-                </ul>
+                            <p>Batas Pendaftaran : {{ $item->tanggal }}</p>
+                                </div>
+                            </li>
+                            <br>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <hr class="horizontal mb-3 mt-3" />
-    <div class=" text-body p-4" id="berita">
-        <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
-        <div class=" d-flex text-dark">
-            <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper ">
-                    @foreach ($berita as $item)
-                    <div class="swiper-slide">
-                        <div class="bg-light" style="border-radius:10px">
-                            <div class="image-wrapper"><img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="border-radius:9px 9px 0px 0;">
+
+        <div class=" text-body p-5" id="berita">
+                            <h1><a href="/beritaAll"><b>| Berita Terkini</b></a></h1>
+                            <hr>
+                            <div class=" d-flex text-dark">
+                                <p class=" d-flex align-items-center"><i class="beff ri-arrow-left-s-line"></i></p>
+
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper ">
+                                        @foreach ($berita as $item)
+                                        <div class="swiper-slide">
+                                            <div class="bg-light" style="border-radius:10px">
+                                                <div class="image-wrapper"><img src="{{ asset('asset/img/Berita/' . $item->gambar) }}" alt="{{ $item->gambar }}" style="border-radius:9px 9px 0px 0;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="/berita/{{ $item->id }}">
+                                                        <h5 class="card-title">{{ $item->judul }}</h5>
+                                                    </a>
+                                                    <p class="card-text">{{ $item->deskripsi }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                    <div class="swiper-pagination martop"></div>
+                                </div>
+                                <p class=" d-flex align-items-center"><i class="beff ri-arrow-right-s-line"></i></p>
                             </div>
-                            <div class="card-body">
-                                <a href="/berita/{{ $item->id }}">
-                                    <h5 class="card-title">{{ $item->judul }}</h5>
+
+                        </div>
+
+                        <br>
+                        <div class="d-flex justify-content-around text-body text-center mb-2 ">
+                            <div class="lingkar">
+                                <a href="/mahasiswa">
+                                    <div class="ele">
+                                        <i class="ri-user-fill"></i>
+                                        <p><b>Mahasiswa Aktif</b></p>
+                                        <h2><b>{{ $jumlahAktif }}</b></h2>
+                                    </div>
                                 </a>
-                                <p class="card-text">{{ $item->deskripsi }}</p>
+                            </div>
+                            <div class="lingkar">
+                                <a href="/mahasiswaAlumni">
+                                    <div class="ele">
+                                        <i class="ri-group-fill"></i>
+                                        <h4><b>Alumni</b></h4>
+                                        <h2><b>{{ $jumlahAlumni }}</b></h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lingkar">
+                                <a href="/staffDosen">
+                                    <div class="ele">
+                                        <b>
+                                            <i class="ri-pages-line"></i>
+                                            <p><b>Dosen</b></p>
+                                            <h2><b>{{ $dosen }}</b></h2>
+                                        </b>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    @endforeach
-                </div>
-                <div class="swiper-pagination martop"></div>
-            </div>
-            <p class="d-flex align-items-center"><i class="afft ri-arrow-right-s-line"></i></p>
-        </div>
-    </div>
-    <hr class="horizontal mb-3 mt-3" />
-    <br>
-    <div class="d-flex justify-content-around text-body text-center mb-2 ">
-        <div class="lingkar">
-            <a href="/mahasiswa">
-                <div class="ele">
-                    <i class="ri-user-fill"></i>
-                    <p><b>Mahasiswa Aktif</b></p>
-                    <h2><b>{{ $jumlahAktif }}</b></h2>
-                </div>
-            </a>
-        </div>
-        <div class="lingkar">
-            <a href="/mahasiswa">
-                <div class="ele">
-                    <i class="ri-group-fill"></i>
-                    <h4><b>Alumni</b></h4>
-                    <h2><b>{{ $jumlahAlumni }}</b></h2>
-                </div>
-            </a>
-        </div>
-        <div class="lingkar">
-            <a href="/staffDosen">
-                <div class="ele">
-                    <b>
-                        <i class="ri-pages-line"></i>
-                        <p><b>Dosen</b></p>
-                        <h2><b>{{ $dosen }}</b></h2>
-                    </b>
-                </div>
-            </a>
-        </div>
-    </div>
 </section>
 
 <br><br>

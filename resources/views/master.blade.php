@@ -79,10 +79,11 @@
       object-fit: cover;
     }
 
-    .martop {
-      margin-top: 20px;
-      background-size: contain;
-    }
+        .martop {
+            margin-top: 20px;
+            background-color: rgba(255, 0, 0, 0.109);
+            background-size: contain;
+        }
 
     .beff {
       margin: 20px;
@@ -429,11 +430,11 @@
     // Select all slides
     const slides = document.querySelectorAll(".slide");
 
-    // loop through slides and set each slides translateX property to index * 100%
-    slides.forEach((slide, indx) => {
-      slide.style.transform = `translateX(${indx * 100}%)`;
-    });
-  </script>
+        // loop through slides and set each slides translateX property to index * 100% 
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${indx * 100}%)`;
+        });
+    </script>
 </body>
 
 </html>
