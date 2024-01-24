@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Visimisi extends Model
+class Visi extends Model
 {
     use HasFactory;
+    protected $table = 'visi';
+    public $timestamps = false;
+    protected $fillable = ['visi'];
 }

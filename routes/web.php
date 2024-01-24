@@ -10,6 +10,8 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\VisiMisiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +25,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [BlogController::class, 'home']);
-//Route::get('/', [BlogController::class, 'register']);
+Route::get('/', [BlogController::class, 'home'])->name('home');
 Route::get('/organisasi', [OrganisasiController::class, 'organisasi']);
 Route::get('/kurikulum', [KurikulumController::class, 'kurikulum']);
 Route::get('/sejarah', [BlogController::class, 'sejarah']);
@@ -33,15 +34,13 @@ Route::get('/staffDosen', [DosenController::class, 'staffDosen']);
 Route::get('/staffDosen/{id}', [DosenController::class, 'detailDosen']); //EditCorry
 Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa']);
 Route::get('/filter-mahasiswa', [MahasiswaController::class, 'filterMahasiswa'])->name('filter.mahasiswa');
-Route::get('/visiMisi', [BlogController::class, 'visiMisi']);
+Route::get('/visiMisi', [VisimisiController::class, 'visiMisi']);
 Route::get('/event/{id}', [EventController::class, 'tampil_event']);
 Route::get('/eventsAll', [EventController::class, 'eventAll']);
 Route::get('/beritaAll', [BeritaController::class, 'beritaAll']);
 Route::get('/berita/{id}', [BeritaController::class, 'tampil_berita']);
-// Route::get('/subscribe', [BlogController::class, 'subscribe']);
 Route::get('/kompetisi/{id}', [KompetisiController::class, 'tampil_kompetisi']);
 Route::get('/kompetisiAll', [KompetisiController::class, 'kompetisiAll']);
-// Route::get('/contactUs', [BlogController::class, 'contactUs']);
 Route::post('/cariProses', [BlogController::class, 'cariProses']);
 
 
@@ -95,16 +94,16 @@ Route::get('/admin/hapuskurikulum/{id}', [KurikulumController::class, 'hapuskuri
 
 
 //Visi Misi
-Route::get('/admin/visiMisi', [adminController::class, 'showVisiMisi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/addMisi', [adminController::class, 'addMisi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/addMisi/proses', [adminController::class, 'addMisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editMisi/{id}', [adminController::class, 'editMisi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editMisi/proses', [adminController::class, 'editMisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editVisi', [adminController::class, 'editVisi'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editVisi/proses', [adminController::class, 'editVisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/editSejarah', [adminController::class, 'editSejarah'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::post('/admin/editSejarah/proses', [adminController::class, 'editSejarah_proses'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin/hapusMisi/{id}', [adminController::class, 'hapusMisi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/visiMisi', [VisiMisiController::class, 'showVisiMisi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/addMisi', [VisiMisiController::class, 'addMisi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/addMisi/proses', [VisiMisiController::class, 'addMisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editMisi/{id}', [VisiMisiController::class, 'editMisi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editMisi/proses', [VisiMisiController::class, 'editMisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editVisi', [VisiMisiController::class, 'editVisi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editVisi/proses', [VisiMisiController::class, 'editVisi_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/editSejarah', [SejarahController::class, 'editSejarah'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/admin/editSejarah/proses', [SejarahController::class, 'editSejarah_proses'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/hapusMisi/{id}', [VisiMisiController::class, 'hapusMisi'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 //Organisasi

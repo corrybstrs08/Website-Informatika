@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 " style="position: fixed">
                     <a href="/admin" class="d-flex align-items-center pb-3  text-white text-decoration-none">
                         <span class="fs-5  d-sm-inline">Menu</span>
                     </a>
@@ -66,28 +66,37 @@
 
                     </ul>
                     <hr>
+                    <div>
+                        <button class="btn btn-primary" onclick="location.href='{{ route('home') }}'">
+                            Beranda
+                        </button>
+                    </div>
                     <div class="dropdown pb-4">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="ri-account-circle-fill"></i>
                             <span class="d-none d-sm-inline mx-1">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><x-dropdown-link class="dropdown-item" :href="route('profile.edit')">
+                            {{-- <li>
+                                <x-dropdown-link class="dropdown-item" :href="route('profile.edit')">
                                 {{ __('Profile') }}
-                            </x-dropdown-link>
+                                </x-dropdown-link>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><form method="POST" action="{{ route('logout') }}">
-                                @csrf
+                            </li> --}}
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
 
-                                <x-dropdown-link class="dropdown-item" :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                                {{-- <a class="dropdown-item" method="POST" href="route('logout')">Sign out</a> --}}
-                            </form></li>
+                                    <x-dropdown-link class="dropdown-item" :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                    {{-- <a class="dropdown-item" method="POST" href="route('logout')">Sign out</a> --}}
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>

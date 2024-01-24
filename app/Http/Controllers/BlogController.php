@@ -69,12 +69,6 @@ class BlogController extends Controller
         return view('profil_lulusan');
     }
 
-    public function sejarah()
-    {
-        $sejarah = DB::table('sejarah')->first();
-        return view('sejarah')->with('sejarah', $sejarah);
-    }
-
     public function profilLulusan()
     {
         return view('profil_lulusan');
@@ -84,15 +78,6 @@ class BlogController extends Controller
     public function register()
     {
         return view('auth.register');
-    }
-
-    public function visiMisi()
-    {
-        $visi = DB::table('visi')->get();
-        $misi = DB::table('misi')->get();
-        return view('visiMisi')
-            ->with('misi', $misi)
-            ->with('visi', $visi);
     }
 
 
