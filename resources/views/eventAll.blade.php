@@ -5,7 +5,7 @@
         <div class="p-2 ">
             <h1 class=""><strong>EVENTS</strong></h1>
             @foreach ($events as $event)
-                <div class="m-2 p-2 " style="background-color: rgba(156, 173, 206, 0.47) ;border-radius: 25px;">
+                <div class="m-2 p-2 " style="background-color: rgb(156, 173, 206) ;border-radius: 25px;">
                     <div class="d-flex mt-2">
                         <div id="tanggal" class="d-flex justify-content-center">
                             <p class="text-center w-100 p-2 m-2" style="background-color: rgb(0, 121, 194);">
@@ -58,4 +58,5 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
 @endsection

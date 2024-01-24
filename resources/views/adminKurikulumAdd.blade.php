@@ -18,7 +18,7 @@
             <input type="text" class="form-control" name="nama" >
 
             <br><br>
-            
+
             <label class="form-label">Semester</label>
             <input type="text" class="form-control" name="semester">
 
@@ -29,6 +29,11 @@
 
             <br><br>
 
+            <label class="form-label">Tahun Kurikulum</label>
+            <input type="text" class="form-control" name="tahun">
+
+
+            <br><br>
             <br>
 
             <input type="submit" value="Tambah Mata Kuliah" class="btn btn-primary">

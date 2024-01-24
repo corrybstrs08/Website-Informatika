@@ -13,7 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('kurikulum', function (Blueprint $table) {
+            $table->string('tahun')->default('2019');
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('kurikulum', function (Blueprint $table) {
+            //
+        });
     }
 };

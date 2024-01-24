@@ -41,7 +41,7 @@
 
             <br>
 
-            <input type="submit" value="Tambah Events" class="btn btn-primary">
+            <input type="submit" value="Tambah Berita" class="btn btn-primary">
         </form>
 
         <br>

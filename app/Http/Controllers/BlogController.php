@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 
 class BlogController extends Controller
 {
+    private $filtercategory = '';
+    private $filtervalue = '';
     public function home()
     {
         $responseData = Http::withToken($this->getToken())
@@ -67,24 +69,6 @@ class BlogController extends Controller
         return view('profil_lulusan');
     }
 
-    public function organisasi()
-    {
-        $organisasi = DB::table('organisasi')->first();
-        return view('organisasi')->with('organisasi', $organisasi);
-    }
-
-    public function kurikulum()
-    {
-        $kurikulum = DB::table('kurikulum')->get();
-        return view('kurikulum')->with('kurikulum', $kurikulum);
-    }
-
-    public function sejarah()
-    {
-        $sejarah = DB::table('sejarah')->first();
-        return view('sejarah')->with('sejarah', $sejarah);
-    }
-
     public function profilLulusan()
     {
         return view('profil_lulusan');
@@ -96,54 +80,6 @@ class BlogController extends Controller
         return view('auth.register');
     }
 
-    public function staffDosen()
-    {
-        $dosen = DB::table('dosen')->get();
-
-        return view('staffDosen')->with('dosen', $dosen);
-    }
-
-    public function visiMisi()
-    {
-        $visi = DB::table('visi')->get();
-        $misi = DB::table('misi')->get();
-        return view('visiMisi')
-            ->with('misi', $misi)
-            ->with('visi', $visi);
-    }
-
-    public function tampil_event($id)
-    {
-        $event = DB::table('events')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_event', ['event' => $event]);
-    }
-
-    public function eventAll()
-    {
-        $event = DB::table('events')
-            ->orderBy('waktu_mulai', 'desc')
-            ->paginate(5);
-
-        return view('eventAll', ['events' => $event]);
-    }
-
-    public function tampil_berita($id)
-    {
-        $news = DB::table('news_article')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_berita', ['berita' => $news]);
-    }
-
-    public function tampil_kompetisi($id)
-    {
-        $kompetisi = DB::table('kompetisi')
-            ->where('id', $id)
-            ->first();
-        return view('tampil_kompetisi', ['kompetisi' => $kompetisi]);
-    }
 
     public function capaian()
     {
@@ -164,33 +100,7 @@ class BlogController extends Controller
 
         $token = $json['token'];
         return $token;
-    }
 
-    public function subscribe()
-    {
-        return view('subscribe');
-    }
-
-    public function mahasiswa()
-    {
-        $responseDataDosen = Http::withToken($this->getToken())
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-            ->body();
-
-        //mengubah data tersebut menjadi array
-        $jsonDataDosen = json_decode($responseDataDosen, true);
-        $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
-
-        $aktifMahasiswa = array_filter($mahasiswa, function ($item) {
-            return $item['status'] == 'Aktif';
-        });
-
-        $aktifMahasiswaCount = count($aktifMahasiswa);
-
-        return view('mahasiswa')
-            ->with('data', $aktifMahasiswa)
-            ->with('jumlah', $aktifMahasiswaCount);
     }
 
     public function mahasiswaAlumni()
@@ -207,7 +117,7 @@ class BlogController extends Controller
         $alumniMahasiswa = array_filter($mahasiswa, function ($item) {
             return $item['status'] == 'Lulus';
         });
-        
+
         $alumniMahasiswaCount = count($alumniMahasiswa);
 
         return view('mahasiswaAlumni')
@@ -220,22 +130,6 @@ class BlogController extends Controller
         return view('contactUS');
     }
 
-    public function beritaAll()
-    {
-        $berita = DB::table('news_article')
-            ->orderBy('id', 'desc')
-            ->paginate(3);
-        return view('beritaAll')->with('berita', $berita);
-    }
-
-    public function kompetisiAll()
-    {
-        $kompetisi = DB::table('kompetisi')
-            ->orderBy('id', 'desc')
-            ->paginate(3);
-
-        return view('kompetisiAll', ['kompetisi' => $kompetisi]);
-    }
 
     public function cariProses(Request $request)
     {
@@ -307,5 +201,4 @@ class BlogController extends Controller
         $nama = $jsonDataDosen['data']['dosen'][0]['nama'];
 
     }
-
 }

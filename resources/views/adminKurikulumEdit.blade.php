@@ -12,7 +12,7 @@
             <input type="text" class="form-control" name="id" value="{{$kurikulum->id}}" hidden>
 
             <label class="form-label">Kode</label>
-            <input type="text" class="form-control" name="kode" value="{{$kurikulum->kode}}" > 
+            <input type="text" class="form-control" name="kode" value="{{$kurikulum->kode}}" >
 
             <br><br>
 
@@ -20,7 +20,7 @@
             <input type="text" class="form-control" name="nama" value="{{$kurikulum->nama}}" >
 
             <br><br>
-            
+
             <label class="form-label">Semester</label>
             <input type="text" class="form-control" name="semester" value="{{$kurikulum->semester}}" >
 
@@ -28,6 +28,11 @@
 
             <label class="form-label">SKS</label>
             <input type="text" class="form-control" name="sks" value="{{$kurikulum->sks}}">
+
+            <br><br>
+
+            <label class="form-label">Tahun Kurikulum</label>
+            <input type="text" class="form-control" name="tahun">
 
             <br><br>
 

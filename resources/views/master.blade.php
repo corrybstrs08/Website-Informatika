@@ -2,326 +2,435 @@
 <html lang="en">
 
 <head>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('asset/css/bootstrap-5.2.3-dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('asset/css/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="{{ asset('asset/img/logo_del.png') }}" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <title>Informatika</title>
+  <style>
+    body {
+      min-width: 920px;
+    }
 
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    .dropcolor {
+      background-color: #767676;
+    }
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    .dropdown.dropdown-center {
+      display: inline-block;
+      width: 180px;
+    }
 
-    <style>
-        /* slideshiot */
+    .dropdown-menu.dropdown-menu-center {
+      text-align: center;
+      width: 180px;
+    }
 
-        /* endslidehost */
+    footer {
+      bottom: 0;
+      width: 100%;
+    }
 
-        /* Modif Corry */
-        /* Ganti warna teks saat kursor diarahkan */
-        .dosen-name:hover {
-            color: blue; /* Ganti dengan warna yang diinginkan */
-        }
-        /* Tambahkan garis bawah saat kursor diarahkan */
-        .card-link:hover .dosen-name {
-            text-decoration: underline; /* Menambahkan garis bawah */
-        }
+    /* slideshiot */
 
-        .gbrDosen {
-            border-radius: 50%;
-            width: 25%;
-        }
+    /* endslidehost */
 
-        .serv ul {
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-            justify-content: center;
-        }
+    /* Modif Corry */
+    /* Ganti warna teks saat kursor diarahkan */
+    .dosen-name:hover {
+      color: blue;
+      /* Ganti dengan warna yang diinginkan */
+    }
 
-        .serv ul li {
-            list-style: none;
-            flex: 0 0 33.333333%;
-        }
+    /* Tambahkan garis bawah saat kursor diarahkan */
+    .card-link:hover .dosen-name {
+      text-decoration: underline;
+      /* Menambahkan garis bawah */
+    }
 
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .gbrDosen {
+      border-radius: 50%;
+      width: 25%;
+    }
+
+    .serv ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      justify-content: center;
+    }
+
+    .serv ul li {
+      list-style: none;
+      flex: 0 0 33.333333%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
         .martop {
             margin-top: 20px;
-            /* background-color: rgba(255, 0, 0, 0.109); */
+            background-color: rgba(255, 0, 0, 0.109);
             background-size: contain;
         }
 
-        .beff {
-            margin: 20px;
-            background-color: aliceblue;
-        }
+    .beff {
+      margin: 20px;
+      background-color: aliceblue;
+    }
 
-        .afft {
-            margin: 20px;
-        }
+    .afft {
+      margin: 20px;
+    }
 
-        * {
-            font-family: 'Nunito';
-        }
+    * {
+      font-family: 'Nunito';
+    }
 
-        .ele {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .ele {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-        .lingkar {
-            border-radius: 50%;
-            height: 10em;
-            width: 10em;
-            position: relative;
-            border: 7px solid rgba(0, 121, 194, 1);
-        }
+    .lingkar {
+      border-radius: 50%;
+      height: 10em;
+      width: 10em;
+      position: relative;
+      border: 7px solid rgba(0, 121, 194, 1);
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .trigger:hover+.keTrig {
-            visibility: visible;
-        }
+    .trigger:hover+.keTrig {
+      visibility: visible;
+    }
 
-        .keTrig {
-            padding: 3%;
-            background-color: rgba(90, 94, 123, 0.95);
-            list-style: none;
-            color: white;
-            position: absolute;
-            visibility: hidden;
-        }
+    .keTrig {
+      padding: 3%;
+      background-color: rgba(90, 94, 123, 0.95);
+      list-style: none;
+      color: white;
+      position: absolute;
+      visibility: hidden;
+    }
 
-        .cards-wrapper {
-            display: flex;
-        }
+    .cards-wrapper {
+      display: flex;
+    }
 
-        .card {
-            margin: 0.5em;
-            width: calc(100%/3);
-        }
+    .card {
+      margin: 0.5em;
+      width: calc(100%/3);
+    }
 
-        .image-wrapper {
-            height: 10vw;
-            margin: 0 auto;
-            /* display: flex;
-                justify-content: center;
-                align-items: center; */
-        }
+    .image-wrapper {
+      height: 10vw;
+      margin: 0 auto;
+      /* display: flex;
+              justify-content: center;
+              align-items: center; */
+    }
 
-        .image-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-        }
+    .image-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-        /* .biru:hover{
-                color: blue
-            } */
+    /* .biru:hover{
+              color: blue
+          } */
 
-        .mainmenubtn {
+    .mainmenubtn {
 
-            cursor: pointer;
-        }
+      cursor: pointer;
+    }
 
-        .mainmenubtn:hover {
-            background-color: grey;
-        }
+    .mainmenubtn:hover {
+      background-color: grey;
+    }
 
-        .dropdown-child {
-            display: none;
-            position: absolute;
-            background-color: rgba(90, 94, 123, 0.67);
-            border-radius: 3%;
-        }
+    .dropdown-child {
+      display: none;
+      position: absolute;
+      background-color: rgba(90, 94, 123, 0.67);
+      border-radius: 3%;
+    }
 
-        .dropdown-child a {
-            color: white;
-            padding: 20px;
-            text-decoration: none;
-            display: block;
-            border-radius: 3%;
-        }
+    .dropdown-child a {
+      color: white;
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+      border-radius: 3%;
+    }
 
-        .dropdown-child a:hover {
-            background-color: rgba(90, 94, 123, 1);
-            border-radius: 3%;
-            z-index: 100000000000;
-        }
+    .dropdown-child a:hover {
+      background-color: rgba(90, 94, 123, 1);
+      border-radius: 3%;
+      z-index: 100000000000;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #a0c4ff;
+      /* Ganti dengan warna biru pudar yang Anda inginkan */
+      color: #fff;
+      /* Ganti dengan warna teks yang sesuai */
+    }
+
+    .text-full {
+      text-align: justify;
+      color: #4a4a4a
+    }
 
 
-        .dropdown:hover .dropdown-child {
-            display: block;
-        }
+    .dropdown:hover .dropdown-child {
+      display: block;
+    }
 
-        .text-body {
-            color: #266bb1 !important;
-        }
+    .text-body {
+      color: #266bb1 !important;
+    }
 
-        /* pagination in eventAll */
+    .horizontal {
+      width: 339px;
+      margin: 0 auto;
+      /* Membuat elemen berada di tengah */
+      border: 2px solid;
+      /* Mengatur border dengan ketebalan 2px */
+      color: rgba(0, 121, 194, 1);
+      /* Mengatur warna border menjadi dark blue */
+    }
 
-        /* croptting */
-    </style>
+    .hr-vertical {
+      width: 2px;
+      /* Sesuaikan lebar vertikal sesuai kebutuhan */
+      height: 100%;
+      /* Sesuaikan tinggi vertikal sesuai kebutuhan */
+      border: 2px solid rgba(0, 121, 194, 1);
+      /* Mengatur border dengan ketebalan 2px dan warna dark blue */
+      margin: 0;
+      /* Hapus margin agar lebih tepat di tengah */
+      transform: rotate(180deg);
+    }
 
-    <title>Informatika IT Del</title>
+
+    /* pagination in eventAll */
+
+    /* croptting */
+  </style>
 </head>
 
-<body style="background-color: #f4f4f4;margin: 0; padding: 0;">
-    <header style="background-color: rgba(128, 128, 128, 0.199)">
-        <div class="d-flex justify-content-between text-body" style="background-color: rgba(25, 36, 111, 1);">
-            <div class="ms-4 mt-4 mb-4 d-flex">
-                <a href="/">
-                    <img src="{{ asset('asset/img/logo_del.png') }}" alt="logo del disini" width="75em" style="border-radius: 10%;">
-                </a>
-                <h2 class="ms-1"><b> Institut <br>Teknologi Del</b></h2>
-            </div>
-            <div>
-                <div class=" align-middle" style="display: flex;">
-                    <p class="p-2 mx-4"><a href="/">Beranda</a></p>
+<body>
+  <header style="background-color: #09306B ;">
+    <div class="container-fluid py-3 px-4">
+      <div class="row align-items-center">
 
-                    <div class="dropdown">
-                        <p class="mainmenubtn mt-1 mx-4">Tentang Kita<i class="ri-arrow-down-s-fill"></i></p>
-                        <div class="dropdown-child float">
-                            <a href="/visiMisi">Visi Misi </a>
-                            <a href="/sejarah">Sejarah</a>
-                        </div>
-                    </div>
-
-                    <p class="p-2 mx-4"><a href="/kurikulum">Kurikulum</a></p>
-
-                    <div class="dropdown">
-                        <p class="mainmenubtn mt-1 mx-4">Akademik<i class="ri-arrow-down-s-fill"></i></p>
-                        <div class="dropdown-child float">
-                            <a href='/organisasi'>Himpunan</a>
-                            <a href="/staffDosen">Dosen </a>
-                            <a href="/mahasiswa">Mahasiswa </a>
-                        </div>
-                    </div>
-
-                    {{-- <p class="p-2 mx-4"><a href="">beasiswa</a></p> --}}
-                    <!--
-                    <div class="p-2">
-                        <a href="/contactUs"><button type="button" class="btn btn-primary">Contact Us</button></a>
-                    </div>
-                    -->
-                </div>
-                <div class="d-flex pe-5 p-1 justify-content-end">
-                    <form action="/cariProses" method="post" enctype="multipart/form-data">
-                        {{ csrf_field() }}
-                        <input type="text" value="Pencarian..." style="border-radius: 10px;" name="cari" onclick="clearInput(this)">
-                    </form>
-                </div>
-            </div>
+        <!-- Logo di bagian kiri -->
+        <div class="col-sm-8">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none">
+            <img src="{{ asset('asset/img/logo_del.png') }}" alt="Logo" class="logo rounded me-4" width="75em">
+            <span>
+              <span class="ms-1 text-light" style="font-size: 36px; font-family: Nunito">Institut Teknologi Del</span>
+              <br>
+              <span class="ms-1 text-light" style="font-size: 20px; font-family: Nunito">Sarjana Informatika</span>
+            </span>
+          </a>
         </div>
-    </header>
 
-    @yield('section')
-    <br>
-    <br>
+        <!-- Navbar di bagian kanan -->
+        <div class="col-sm-4 d-flex justify-content-end flex-column">
+          <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container-fluid d-flex justify-content-end">
 
-    <div class="bawah ">
-        <div class=" pt-3 container-fluid text-body " name="footer " style="background-color: rgba(25, 36, 111, 1);margin: 0; padding: 0; ">
+              <!-- Tombol burger untuk menu mobile -->
+              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-            <div class="row p-3">
-                <div class="col-sm ">
-                    <label for=" ">Institut Teknologi Del</label><br>
-                    <label for=" ">Jl. Sisingamangaraja, Sitoluama, Laguboti, Toba Samosir Sumatera Utara -
-                        Indonesia
-                        22381</label>
-                    <br><br><br>
-                    <label for=" "><i class="ri-phone-line"></i>+62 632 331234</label><br>
-                    <label for=" "><i class="ri-mail-line"></i><i>Informatika@del.ac.id</i></label>
-                </div>
-                <div class="col-sm ">
-                    <p>Enter your email address to subscribe to this blog and receive notifications of new posts by
-                        email.</p>
-                    <p>Email Address</p>
-                    <hr style="size: 10; width: 80%; ">
+              <!-- Daftar menu navbar -->
+              <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                <ul class="navbar-nav mr-auto gap-3 justify-content-end ">
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="/" style="font-size: 16px; font-family: Nunito;">Beranda</a>
+                  </li>
 
-                    <div class="containter d-flex justify-content-end ">
-                        <a href="/subscribe"><button type="button " class="mt-3 btn btn-primary ">Subscribe</button></a>
+                  <!-- Profil -->
+
+                  <li class="nav-item">
+                    <div class="dropdown show">
+                      <a class="nav-link dropdown-toggle text-light" href="#" style="font-size: 16px; font-family: Nunito" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target="#dropdownMenu">Profil</a>
+                      <ul class="dropdown-menu dropdown-menu-center dropcolor" aria-labelledby="dropdownMenuLink" id="dropdownMenu" style="width: fit-content;">
+                        <li><a class="dropdown-item text-light" href="/visiMisi" style="font-size: 16px; font-family: Nunito;">Visi Misi</a></li>
+                        <hr>
+                        <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Sejarah</a></li>
+                        <hr>
+                        <!-- <li><a class="dropdown-item text-light" href="/sejarah" style="font-size: 16px; font-family: Nunito;">Data Pendaftaran</a></li> -->
+                      </ul>
                     </div>
+                  </li>
 
-                    <br><br>
-                    <div class="d-flex justify-content-end me-3" style="color:black; font-size:3em">
-                        <a href="https://id-id.facebook.com/Institut.Teknologi.Del/"><i class="ri-facebook-circle-fill mx-2"></i></a>
+                  <!-- KURIKULUM -->
 
-                        <a href="mailto: gunturaugustin150@gmail.com"><i class="ri-mail-line mx-2">
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="/kurikulum" style="font-size: 16px; font-family: Nunito">Kurikulum</a>
+                  </li>
 
-                            </i></a>
-                        <a href="https://www.youtube.com/channel/UCi_VutHsvtyaJQ84s9xdSDg"><i class="ri-youtube-fill mx-2"></i></a>
-                        <a href="https://twitter.com/institut_del"><i class="ri-twitter-fill mx-2"></i></a>
-                        <a href="https://www.instagram.com/it.del/?hl=id"><i class="ri-instagram-fill mx-2"></i></a>
+                  <!-- AKADEMIK -->
 
+                  <li class="nav-item">
+                    <div class="dropdown show">
+                      <a class="nav-link dropdown-toggle text-light" href="#" style="font-size: 16px; font-family: Nunito" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" data-bs-target="#dropdownMenu">Akademik</a>
+                      <ul class="dropdown-menu dropdown-menu-center dropcolor" aria-labelledby="dropdownMenuLink" id="dropdownMenu" style="width: fit-content;">
+                        <li><a class="dropdown-item text-light" href="/organisasi" style="font-size: 16px; font-family: Nunito;">Himasti</a></li>
+                        <hr>
+                        <li><a class="dropdown-item text-light" href="/staffDosen" style="font-size: 16px; font-family: Nunito">Dosen</a></li>
+                        <hr>
+                        <li><a class="dropdown-item text-light" href="/mahasiswa" style="font-size: 16px; font-family: Nunito">Mahasiswa</a></li>
+                      </ul>
                     </div>
-                </div>
+                  </li>
+
+                  <!-- KONTAK -->
+
+                  {{-- <li class="nav-item">
+                    <a class="nav-link text-light" href="/kontak" style="font-size: 16px; font-family: Nunito">Kontak</a>
+                  </li> --}}
+
+                  <!-- LOGIN ADMIN -->
+
+                  <li class="nav-item" style="margin-left: 10px;">
+                    <a href="/admin" class="btn btn-primary" style="font-size: 16px; width: 150px; font-family: Nunito; background-color: #0079C2;">Login Admin</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </nav>
+
+          <!-- KOLOM PENCARIAN -->
+
+          <div class="row  d-flex justify-content-end">
+            <div class="col col-6 " style="width: 300px;">
+              <form action="/cariProses" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <input type="text" class="form-control" placeholder="Pencarian.." style="background-color: aliceblue;" name="cari" onclick="clearInput(this)">
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="d-flex justify-content-between">
-            <p class="m-0 p-0 bg-dark text-body ">© 2023 Program Studi S1 INFORMATIKA - IT Del</p>
-            <a href="/admin">
-                <p class="m-0 p-0 bg-dark text-body" id="loginAdmin">Login Admin</p>
-            </a>
-        </div>
+      </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  </header>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".afft",
-                prevEl: ".beff",
-            },
-        });
 
-        function clearInput(input) {
-            input.value = '';
-        }
+  <!-- SECTION -->
+  @yield('section')
+  <!-- END SECTION -->
 
-        const slidesContainer = document.getElementById("slides-container");
-        const slide = document.querySelector(".slide");
-        const prevButton = document.getElementById("slide-arrow-prev");
-        const nextButton = document.getElementById("slide-arrow-next");
-        nextButton.addEventListener("click", () => {
-            const slideWidth = slide.clientWidth;
-            slidesContainer.scrollLeft += slideWidth;
-        });
-        prevButton.addEventListener("click", () => {
-            const slideWidth = slide.clientWidth;
-            slidesContainer.scrollLeft -= slideWidth;
-        });
 
-        // Select all slides
-        const slides = document.querySelectorAll(".slide");
+  <br>
+  <footer>
+    <div class="container-fluid" style="background-color: #09306B ;">
+      <div class="row">
+        <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
 
-        // loop through slides and set each slides translateX property to index * 100%
+          <!-- KONTAK KAMI -->
+
+          <h1 class="text-light fs-3 fw-bold px-3">Kontak Kami</h1>
+          <br>
+          <div class="container-fluid">
+            <span>Institut Teknologi Del</span>
+            <br>
+            <span>Jl. Sisingamangaraja, Sitoluama, Laguboti, Toba, Sumatera Utara, Indonesia</span>
+            <br>
+            <p>Kode Pos : 22381</p>
+            <p>
+              <i class="ri-phone-line"></i>
+              <span>+62 632 331234</span>
+              <br>
+              <i class="ri-mail-line"></i>
+              <i>Informatika@del.ac.id</i>
+            </p>
+          </div>
+        </div>
+
+        <!-- TAUTAN -->
+
+        <div class="col-12 col-md-6 px-3 py-3 text-light" style="font-family: Nunito;">
+          <h1 class="text-light fs-3 fw-bold">Tautan</h1>
+          <a href="https://www.del.ac.id/"><img src="{{ asset('asset/img/logo_del.png') }}" alt="del" target="_blank" width="100em" height="100em" class="rounded mx-2"></a>
+          <a href="https://spmb.del.ac.id/"><img src="{{ asset('asset/img/spmb.png') }}" alt="spmb" target="_blank" width="130em" height="100em" class="rounded mx-2"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TANDA COPYRIGHT -->
+
+    <div class="container-fluid d-flex justify-content-center" style="background-color: #000; font-family: Nunito; margin-bottom: -10px;">
+      <p class="justify-items-center" style="color: #f4f4f4 ; font-weight: 700"> &copy; 2023 Program Studi S1 INFORMATIKA - IT Del</p>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".afft",
+        prevEl: ".beff",
+      },
+    });
+
+    function clearInput(input) {
+      input.value = '';
+    }
+
+    const slidesContainer = document.getElementById("slides-container");
+    const slide = document.querySelector(".slide");
+    const prevButton = document.getElementById("slide-arrow-prev");
+    const nextButton = document.getElementById("slide-arrow-next");
+    nextButton.addEventListener("click", () => {
+      const slideWidth = slide.clientWidth;
+      slidesContainer.scrollLeft += slideWidth;
+    });
+    prevButton.addEventListener("click", () => {
+      const slideWidth = slide.clientWidth;
+      slidesContainer.scrollLeft -= slideWidth;
+    });
+
+    // Select all slides
+    const slides = document.querySelectorAll(".slide");
+
+        // loop through slides and set each slides translateX property to index * 100% 
         slides.forEach((slide, indx) => {
             slide.style.transform = `translateX(${indx * 100}%)`;
         });

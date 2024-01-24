@@ -27,7 +27,7 @@
                     
                     <a href="/admin/hapusBerita/{{$item->id}}"><button type="button" class="btn btn-danger mx-1">Hapus</button></a>
                     
-                    <a href="/berita/{{$item->id}}"><button type="button" class="btn btn-success mx-1">Lihat Artikel Asli</button></a>
+                    <a href="/berita/{{$item->id}}" target="_blank"><button type="button" class="btn btn-success mx-1">Lihat Pratinjau</button></a>
                 </td>
             </tr>
         @endforeach

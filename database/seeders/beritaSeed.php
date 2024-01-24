@@ -78,10 +78,10 @@ class beritaSeed extends Seeder
                 'gambar' => '4.jpg',
             ],
             [
-                'judul' => 'Salah satu Mahasiswa Informatika menjadi peserta Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam Tingkat Nasional Tahun 2022
+                'judul' => 'Salah satu Mahasiswa Informatika menjadi peserta ONMIPA Tingkat Nasional Tahun 2022
 
                 ',
-                'deskripsi' => 'Enrico Hezkiel Sirait yang merupakan Mahasiswa Informatika angkatan 2021 yang berhasil lolos mengikuti Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam (ONMIPA) Tingkat Nasional Tahun 2022
+                'deskripsi' => 'Enrico Hezkiel Sirait yang merupakan Mahasiswa Informatika angkatan 2021 yang berhasil lolos mengikuti ONMIPA Tingkat Nasional Tahun 2022
 
                 ',
                 'isi' => "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia melalui Balai Pengembangan Talenta Indonesia telah melaksanakan seleksi tingkat wilayah Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam (ON MIPA) tahun 2022 pada tanggal  28-29 Juli 2022 secara daring.
