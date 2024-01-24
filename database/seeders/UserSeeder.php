@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
-    
+
     /**
      * Run the database seeds.
      *
@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // Membuat 10 user dengan factory
+
         DB::table('users')->insert([
             [
                 'name' => "admin",
