@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
             kopmetisiSeed::class,
             dosenSeed::class,
             mahasiswaSeed::class,
+            UserSeeder::class,
+            OrganisasiSeed::class,
         ]);
     }
 }
