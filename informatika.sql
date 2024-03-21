@@ -1,4 +1,4 @@
-/*
+`users``users`/*
 SQLyog Community v13.2.0 (64 bit)
 MySQL - 10.9.4-MariaDB : Database - informatika
 *********************************************************************
@@ -16,7 +16,7 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`informatika` /*!40100 DEFAULT CHARACTER
 
 USE `informatika`;
 
-/*Table structure for table `dosen` */
+/BLOB:https://web.whatsapp.com/d6a2c957-1fe8-4ab5-87e0-7b78eb3099d8*TABLE structure FOR TABLE `dosen` */
 
 DROP TABLE IF EXISTS `dosen`;
 

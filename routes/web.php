@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BlogController::class, 'home'])->name('home');
 Route::get('/organisasi', [OrganisasiController::class, 'organisasi']);
 Route::get('/kurikulum', [KurikulumController::class, 'kurikulum']);
-Route::get('/sejarah', [BlogController::class, 'sejarah']);
+Route::get('/sejarah', [SejarahController::class, 'sejarah']);
 Route::get('/profil-lulusan', [BlogController::class, 'profilLulusan']);
 Route::get('/staffDosen', [DosenController::class, 'staffDosen']);
 Route::get('/staffDosen/{id}', [DosenController::class, 'detailDosen']); //EditCorry
