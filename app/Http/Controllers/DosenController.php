@@ -59,7 +59,7 @@ class DosenController extends Controller
         $dosen = Dosen::where('id', $id)
             ->first();
 
-        return view('adminDosenEdit')->with('dosen', $dosen);
+        return view('adminDosenedit')->with('dosen', $dosen);
     }
 
     public function editDosen_proses(Request $request)
