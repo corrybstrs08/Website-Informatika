@@ -12,9 +12,9 @@ class KurikulumController extends Controller
         $targetYear = $request->query("tahun");
 
         $kurikulum = null;
-        if(!$targetYear){
+        if (!$targetYear) {
             $kurikulum = Kurikulum::get();
-        }else{
+        } else {
             $kurikulum = Kurikulum::where('tahun', $targetYear)->get();
         }
 
@@ -52,7 +52,8 @@ class KurikulumController extends Controller
             'kode' => $request->kode,
             'nama' => $request->nama,
             'semester' => $request->semester,
-            'sks' => $request->semester,
+            'sks' => $request->sks,
+            'tahun' => $request->tahun
         ]);
 
         return redirect('/admin/kurikulum');
@@ -80,6 +81,7 @@ class KurikulumController extends Controller
                 'nama' => $request->nama,
                 'semester' => $request->semester,
                 'sks' => $request->sks,
+                'tahun' => $request->tahun,
             ]);
 
         return redirect('/admin/kurikulum');
@@ -92,5 +94,4 @@ class KurikulumController extends Controller
 
         return redirect('/admin/kurikulum');
     }
-
 }
