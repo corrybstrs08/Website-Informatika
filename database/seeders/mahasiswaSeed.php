@@ -3118,13 +3118,6 @@ class mahasiswaSeed extends Seeder
                 'angkatan' => 2022,
                 'status' => 'Aktif',
             ],
-            [
-                'nim' => '11S22055',
-                'nama' => 'Pangeran Simamora',
-                'angkatan' => 2022,
-                'status' => 'Aktif',
-            ],
-
         ]);
     }
 }
