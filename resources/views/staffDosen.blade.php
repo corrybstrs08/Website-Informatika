@@ -6,6 +6,7 @@
     <div class="serv text-body">
         <ul class="list-unstyled d-flex flex-wrap justify-content-around">
             @foreach ($dosen as $item)
+            @if ($item->status != "Tidak Aktif")
             <a href="/staffDosen/{{ $item->id }}" class="card-link">
                 <div class="card m-2" style="width: 18rem; height: 10rem;">
                     <div class="text-center mt-3">
@@ -14,6 +15,7 @@
                     </div>
                 </div>
             </a>
+            @endif
             @endforeach
         </ul>
     </div>

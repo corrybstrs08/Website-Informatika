@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
@@ -14,29 +15,15 @@ class BlogController extends Controller
     private $filtervalue = '';
     public function home()
     {
-        $responseData = Http::withToken($this->getToken())
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-            ->body();
-
-        //mengubah data tersebut menjadi array
-        $jsonData = json_decode($responseData, true);
-        $mahasiswa = $jsonData['data']['mahasiswa'];
-
-        $mahasiswaIF = array_filter($mahasiswa, function ($item) {
-            return $item['prodi_name'] == 'S1 Informatika';
-        });
-        $aktifMahasiswa = array_filter($mahasiswaIF, function ($item) {
-            return $item['status'] == 'Aktif';
-        });
-        $alumniMahasiswa = array_filter($mahasiswaIF, function ($item) {
-            return $item['status'] == 'Lulus';
-        });
+        $alumniMahasiswa = Mahasiswa::where('status', '=', 'Lulus')->get();
+        $aktifMahasiswa = Mahasiswa::where('status', 'Aktif')->get();
         $alumniMahasiswaCount = count($alumniMahasiswa);
         $aktifMahasiswaCount = count($aktifMahasiswa);
 
         $jumlah = DB::table('jumlah')->get();
-        $dosen = DB::table('dosen')->count();
+        $dosen = DB::table('dosen')
+                ->where('status', 'Aktif')
+                ->count();
         $kompetisi = DB::table('kompetisi')
             ->orderBy('tanggal', 'desc')
             ->paginate(3);
@@ -86,44 +73,6 @@ class BlogController extends Controller
         return view('capaian');
     }
 
-    public function getToken()
-    {
-        $response = Http::asForm()
-            ->post('https://cis-dev.del.ac.id/api/jwt-api/do-auth', [
-                'username' => 'arlinta.barus',
-                'password' => 'Del@2022',
-            ])
-            ->body();
-
-        //untuk membuat jadi array
-        $json = json_decode($response, true);
-
-        $token = $json['token'];
-        return $token;
-
-    }
-
-    public function mahasiswaAlumni()
-    {
-        $responseDataDosen = Http::withToken($this->getToken())
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/mahasiswa')
-            ->body();
-
-        //mengubah data tersebut menjadi array
-        $jsonDataDosen = json_decode($responseDataDosen, true);
-        $mahasiswa = $jsonDataDosen['data']['mahasiswa'];
-
-        $alumniMahasiswa = array_filter($mahasiswa, function ($item) {
-            return $item['status'] == 'Lulus';
-        });
-
-        $alumniMahasiswaCount = count($alumniMahasiswa);
-
-        return view('mahasiswaAlumni')
-            ->with('data', $alumniMahasiswa)
-            ->with('jumlah', $alumniMahasiswaCount);
-    }
 
     public function contactUs()
     {
@@ -179,26 +128,4 @@ class BlogController extends Controller
         }
     }
 
-    function getDataDosen($userId, $token)
-    {
-        //untuk mengambil data dosen menggunakan token yang telah didapat sebelumnya
-        $responseDataDosen = Http::withToken($token)
-            ->asForm()
-            ->post('https://cis-dev.del.ac.id/api/library-api/dosen?userid=')
-            ->body();
-
-        //mengubah data tersebut menjadi array
-        $jsonDataDosen = json_decode($responseDataDosen, true);
-
-        //mengecek apakah data benar benar dosen
-        if (sizeof($jsonDataDosen['data']['dosen']) == 0) {
-            return Redirect::back()
-                ->withInput()
-                ->withErrors(['password' => 'salah']);
-        }
-
-        //menampung variabel dosen tersebut
-        $nama = $jsonDataDosen['data']['dosen'][0]['nama'];
-
-    }
 }

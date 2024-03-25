@@ -23,6 +23,14 @@
             <input type="file" name="file">
         </div>
 
+        <br><br>
+
+        <label class="form-label">Status</label>
+        <select name="status" id="status">
+            <option value="Aktif">Aktif</option>
+            <option value="Tidak Aktif">Tidak Aktif</option>
+        </select>
+
         <br>
 
         <input type="submit" value="Tambah Dosen" class="btn btn-primary">

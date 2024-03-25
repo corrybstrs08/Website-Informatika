@@ -48,6 +48,7 @@ class DosenController extends Controller
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'gambar' => $request->file->getClientOriginalName(),
+            'status' => $request->status,
         ]);
 
         return redirect('/admin/dosen');
@@ -77,6 +78,7 @@ class DosenController extends Controller
                 'nama' => $request->nama,
                 'deskripsi' => $request->deskripsi,
                 'gambar' => $request->file->getClientOriginalName(),
+                'status' => $request->status,
             ]);
 
         return redirect('/admin/dosen');

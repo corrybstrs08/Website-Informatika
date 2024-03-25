@@ -52,7 +52,8 @@ class KurikulumController extends Controller
             'kode' => $request->kode,
             'nama' => $request->nama,
             'semester' => $request->semester,
-            'sks' => $request->semester,
+            'sks' => $request->sks,
+            'tahun' => $request->tahun,
         ]);
 
         return redirect('/admin/kurikulum');
@@ -80,6 +81,7 @@ class KurikulumController extends Controller
                 'nama' => $request->nama,
                 'semester' => $request->semester,
                 'sks' => $request->sks,
+                'tahun' => $request->tahun,
             ]);
 
         return redirect('/admin/kurikulum');

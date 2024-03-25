@@ -119,6 +119,7 @@ Route::get('/dashboard', function () {
 
 //Mahasiswa
 Route::get('/admin/mahasiswa', [MahasiswaController::class, 'adminMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/filtermahasiswa', [MahasiswaController::class, 'adminFilterMahasiswa'])->middleware(['auth', 'verified'])->name('filter.AdminMahasiswa');
 Route::get('/admin/addMahasiswa', [MahasiswaController::class, 'addMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('/addMahasiswa_proses', [MahasiswaController::class, 'addMahasiswa_proses'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/admin/editMahasiswa/{id}', [MahasiswaController::class, 'editMahasiswa'])->middleware(['auth', 'verified'])->name('dashboard');

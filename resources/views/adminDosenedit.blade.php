@@ -27,6 +27,14 @@
             <input type="file" name="file">
         </div>
 
+        <br><br>
+
+        <label class="form-label">Status</label>
+        <select name="status" id="status">
+            <option value="Aktif">Aktif</option>
+            <option value="Tidak Aktif">Tidak Aktif</option>
+        </select>
+
         <br>
 
         <img class="gbrDosen w-50" src="{{ asset('asset/img/Dosen/' . $dosen->gambar) }}" alt="{{ $dosen->gambar }}">

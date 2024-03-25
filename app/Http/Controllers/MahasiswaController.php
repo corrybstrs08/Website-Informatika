@@ -55,6 +55,27 @@ class MahasiswaController extends Controller
             ->with('status', $status);
     }
 
+    public function adminFilterMahasiswa(Request $request){
+        if ($request->searchby == 'angkatan') {
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
+        }
+
+        if ($request->searchby == 'status') {
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
+        }
+
+        if ($request->searchby == '') {
+            $this->filtercategory = $request->searchby;
+            $this->filtervalue = $request->searchvalue;
+        }
+
+        // dd($this->filtervalue);
+        $mahasiswaView = $this->adminMahasiswa();
+        return $mahasiswaView;
+    }
+
     public function filterMahasiswa(Request $request)
     {
 
@@ -80,8 +101,47 @@ class MahasiswaController extends Controller
 
     public function adminMahasiswa()
     {
-        $mahasiswa = Mahasiswa::get();
-        return view('adminMahasiswa')->with('mahasiswa', $mahasiswa);
+        $angkatan = Mahasiswa::select('angkatan')
+            ->distinct()
+            ->get();
+
+        $status = Mahasiswa::select('status')
+            ->distinct()
+            ->get();
+
+        if ($this->filtercategory == 'angkatan') {
+            $mahasiswa = Mahasiswa::where('angkatan', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'angkatan' => $this->filtervalue
+                ]);
+        }
+
+        if ($this->filtercategory == 'status') {
+            $mahasiswa = Mahasiswa::where('status', '=', $this->filtervalue)
+                ->orderBy('nim', 'ASC')
+                ->paginate(20)
+                ->appends([
+                    'status' => $this->filtervalue
+                ]);
+        }
+
+        if ($this->filtercategory == '') {
+            $mahasiswa = Mahasiswa::orderBy('nim', 'ASC')
+                ->paginate(20);
+        }
+
+        $mahasiswa->appends([
+            'searchby' => $this->filtercategory,
+            'searchvalue' => $this->filtervalue,
+        ]);
+
+        // dd($angkatan);
+        return view('adminMahasiswa')
+            ->with('data', $mahasiswa)
+            ->with('angkatan', $angkatan)
+            ->with('status', $status);
     }
 
     public function addMahasiswa()

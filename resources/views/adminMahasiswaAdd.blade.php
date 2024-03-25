@@ -42,6 +42,7 @@
         <select name="status" id="status">
             <option value="">--- Pilih Status ---</option>
             <option value="Aktif">Aktif</option>
+            <option value="Tidak Aktif">Tidak Aktif</option>
             <option value="Lulus">Lulus</option>
             <option value="Mengundurkan Diri">Mengundurkan Diri</option>
         </select>

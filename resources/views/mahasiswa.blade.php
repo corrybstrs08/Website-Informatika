@@ -82,7 +82,9 @@
                 var optionarr = [
                     @if (@isset($status) & sizeof($status) > 0)
                         @foreach ($status as $sts)
-                            '{{ $sts->status }}|{{ $sts->status }}',
+                            @if ($sts->status != "Tidak Aktif")
+                                '{{ $sts->status }}|{{ $sts->status }}',
+                            @endif
                         @endforeach
                     @endif
                 ];

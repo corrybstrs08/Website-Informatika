@@ -44,6 +44,7 @@
         <select name="status" id="status">
             <option value="">--- Pilih Status ---</option>
             <option value="Aktif" {{$mahasiswa->status == 'Aktif' ? 'selected' : ''}}>Aktif</option>
+            <option value="Tidak Aktif" {{$mahasiswa->status == 'Tidak Aktif' ? 'selected' : ''}}>Tidak Aktif</option>
             <option value="Lulus" {{$mahasiswa->status == 'Lulus' ? 'selected' : ''}}>Lulus</option>
             <option value="Mengundurkan Diri" {{$mahasiswa->status == 'Mengundurkan Diri' ? 'selected' : ''}}>Mengundurkan Diri</option>
         </select>
